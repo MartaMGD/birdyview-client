@@ -1,8 +1,8 @@
 
 export default function About() {
     return (
-        <div>
+        <main className="container">
             <h1>About</h1>
-        </div>
+        </main>
     )
 }

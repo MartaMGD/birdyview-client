@@ -1,8 +1,8 @@
 
 export default function HomeSearch() {
     return (
-        <div>
+        <main className="container">
             <h1>Home</h1>
-        </div>
+        </main>
     )
 }

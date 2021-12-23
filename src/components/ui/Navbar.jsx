@@ -2,35 +2,65 @@ import { Link, Outlet } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <main>
-            <nav>
-                <Link className="navBarLogo" to="/">
-                    Logo
-                </Link>
+        <header>
+            <nav className="navBarContainer">
 
-                <Link to="/">
-                    Búsqueda
-                </Link>
+                <div className="logoStyle">
+                    <Link
+                        to="/">
+                        Logo
+                    </Link>
+                </div>
 
-                <Link to="/articulos">
-                    Artículos
-                </Link>
+                <label className="openMenuIcon" htmlFor="openMenu">
+                    <i className="fas fa-bars"></i>
+                </label>
+                <input className="openMenu" type="checkbox" id="openMenu" />
 
-                <Link to="/avistamientos">
-                    Avistamientos
-                </Link>
 
-                <Link to="/about">
-                    About
-                </Link>
 
-                <Link to="/login">
-                    Accede/Registro
-                </Link>
+                <ul className="linkPosition">
+
+                    <li className="linkUnit">
+                        <Link
+                            to="/">
+                            Búsqueda
+                        </Link>
+                    </li>
+
+                    <li className="linkUnit">
+                        <Link
+                            to="/articulos">
+                            Blog
+                        </Link>
+                    </li>
+
+                    <li className="linkUnit">
+                        <Link
+                            to="/avistamientos">
+                            Avistamientos
+                        </Link>
+                    </li>
+
+                    <li className="linkUnit">
+                        <Link
+                            to="/about">
+                            About
+                        </Link>
+                    </li>
+
+                    <li className="linkUnit">
+                        <Link
+                            to="/login">
+                            Accede / Registro
+                        </Link>
+                    </li>
+                </ul>
+
+                <section>
+                    <Outlet />
+                </section>
             </nav>
-            <section>
-                <Outlet/>
-            </section>
-        </main>
+        </header>
     )
 }

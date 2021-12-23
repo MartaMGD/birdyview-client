@@ -1,8 +1,8 @@
 
 export default function Birdwatching() {
     return (
-        <div>
+        <main className="container">
             <h1>Avistamientos</h1>
-        </div>
+        </main>
     )
 }

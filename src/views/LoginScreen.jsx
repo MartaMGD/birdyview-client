@@ -1,8 +1,8 @@
 
 export default function LoginScreen() {
     return (
-        <div>
+<main className="container">
             <h1>Login</h1>
-        </div>
+        </main>
     )
 }
