@@ -27,15 +27,24 @@ body {
     font-family:'Poppins';
 }
 
+/* Container */
+.container {
+    margin:2rem;
+}
+
 /* Navbar - Links - Logo */
 .navBarContainer {
     height: 3rem;
     width: 100%;
-    background-color: var(--vivid-dark-green);
+    background-color: var(--pale-green);
     display:flex;
     align-items: center;
     position: relative;
-    box-shadow: 3px 2px 17px -5px var(--dark-grey-green);
+    border-bottom: 1px solid var(--vivid-dark-green);
+}
+
+.logoStyle {
+    padding-left: 1rem;
 }
 
 #openMenu {
@@ -46,20 +55,27 @@ body {
     position: absolute;
     right: 0;
     cursor: pointer;
+    padding-right: 1rem;
 }
 
 .linkUnit a {
-    color: var(--cream);
+    color: var(--dark-grey-green);
+    display: block;
+    text-align: right;
+    margin: 1rem 0;
 }
 
 .linkPosition {
     display: none;
-    width: 50%;
-    background-color: var(--vivid-dark-green);
+    width: 60%;
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: var(--pale-green);
     position: absolute;
     top: 3rem;
     right: 0;
     height: calc(100vh - 48px);
+    border-left: 1px solid var(--vivid-dark-green);
 }
 
 .openMenu:checked ~ .linkPosition {
@@ -84,6 +100,8 @@ body {
         display: flex;
         justify-content: space-around;
         position: static;
+        width: 100%;
+        height: auto;
     }
 
     .openMenuIcon {
