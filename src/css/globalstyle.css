@@ -95,6 +95,7 @@ body {
 /* Footer */
 .footerStyle {
     margin: 0;
+    background-color: black;
     height: 5rem;
     width: 100%;
 }
