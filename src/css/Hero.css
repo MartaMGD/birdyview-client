@@ -8,7 +8,7 @@
 }
 
 /*** HOME ***/
-.heroContainer {
+.homeContainer {
     position: relative;
     width: 100%;
 }
@@ -51,4 +51,16 @@
     font-size: 20px;
     font-weight: bold;
     padding: 10px 20px;
+}
+
+/*** Text Box ***/
+.heroTextBox {
+    margin: 0;
+    height: 18rem;
+    background-color: var(--vivid-dark-green);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 2rem;
 }

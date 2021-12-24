@@ -1,14 +1,17 @@
 import { Link, Outlet } from 'react-router-dom';
+import BirdyViewLogo from '../../../assets/images/BirdyViewLogo.png';
 
 export default function Navbar() {
     return (
         <header>
             <nav className="navBarContainer">
 
-                <div className="logoStyle">
+                <div>
                     <Link
                         to="/">
-                        Logo
+                        <img className="logoStyle"
+                        src={BirdyViewLogo} 
+                        alt="Logo de marca" />
                     </Link>
                 </div>
 
