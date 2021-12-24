@@ -23,7 +23,7 @@ export default function Navbar() {
 
                     <li className="linkUnit">
                         <Link
-                            to="/">
+                            to="/search">
                             Búsqueda
                         </Link>
                     </li>

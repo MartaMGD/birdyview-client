@@ -1,0 +1,54 @@
+:root {
+    --vivid-dark-green: #355C3E;
+    --pale-green: #C6E1CC;
+    --medium-pale-green: #80DB94;
+    --dark-grey-green: #515C53;
+    --medium-dark-green: #62A871;
+    --cream: #E6E1BE;
+}
+
+/*** HOME ***/
+.heroContainer {
+    position: relative;
+    width: 100%;
+}
+
+.heroImage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.heroEffect {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.heroContainer:hover .heroImage {
+    opacity: 0.3;
+}
+
+.heroContainer:hover .heroEffect {
+    opacity: 1;
+}
+
+.heroText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 10rem;
+    background-color: var(--dark-grey-green);
+    color: var(--cream);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
