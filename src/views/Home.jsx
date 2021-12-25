@@ -1,23 +1,12 @@
-import HomeImage from '../assets/images/HomeImage.jpg';
+import Hero from '../components/Hero/Hero';
 import HomeInfoBox from '../components/HomeInfoBox/HomeInfoBox';
 import NewsletterInput from '../components/NewsletterInput/NewsletterInput';
 import '../css/Hero.css'
 
 export default function Home() {
     return (
-        <main>
-            {/* Hero Image with hover effect */}
-            <div className="heroContainer">
-                <img className="heroImage"
-                    src={HomeImage}
-                    alt="Welcome" />
-                <div className="heroEffect">
-                    <p className="heroText">
-                        Bienvenido a BirdyView
-                    </p>
-                </div>
-            </div>
-
+        <main className="container">
+            <Hero/>
             {/* Text Box */}
             <p className="heroTextBox">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nesciunt pariatur consectetur in? Corrupti nihil ullam molestiae 

@@ -30,8 +30,8 @@ body {
 
 /* Container */
 .container {
-    margin-left:2rem;
-    margin-right:2rem;
+    margin-left:0;
+    margin-right:0;
 }
 
 /*** Navbar - Links - Logo ***/
@@ -49,8 +49,7 @@ body {
     margin-left: 0.6rem;
     height: 2.1rem;
     width: 2.1rem;
-    display: flex;
-    
+    display: flex; 
 }
 
 #openMenu {
@@ -112,6 +111,11 @@ body {
 
 /* DESKTOP */
 @media (min-width: 992px) {
+    .container {
+        margin-left:15rem;
+        margin-right:15rem;
+    }
+    
     .navBarContainer {
         height: 3rem;
         width: 100%;
@@ -120,6 +124,8 @@ body {
         align-items: center;
         position: relative;
         border-bottom: 1px solid var(--vivid-dark-green);
+        padding-right: 3rem;
+
     }
 
     .linkPosition {
@@ -129,7 +135,7 @@ body {
         position: static;
         width: 100%;
         height: 3rem;
-        padding: 1rem;
+        padding: 0;
     }
 
     .openMenuIcon {
