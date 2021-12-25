@@ -1,7 +1,7 @@
 :root {
     --vivid-dark-green: #355C3E;
-    --pale-green: #C6E1CC;
-    --medium-pale-green: #80DB94;
+    --cream: #C6E1CC;
+    --medium-cream: #80DB94;
     --dark-grey-green: #515C53;
     --medium-dark-green: #62A871;
     --cream: #E6E1BE;
@@ -24,7 +24,7 @@ ul, ol, li {
 
 body {
     margin: 0;
-    background-color: var(--pale-green);
+    background-color: var(--cream);
     font-family:'Poppins';
 }
 
@@ -38,7 +38,7 @@ body {
 .navBarContainer {
     height: 3rem;
     width: 100%;
-    background-color: var(--pale-green);
+    background-color: var(--cream);
     display:flex;
     align-items: center;
     position: relative;
@@ -78,7 +78,7 @@ body {
     display: none;
     width: 60%;
     padding: 1rem;
-    background-color: var(--pale-green);
+    background-color: var(--cream);
     position: absolute;
     z-index: 2;
     top: 3rem;
@@ -119,7 +119,7 @@ body {
     .navBarContainer {
         height: 3rem;
         width: 100%;
-        background-color: var(--pale-green);
+        background-color: var(--cream);
         display:flex;
         align-items: center;
         position: relative;
@@ -131,7 +131,7 @@ body {
         display: flex;
         justify-content: space-around;
         border-bottom: 1px solid var(--vivid-dark-green);
-        border-left: 1px solid var(--pale-green);
+        border-left: 1px solid var(--cream);
         position: static;
         width: 100%;
         height: 3rem;

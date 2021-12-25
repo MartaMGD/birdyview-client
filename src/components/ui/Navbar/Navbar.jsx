@@ -55,7 +55,7 @@ export default function Navbar() {
                     <li className="linkUnit">
                         <Link
                             to="/login">
-                            Accede / Registro
+                            Accede / Regístrate
                         </Link>
                     </li>
                 </ul>

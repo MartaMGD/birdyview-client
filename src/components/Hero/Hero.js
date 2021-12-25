@@ -1,4 +1,4 @@
-import HomeImage from '../../assets/images/HomeImage.jpg';
+import HomeImage from '../../assets/images/HomeImage.jpg'
 export default function Hero() {
     return (
         <div>
