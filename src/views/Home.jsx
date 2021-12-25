@@ -1,5 +1,6 @@
 import HomeImage from '../assets/images/HomeImage.jpg';
-import NewsletterInput from '../components/ui/NewsletterInput/NewsletterInput';
+import HomeInfoBox from '../components/HomeInfoBox/HomeInfoBox';
+import NewsletterInput from '../components/NewsletterInput/NewsletterInput';
 import '../css/Hero.css'
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
                 officia quos harum beatae ex culpa provident expedita facere, veniam quaerat sunt ipsa nisi. Consequuntur incidunt dolorum provident 
                 ullam voluptatibus excepturi, amet distinctio fuga obcaecati. 
             </p>
-
+            <HomeInfoBox/>
             <NewsletterInput/>
         </main>
     )

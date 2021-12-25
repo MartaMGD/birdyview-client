@@ -1,4 +1,4 @@
-import "../../../css/NewsletterInput.css";
+import "../../css/NewsletterInput.css";
 
 export default function NewsletterInput() {
     return (

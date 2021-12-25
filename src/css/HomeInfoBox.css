@@ -1,0 +1,43 @@
+.infoBoxStyle {
+    position: relative;
+    width: 100%;
+}
+
+.infoBoxImage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.infoBoxEffect {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-color:coral;
+    transition: .9s ease;
+    opacity: 0.9;
+}
+
+.infoBoxStyle:hover .infoBoxEffect {
+    width: 100%;
+}
+
+.infoBoxText {
+    white-space: nowrap; 
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
