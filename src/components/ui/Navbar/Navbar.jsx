@@ -47,13 +47,6 @@ export default function Navbar() {
 
                     <li className="linkUnit">
                         <Link
-                            to="/about">
-                            About
-                        </Link>
-                    </li>
-
-                    <li className="linkUnit">
-                        <Link
                             to="/login">
                             Accede / Regístrate
                         </Link>

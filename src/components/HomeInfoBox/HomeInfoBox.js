@@ -1,17 +1,24 @@
-import '../../css/HomeInfoBox.css';
+import { Link } from 'react-router-dom';
 import HomeInfoBoxImage from '../../assets/images/HomeInfoBoxImage.png';
+import '../../css/HomeInfoBox.css';
 
 export default function HomeInfoBox() {
     return (
         <div className="infoBoxStyle">
-        <img className="infoBoxImage"
-            src={HomeInfoBoxImage}
-            alt="Birdwatching news" />
-        <div className="infoBoxEffect">
-            <span className="infoBoxText">
-                Descubre los últimos avistamientos 
-            </span>
+            <img className="infoBoxImage"
+                src={HomeInfoBoxImage}
+                alt="Birdwatching news" />
+            <div className="infoBoxEffect">
+                <span className="infoBoxText">
+                    Descubre los últimos avistamientos
+                    <button className="knowMoreButton">
+                        <Link
+                            to="/avistamientos">
+                            Saber más
+                        </Link>
+                    </button>
+                </span>
+            </div>
         </div>
-    </div>
     )
 }
