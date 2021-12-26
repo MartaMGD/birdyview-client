@@ -12,18 +12,18 @@
 
 /*** SEARCH BAR ***/
 .searchFormWrapper {
-    height: 9rem;
+    height: 14rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--vivid-dark-green);
+    background-color: var(--dark-coral);
 }
 
 .searchInterfaceInput {
     margin-bottom: 2rem;
     margin-top: 2rem;
-    height:2rem;
+    height:2.5rem;
     width: 15rem;
     background-color: whitesmoke;
     border: solid whitesmoke 1px;
@@ -33,18 +33,18 @@
 }
 
 .searchButton {
-    height: 2rem;
+    height: 2.5rem;
     width: 5rem;
-    background-color: var(--dark-coral);
+    background-color: var(--vivid-dark-green);
     color: white;
-    border: solid var(--dark-coral) 1px;
+    border: solid var(--vivid-dark-green) 1px;
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
 }
 
 .searchButton:hover {
-    background-color: var(--medium-coral);
-    border: solid var(--medium-coral) 1px;
+    background-color: var(--medium-dark-green);
+    border: solid var(--medium-dark-green) 1px;
 }
 
 /*** SHOW BIRDS SPACE ***/
@@ -64,3 +64,25 @@
     font-weight: bold;
     padding-bottom: 1rem;
 }
+
+/*** Media queries ***/
+/* TABLET */
+@media (min-width: 768px) { }
+
+/* DESKTOP */
+@media (min-width: 992px) {
+
+    .searchInterfaceInput {
+        height:2.5rem;
+        width: 35rem;
+    }
+    
+    .searchButton {
+        height: 2.5rem;
+        width: 5rem;
+    }
+
+  }
+
+/* DESKTOP */
+@media (min-width: 1200px) { }
