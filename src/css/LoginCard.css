@@ -27,7 +27,7 @@
     margin: 0.7rem;
     border-radius: 5rem;
     border: solid var(--medium-teal) 0.1rem;
-    display: flex;
+    padding-left: 2rem;
 
 }
 
@@ -39,7 +39,7 @@
     background-color: var(--dark-grey-green);
     color: var(--pale-green);
     font-weight: bold;
-    margin-top: 0.6rem;
+    margin-top: 1rem;
 }
 
 .loginButtonStyle:hover {
@@ -49,12 +49,18 @@
 
 .loginMessage {
     font-weight: bold;
-    padding-bottom: 2rem;
+    padding: 1rem;
 }
 
 .loginSpanStyle {
     font-size: 0.8rem;
     padding-top: 0.5rem;
+}
+
+.inputTextPlaceholders {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
 }
 
 /*** Media queries ***/

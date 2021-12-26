@@ -6,6 +6,8 @@ import LoginScreen from './views/LoginScreen';
 import Navbar from './components/ui/Navbar/Navbar';
 import Footer from './components/ui/Footer/Footer';
 import Home from './views/Home';
+import RetrievePassword from './views/RetrievePassword';
+import RegisterScreen from './views/RegisterScreen';
 
 export default function BirdyViewApp() {
   return (
@@ -18,6 +20,8 @@ export default function BirdyViewApp() {
             <Route path="articulos" element={<Articles/>}/>
             <Route path="avistamientos" element={<Birdwatching/>}/>
             <Route path="login" element={<LoginScreen/>}/>
+            <Route path="recuperarpassword" element={<RetrievePassword/>}/>
+            <Route path="registernewuser" element={<RegisterScreen/>}/>
         </Routes>
         <Footer/>
         </BrowserRouter>

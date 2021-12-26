@@ -7,9 +7,9 @@ export default function LoginScreen() {
     return (
         <main className="loginBackground loginContainer">
             <LoginCard
-            loginMessage="Inicia Sesión"
-            firstInputText="Introduce tu correo electrónico"
-            secondInputText="Contraseña"/>
+            loginMessage="Recupera tu contraseña"
+            firstInputText="Introduce tu nombre de usuario"
+            secondInputText="Introduce tu correo electrónico"/>
         </main>
     )
 }
