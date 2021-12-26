@@ -1,0 +1,17 @@
+.birdCard {
+    height: 17rem;
+    width: 13rem;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.25rem 0.25rem 0 gray;
+    transition: 0.2s ease-in;
+    padding: 1rem;
+  }
+  
+  .birdCard:hover {
+    box-shadow: 0 0.25rem 1rem 0 gray;
+  }
+  
+  .birdCardContainer {
+    padding: 2rem;
+  }

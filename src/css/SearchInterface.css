@@ -54,6 +54,7 @@
     background-color: var(--cream);
     padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -61,4 +62,5 @@
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
+    padding-bottom: 1rem;
 }

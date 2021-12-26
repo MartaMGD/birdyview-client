@@ -1,4 +1,5 @@
 import '../../css/SearchInterface.css';
+import BirdCard from '../BirdCard/BirdCard';
 
 export default function SearchInterface() {
     return (
@@ -21,6 +22,7 @@ export default function SearchInterface() {
 
             <div className="showBirds">
                 <span>Resultados</span>
+                <BirdCard/>
             </div>
         </main>
     )
