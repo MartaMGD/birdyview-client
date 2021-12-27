@@ -60,6 +60,7 @@
 .knowMoreButton:hover {
     background-color: gray;
     border: solid gray 1px;
+    cursor: pointer;
 }
 
 /*** Media queries ***/

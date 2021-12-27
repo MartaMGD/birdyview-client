@@ -8,6 +8,7 @@
     --light-coral: #FF9778;
     --medium-coral: #FF7358;
     --dark-coral: #6E3226;
+    --vanilla: #FFE9B8;
 }
 
 /*** SEARCH BAR ***/
@@ -51,7 +52,7 @@
 .showBirds {
     height: 100%;
     width: 100%;
-    background-color: var(--cream);
+    background-color: var(--vanilla);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;

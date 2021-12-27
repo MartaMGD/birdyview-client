@@ -5,6 +5,7 @@
     --dark-grey-green: #515C53;
     --medium-dark-green: #62A871;
     --cream: #E6E1BE;
+    --vanilla: #FFE9B8;
 }
 
 /*** Global Styles ***/
@@ -32,6 +33,14 @@ body {
 .container {
     margin-left:0;
     margin-right:0;
+}
+
+.titleStyle {
+    background-color: var(--vanilla);
+    font-size: 1.6rem;
+    padding: 2rem;
+    margin: 0;
+    height: 6rem;
 }
 
 /*** Navbar - Links - Logo ***/
@@ -121,6 +130,12 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/*** BLOG PAGE GLOBAL CONFIGURATION ***/
+
+
+
+
 
 /*** Media queries ***/
 /* TABLET */
