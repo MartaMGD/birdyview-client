@@ -1,12 +1,15 @@
 import '../../css/BirdCard.css';
 
-export default function BirdCard() {
+export default function BirdCard(props) {
+    console.log(props.id);
     return (
-        <div class="birdCard">
-            <img src="img_avatar.png" alt="Imagen pájaro" />
-            <div class="birdCardcontainer">
-                <h4><b>Pájaro 1</b></h4>
-                <p>Descripción pájaro</p>
+        <div className="birdCard">
+            <img className="birdPhotoCard" 
+            src={`/birdimages/${props.id}.jpg`} 
+            alt="Imagen pájaro"/>
+            <div className="birdCardcontainer">
+                <h4><b>{props.birdname}</b></h4>
+                <p>{props.description}</p>
             </div>
         </div>
     )
