@@ -62,7 +62,7 @@
     color: var(--cream);
     display: flex;
     align-items: center;
-    text-align: justify;
+    text-align:center;
     padding: 2rem;
 }
 
