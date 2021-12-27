@@ -1,5 +1,5 @@
 .birdCard {
-    height: 17rem;
+    height: 20rem;
     width: 18rem;
     background-color: white;
     border-radius: 1.5rem;
@@ -48,10 +48,11 @@
 
   .birdPhotoCard {
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     object-fit:cover;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+
   }
   
  }

@@ -29,7 +29,7 @@ export default function SearchInterface() {
                                 key={i}
                                 id={bird.id}
                                 birdname={bird.birdname}
-                                description={bird.description} />
+                                scientificname={bird.scientificname} />
                         )
                     })
                 }

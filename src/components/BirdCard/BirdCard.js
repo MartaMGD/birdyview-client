@@ -9,7 +9,7 @@ export default function BirdCard(props) {
             alt="Imagen pájaro"/>
             <div className="birdCardcontainer">
                 <h4><b>{props.birdname}</b></h4>
-                <p>{props.description}</p>
+                <p>{props.scientificname}</p>
             </div>
         </div>
     )
