@@ -131,11 +131,12 @@ body {
     font-weight: bold;
 }
 
-/*** BLOG PAGE GLOBAL CONFIGURATION ***/
-
-
-
-
+/*** BIRD PAGE GLOBAL CONFIGURATION ***/
+.birdPageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*** Media queries ***/
 /* TABLET */
