@@ -10,7 +10,7 @@ export default function Birdpage(props) {
     return (
         <div className="container birdPageWrapper">
             <img className="infoBirdPhoto"
-                src="public/birdimages/1.jpg"
+                src={`/birdimages/${bird.id}.jpg`}
                 alt="Pájaro info" />
             <h2> Nombre común: {bird.birdname}</h2>
             <h3> Nombre científico: {bird.scientificname}</h3>
