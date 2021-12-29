@@ -9,6 +9,7 @@ import Home from './views/Home';
 import RetrievePassword from './views/RetrievePassword';
 import RegisterScreen from './views/RegisterScreen';
 import Birdpage from './views/Birdpage';
+import BlogEntryPage from './views/BlogEntryPage';
 
 export default function BirdyViewApp() {
   return (
@@ -25,6 +26,7 @@ export default function BirdyViewApp() {
             <Route path="recuperarpassword" element={<RetrievePassword/>}/>
             <Route path="registernewuser" element={<RegisterScreen/>}/>
             <Route path="birdpage/:birdId" element={<Birdpage/>}/>
+            <Route path="articulos/:postId" element={<BlogEntryPage/>}/>
 
         </Routes>
         <Footer/>
