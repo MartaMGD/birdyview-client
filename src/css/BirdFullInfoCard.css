@@ -1,0 +1,9 @@
+.birdInfoContainer {
+    margin: 3rem;
+    background-color: var(--vanilla);
+    box-shadow: 0 0.25rem 0.25rem 0 gray;
+    border-radius: 2rem;
+    height: 50rem;
+    width: 50rem;
+
+}

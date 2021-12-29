@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import '../../css/BirdCard.css';
 
 export default function BirdCard(props) {
-    console.log(props.id);
     return (
         <div className="birdCard">
             <img className="birdPhotoCard"
@@ -12,8 +11,9 @@ export default function BirdCard(props) {
                 <h4><b>{props.birdname}</b></h4>
                 <p>{props.scientificname}</p>
                 <h5 className="toPageStyle">
+
                     <Link
-                        to="/birdpage">
+                        to={`/birdpage/${props.id}`}>
                         Saber más
                     </Link>
                 </h5>

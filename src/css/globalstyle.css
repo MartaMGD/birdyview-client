@@ -133,9 +133,29 @@ body {
 
 /*** BIRD PAGE GLOBAL CONFIGURATION ***/
 .birdPageWrapper {
+    background-color: var(--vanilla);
+    color: var(--vivid-dark-green);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.infoBirdPhoto {
+    height: 50rem;
+    width: 100%;
+}
+
+/*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
+.mainBlogStyle {
+    background-color: var(--vanilla);
+    color: var(--vivid-dark-green);
+    padding: 2rem;
+}
+
+.articleEntryStyle {
+    padding-bottom: 1.5rem;
+    text-align: justify;
 }
 
 /*** Media queries ***/

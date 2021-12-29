@@ -1,25 +1,23 @@
 import '../css/globalstyle.css';
-import { birds } from '../data/hardcodeddata';
-import BirdFullInfoCard from '../components/BirdFullInfoCard/BirdFullInfoCard';
+import { useParams } from 'react-router';
+import { getBirdById } from '../selectors/getBirdById';
 
-export default function Birdpage() {
+export default function Birdpage(props) {
+    const { birdId } = useParams();
+
+    const bird = getBirdById(birdId);
+
     return (
-        <main className="birdPageWrapper">
-            {
-                birds.map((bird, i) => {
-                    return (
-                        <BirdFullInfoCard
-                            key={i}
-                            id={bird.id}
-                            birdname={bird.birdname}
-                            scientificname={bird.scientificname}
-                            habitat={bird.habitat}
-                            height={bird.height}
-                            wingspan={bird.wingspan}
-                            description={bird.description} />
-                    )
-                })
-            }
-        </main>
+        <div className="container birdPageWrapper">
+            <img className="infoBirdPhoto"
+                src="public/birdimages/1.jpg"
+                alt="Pájaro info" />
+            <h2> Nombre común: {bird.birdname}</h2>
+            <h3> Nombre científico: {bird.scientificname}</h3>
+            <span><b>Habitat:</b> {bird.habitat}</span>
+            <span><b>Altura:</b> {bird.height}</span>
+            <span><b>Envergadura:</b> {bird.wingspan}</span>
+            <p><b>Descripción:</b> {bird.description} </p>
+        </div>
     )
 }

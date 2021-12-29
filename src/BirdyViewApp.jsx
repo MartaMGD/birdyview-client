@@ -24,7 +24,7 @@ export default function BirdyViewApp() {
             {/* Rutas internas? */}
             <Route path="recuperarpassword" element={<RetrievePassword/>}/>
             <Route path="registernewuser" element={<RegisterScreen/>}/>
-            <Route path="birdpage" element={<Birdpage/>}/>
+            <Route path="birdpage/:birdId" element={<Birdpage/>}/>
 
         </Routes>
         <Footer/>
