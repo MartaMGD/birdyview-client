@@ -1,0 +1,81 @@
+:root {
+    --vivid-dark-green: #355C3E;
+    --pale-green: #C6E1CC;
+    --medium-pale-green: #80DB94;
+    --dark-grey-green: #515C53;
+    --medium-dark-green: #62A871;
+    --cream: #E6E1BE;
+    --vanilla: #FFE9B8;
+}
+
+#tableStyle {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--vanilla);
+    border-radius: 0.4rem;
+    box-shadow: 0 0.15rem 0.15rem 0 gray;
+    
+  }
+  
+  #tableStyle td, #tableStyle th {
+    border: solid ver(--dark-grey-green) 1px;
+    padding: 0.5rem;
+  }
+  
+  #tableStyle tr:nth-child(even){background-color: var(--medium-pale-green)}
+  
+  #tableStyle tr:hover {background-color: #ddd;}
+  
+  #tableStyle th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--vivid-dark-green);
+    color: white;
+  }
+
+  /* INPUT TABLE */
+
+  .addBirdFormStyle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--vanilla);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: solid var(--dark-grey-green) 1px;
+  }
+
+  input, select {
+      padding-left: 1rem;
+      height: 2rem;
+      width: 25rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.3rem;
+      border: solid var(--vivid-dark-green) 0.1rem;
+      margin: 0.5rem;
+  }
+
+  .birdwatchingSpanStyle {
+    font-weight: bold;
+    color: var(--dark-grey-green)
+  }
+  
+  button {
+      height: 2rem;
+      width: 5rem;
+      background-color: var(--dark-grey-green);
+      border: solid var(--dark-grey-green) 0.1rem;
+      border-radius: 0.3rem;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--vivid-dark-green);
+    border: solid var(--vivid-dark-green) 0.1rem;
+  }

@@ -1,9 +1,9 @@
-import '../css/globalstyle.css';
+import BirdwatchingTable from "../components/BirdWatchingTable/BirdWatchingTable";
 
 export default function Birdwatching() {
     return (
-        <main className="container">
-            <h1 className="titleStyle">Avistamientos</h1>
-        </main>
+        <div>
+            <BirdwatchingTable/>
+        </div>
     )
 }
