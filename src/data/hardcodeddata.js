@@ -72,3 +72,28 @@ export const birds = [
         "description": "Ave fluvial y poco gregaria. A menudo se ve en zonas urbanas."
     }
 ]
+
+
+export const users = [
+    {
+        id: 1,
+        email: 'juanito@gmail.com',
+        pass: '123',
+        nombre: 'Juanito',
+        admin: false
+    },
+    {
+        id: 2,
+        email: 'pepito@gmail.com',
+        pass: '1234',
+        nombre: 'Pepito',
+        admin: false
+    },
+    {
+        id: 3,
+        email: 'admin@gmail.com',
+        pass: '12345',
+        nombre: 'Jaimito',
+        admin: true
+    }
+]

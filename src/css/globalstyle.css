@@ -81,6 +81,7 @@ body {
 
 .linkUnit a:hover {
     text-shadow: 2px 2px 3px var(--dark-grey-green);
+    cursor: pointer;
 }
 
 .linkPosition {
@@ -94,6 +95,11 @@ body {
     right: 0;
     height: calc(100vh - 48px);
     border-left: 1px solid var(--vivid-dark-green);
+}
+
+.navbarBlockStyle {
+    display: flex;
+    flex-direction: row;
 }
 
 .openMenu:checked ~ .linkPosition {
@@ -190,6 +196,10 @@ body {
         width: 100%;
         height: 3rem;
         padding: 0;
+    }
+
+    .navbarBlockStyle {
+padding-left: 2rem;
     }
 
     .openMenuIcon {
