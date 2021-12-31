@@ -77,9 +77,9 @@ export const birds = [
 export const users = [
     {
         id: 1,
-        email: 'juanito@gmail.com',
+        email: 'maria@gmail.com',
         pass: '123',
-        nombre: 'Juanito',
+        nombre: 'María',
         admin: false
     },
     {
