@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function Articles() {
     return (
-        <main className="container">
+        <main className="container mainBlogStyle">
             <h2 className="titleStyle"> Últimos artículos </h2>
             {
-                <div className="mainBlogStyle">
+                <div>
                     <ul className="list-group">
                         {blogentries.map((entry, i) => {
                             return (

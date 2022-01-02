@@ -17,7 +17,7 @@ export default function Birdpage(props) {
             <span><b>Habitat:</b> {bird.habitat}</span>
             <span><b>Altura:</b> {bird.height}</span>
             <span><b>Envergadura:</b> {bird.wingspan}</span>
-            <p><b>Descripción:</b> {bird.description} </p>
+            <p className="birdParagStyle"><b>Descripción:</b> {bird.description} </p>
         </div>
     )
 }
