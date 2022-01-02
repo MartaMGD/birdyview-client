@@ -300,6 +300,18 @@ body {
 .infoBirdPhoto {
     padding-top: 2rem;
 }
+
+.birdPageWrapper{
+    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    height: 100%;
+    background-color: var(--vanilla);
+    color: var(--vivid-dark-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
  }
 
 /* DESKTOP */
