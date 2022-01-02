@@ -10,6 +10,8 @@ import RetrievePassword from './views/RetrievePassword';
 import RegisterScreen from './views/RegisterScreen';
 import { useEffect, useState } from 'react';
 import UserDashboard from './views/UserDashboard';
+import Birdpage from './views/Birdpage';
+import BlogEntryPage from './views/BlogEntryPage';
 
 export default function BirdyViewApp() {
 
@@ -18,7 +20,7 @@ export default function BirdyViewApp() {
         status: false,
         token: '',
         name: '',
-        email:'',
+        email: '',
         admin: false
     })
 
@@ -33,35 +35,37 @@ export default function BirdyViewApp() {
     // Esta función redirige al usuario al componente (panel de control) si está autenticado o sino lo deja en el login
     function PrivateOutlet() {
         const auth = useAuth()
-        return auth ? <Outlet/> : <Navigate to="/login"/>
+        return auth ? <Outlet /> : <Navigate to="/login" />
     }
 
     return (
-            <>
-                <BrowserRouter>
-                    {/*aquí pasamos la sesión a la navbar*/}
-                    <Navbar userSession={userSession} setUserSession={setUserSession}/>
-                    <Routes>
-                        <Route path="/" element={<Home/>}/>
-                        <Route path="search" element={<Search/>}/>
-                        <Route path="articulos" element={<Articles/>}/>
+        <>
+            <BrowserRouter>
+                {/*aquí pasamos la sesión a la navbar*/}
+                <Navbar userSession={userSession} setUserSession={setUserSession} />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path="birdpage/:birdId" element={<Birdpage />} />
+                    <Route path="articulos" element={<Articles />} />
+                    <Route path="articulos/:postId" element={<BlogEntryPage />} />
 
-                        {/*aquí pasamos la sesión al componente Login Screen*/}
-                        <Route path="login" element={<LoginScreen setUserSession={setUserSession}/>}/>
-                        <Route path="recuperarpassword" element={<RetrievePassword/>}/>
-                        <Route path="registernewuser" element={<RegisterScreen/>}/>
+                    {/*aquí pasamos la sesión al componente Login Screen*/}
+                    <Route path="login" element={<LoginScreen setUserSession={setUserSession} />} />
+                    <Route path="recuperarpassword" element={<RetrievePassword />} />
+                    <Route path="registernewuser" element={<RegisterScreen />} />
 
-                        {/*Esta es una ruta protegida: la del panel de usuario*/}
-                        <Route path="avistamientos" element={<PrivateOutlet/>}>
-                            <Route path="" element={<Birdwatching userSession={userSession}/>}/>
-                        </Route>
+                    {/*Esta es una ruta protegida: la del panel de usuario*/}
+                    <Route path="avistamientos" element={<PrivateOutlet />}>
+                        <Route path="" element={<Birdwatching userSession={userSession} />} />
+                    </Route>
 
-                        <Route path="userdashboard" element={<PrivateOutlet/>}>
-                            <Route path="" element={<UserDashboard userSession={userSession}/>}/>
-                        </Route>
-                    </Routes>
-                    <Footer/>
-                </BrowserRouter>
-            </>
+                    <Route path="userdashboard" element={<PrivateOutlet />}>
+                        <Route path="" element={<UserDashboard userSession={userSession} />} />
+                    </Route>
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </>
     )
 }

@@ -24,7 +24,7 @@ export const birds = [
         "habitat": "Península",
         "height": "27 cm",
         "wingspan": "48 cm",
-        "description": "Muy abundante por todo el país."
+        "description": "La abubilla​ es una especie de ave bucerotiforme de la familia Upupidae;​ no obstante, en la taxonomía de Sibley-Ahlquist, Upupa es separado en un orden propio, los Upupiformes. Se trata de una especie diurna, solitaria, territorial y migratoria."
     },
     {
         "id": "4",
@@ -33,7 +33,7 @@ export const birds = [
         "habitat": "Península",
         "height": "110 cm",
         "wingspan": "265 cm",
-        "description": "Ave carroñera que vive en zonas montañosas."
+        "description": "Puede llegar a los 10 kg de peso, con una envergadura que supera los 2,5 m (pudiendo alcanzar los 260 cm). Las plumas son de color ocre o canela en la mayor parte del cuerpo (dorso, zona ventral y mitad anterior de las alas), siendo este el motivo de su apelativo leonado. Estas plumas leonadas se tornan marrón oscuro o negro en las rectrices de la cola y extremo de las rémiges. La base del cuello está rodeada por filoplumas blancas a modo de gorguera. El pico ganchudo, típico de las rapaces, y especializado en desgarrar tejidos, es pardo grisáceo en la base y amarillento pálido en los lados.Los tarsos y dedos son grises y grandes, aunque mucho más débiles que los de otras grandes rapaces, siendo las uñas cortas y romas.Esta circunstancia, a la que hay que añadir especialmente el gran peso y lentitud de estas aves, hace que sea prácticamente imposible que los buitres den caza o maten a otros animales, como sí hace el resto de las rapaces."
     },
     {
         "id": "5",

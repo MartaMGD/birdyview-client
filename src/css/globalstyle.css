@@ -70,6 +70,7 @@ body {
     right: 0;
     cursor: pointer;
     padding-right: 1rem;
+
 }
 
 .linkUnit a {
@@ -138,7 +139,7 @@ body {
 }
 
 /*** BIRD PAGE GLOBAL CONFIGURATION ***/
-.birdPageWrapper {
+.birdPageWrapper, .birdPageWrapper p{
     height: 100%;
     background-color: var(--vanilla);
     color: var(--vivid-dark-green);
@@ -146,6 +147,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.birdPageWrapper p {
+    padding: 0 2rem;
+    text-align: justify;
 }
 
 .infoBirdPhoto {
@@ -251,6 +257,49 @@ body {
         width: 50%;
         border-radius: 7px;
     }
+
+
+/*** USER DASHBOARD GLOBAL CONFIGURATION ***/
+
+.welcomePanelStyle {
+    background-color: var(--pale-green);
+    box-shadow: 2px 2px 2px var(--dark-grey-green);
+    color:black;
+    height: 3rem;
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+   
+}
+
+.dashboardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboardInputStyle {
+    height: 2rem;
+    width: 50rem;
+    margin: 0.8rem;
+}
+
+.userPanelStyle {
+    height: 40rem;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*** BIRD PAGE GLOBAL CONFIGURATION ***/
+
+.infoBirdPhoto {
+    padding-top: 2rem;
+}
  }
 
 /* DESKTOP */
