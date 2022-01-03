@@ -63,7 +63,7 @@ export default function Navbar(props) {
                                 })
                                 navigate('/')
                             }}>
-                                Logout
+                                Cerrar sesión
                             </a>
                             : <Link to="/login">
                                 Accede / Regístrate
