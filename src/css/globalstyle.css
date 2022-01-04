@@ -33,6 +33,7 @@ body {
 .container {
     margin-left:0;
     margin-right:0;
+    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
 }
 
 /*** Navbar - Links - Logo ***/
@@ -156,7 +157,6 @@ body {
     margin: 0;
     background-image: url('../assets/images/LoginRegisterBackground.jpeg');
     color: var(--vanilla);
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
     font-size: 1.6rem;
     padding: 4rem;
     display: flex;
@@ -167,7 +167,6 @@ body {
     background-color: var(--vanilla);
     color: var(--vivid-dark-green);
     padding: 2rem;
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
 }
 
 .articleEntryStyle {

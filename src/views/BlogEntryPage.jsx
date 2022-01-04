@@ -16,7 +16,7 @@ export default function BlogEntryPage(props) {
 
             {/* COMMENTS */}
             <div className="container commentBoxStyle">
-            <h3 className="container">Comentarios</h3>    
+            <h3>Comentarios</h3>    
 
             <input 
             className="commentNameInputStyle"
