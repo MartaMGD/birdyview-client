@@ -35,14 +35,6 @@ body {
     margin-right:0;
 }
 
-.titleStyle {
-    background-color: var(--vanilla);
-    font-size: 1.6rem;
-    padding: 2rem;
-    margin: 0;
-    height: 6rem;
-}
-
 /*** Navbar - Links - Logo ***/
 .navBarContainer {
     height: 3rem;
@@ -134,7 +126,7 @@ body {
     align-items: flex-end;
     padding: 2rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -160,6 +152,17 @@ body {
 }
 
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
+.titleStyle {
+    margin: 0;
+    background-image: url('../assets/images/LoginRegisterBackground.jpeg');
+    color: var(--vanilla);
+    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    font-size: 1.6rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+}
+
 .mainBlogStyle {
     background-color: var(--vanilla);
     color: var(--vivid-dark-green);
@@ -170,6 +173,15 @@ body {
 .articleEntryStyle {
     padding-bottom: 1.5rem;
     text-align: justify;
+    border-bottom: solid var(--vivid-dark-green) 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clickBlogText {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: black;
 }
 
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/

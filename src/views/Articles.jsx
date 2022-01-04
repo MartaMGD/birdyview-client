@@ -4,28 +4,40 @@ import { Link } from 'react-router-dom';
 
 export default function Articles() {
     return (
-        <main className="container mainBlogStyle">
-            <h2 className="titleStyle"> Últimos artículos </h2>
-            {
-                <div>
-                    <ul className="list-group">
-                        {blogentries.map((entry, i) => {
-                            return (
-                                <li
-                                    key={i}>
-                                    <h3 className="articleTitleStyle">{entry.articletitle}</h3>
-                                    <p className="articleEntryStyle">{entry.articlecontent}</p>
+        <>
+            <h1 className="container titleStyle"> Últimos artículos </h1>
+            <main className="container mainBlogStyle">
 
-                                    <Link
-                                        to={`/articulos/${entry.id}`}>
-                                        Sigue leyendo
-                                    </Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            }
-        </main>
+                {
+                    <div>
+                        <ul className="list-group">
+                            {blogentries.map((entry, i) => {
+                                return (
+                                    <li className="articleEntryStyle"
+                                        key={i}>
+
+                                        <h3 className="articleTitleStyle">{entry.articletitle}</h3>
+
+                                        <p>
+
+                                            {entry.articlecontent}
+
+                                        </p>
+
+                                        <Link
+                                            to={`/articulos/${entry.id}`}>
+                                            <span className="clickBlogText">
+                                                Sigue leyendo
+                                            </span>
+                                        </Link>
+
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                }
+            </main>
+        </>
     )
 }
