@@ -167,6 +167,20 @@ body {
     background-color: var(--vanilla);
     color: var(--vivid-dark-green);
     padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.mainEntryStyle {
+    background-color: var(--vanilla);
+    color: var(--vivid-dark-green);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .articleEntryStyle {
@@ -175,6 +189,7 @@ body {
     border-bottom: solid var(--vivid-dark-green) 1px;
     display: flex;
     flex-direction: column;
+    width: 70rem;
 }
 
 .clickBlogText {

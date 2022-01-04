@@ -9,7 +9,7 @@ export default function BlogEntryPage(props) {
 
     return (
         <>
-            <div className="container mainBlogStyle">
+            <div className="container mainEntryStyle">
                 <h2>{post.articletitle}</h2>
                 <p>{post.articlecontent}</p>
             </div>
