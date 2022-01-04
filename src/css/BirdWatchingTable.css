@@ -13,9 +13,8 @@
     border-collapse: collapse;
     width: 100%;
     background-color: var(--vanilla);
-    border-radius: 0.4rem;
-    box-shadow: 0 0.15rem 0.15rem 0 gray;
-    
+    border: solid var(--dark-grey-green) 1px;
+    box-shadow: 0px 4px 12px -1px var(--dark-grey-green);
   }
   
   #tableStyle td, #tableStyle th {
@@ -43,14 +42,15 @@
   /* INPUT TABLE */
 
   .addBirdFormStyle {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
     background-color: var(--vanilla);
     align-items: center;
     padding: 2rem;
     border: solid var(--dark-grey-green) 1px;
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 12px -1px var(--dark-grey-green);
 
   }
 

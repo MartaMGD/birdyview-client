@@ -201,14 +201,18 @@ body {
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
 .commentBoxStyle {
     background-color: var(--vanilla);
-    padding: 1rem;
+    padding-left: 2rem;
     border-top: solid var(--vivid-dark-green) 1px;
     box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .commentInputStyle {
     height: 5rem;
-    width: 25rem;
+    width: 15rem;
     padding-bottom: 2rem;
 }
 
@@ -351,6 +355,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
+.birdwatchingPage {
+    background-color: var(--vanilla);
+    padding: 2rem;
 }
 
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
