@@ -1,6 +1,8 @@
 import '../css/globalstyle.css';
 import { useParams } from 'react-router';
+import { useState } from 'react';
 import { getPostbyId } from '../selectors/getPostById';
+import CommentBox from '../components/CommentBox/CommentBox';
 
 export default function BlogEntryPage(props) {
     const { postId } = useParams();
@@ -16,18 +18,24 @@ export default function BlogEntryPage(props) {
 
             {/* COMMENTS */}
             <div className="container commentBoxStyle">
-            <h3>Comentarios</h3>    
+                <h3>Comentarios</h3>
 
-            <input 
-            className="commentNameInputStyle"
-            type="text"
-            placeholder= "Nombre" />
+                <input
+                    className="commentNameInputStyle"
+                    type="text"
+                    placeholder="Nombre"
+                />
 
-            <input 
-            className="commentInputStyle"
-            type="text"
-            placeholder= "Deja tu comentario..." />
+                <input
+                    className="commentInputStyle"
+                    type="text"
+                    placeholder="Deja tu comentario..."
+                />
+
+                <img className="articleSeparator" src="/articleseparator.png" alt="Separator" />
             </div>
+
+            <CommentBox />
         </>
     )
 

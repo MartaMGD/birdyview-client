@@ -158,7 +158,7 @@ body {
     background-image: url('../assets/images/LoginRegisterBackground.jpeg');
     color: var(--vanilla);
     font-size: 1.6rem;
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     align-items: center;
 }
@@ -174,12 +174,16 @@ body {
 }
 
 .mainEntryStyle {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     background-color: var(--vanilla);
     color: var(--vivid-dark-green);
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
 
 }
 
@@ -203,7 +207,6 @@ body {
     background-color: var(--vanilla);
     padding-left: 2rem;
     border-top: solid var(--vivid-dark-green) 1px;
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -214,6 +217,11 @@ body {
     height: 5rem;
     width: 15rem;
     padding-bottom: 2rem;
+}
+
+.articleSeparator {
+    width: 400px;
+    height: 70px;
 }
 
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/

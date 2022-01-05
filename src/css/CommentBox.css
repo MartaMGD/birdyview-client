@@ -1,0 +1,27 @@
+:root {
+    --vivid-dark-green: #355C3E;
+    --pale-green: #C6E1CC;
+    --medium-pale-green: #80DB94;
+    --dark-grey-green: #515C53;
+    --medium-dark-green: #62A871;
+    --cream: #E6E1BE;
+    --vanilla: #FFE9B8;
+}
+
+.commentStyle {
+    padding-top: 2rem;
+    padding-left: 10rem;
+    height: 200px;
+    background-color: var(--vanilla);
+    color: var(--dark-grey-green);
+    border-bottom: solid black 1px;
+
+}
+
+.commentName {
+    font-weight: bold;
+}
+
+.commentContent {
+    text-align: justify;
+}
