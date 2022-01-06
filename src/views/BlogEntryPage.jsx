@@ -9,10 +9,15 @@ export default function BlogEntryPage(props) {
 
     const post = getPostbyId(postId);
 
+
     return (
         <>
             <div className="container mainEntryStyle">
                 <h2>{post.articletitle}</h2>
+                <img className="articlePhoto"
+                src={`/articleimages/${post.id}.jpg`}
+                alt="Foto artículo" />
+                <img className="photoSeparator" src="/photoseparator.png" alt="Separator" />
                 <p>{post.articlecontent}</p>
             </div>
 
@@ -38,6 +43,5 @@ export default function BlogEntryPage(props) {
             <CommentBox />
         </>
     )
-
 
 }

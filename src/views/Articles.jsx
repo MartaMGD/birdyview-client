@@ -20,7 +20,7 @@ export default function Articles() {
 
                                         <p>
 
-                                            {entry.articlecontent}
+                                            {entry.extract}
 
                                         </p>
 

@@ -10,11 +10,10 @@
 
 .commentStyle {
     padding-top: 2rem;
-    padding-left: 10rem;
+    padding-left: 2rem;
     height: 200px;
     background-color: var(--vanilla);
     color: var(--dark-grey-green);
-    border-bottom: solid black 1px;
 
 }
 
@@ -25,3 +24,24 @@
 .commentContent {
     text-align: justify;
 }
+
+/*** Media queries ***/
+/* TABLET */
+@media (min-width: 768px) { }
+
+/* DESKTOP */
+@media (min-width: 992px) {
+    .commentStyle {
+        padding-top: 2rem;
+        padding-left: 10rem;
+        height: 200px;
+        background-color: var(--vanilla);
+        color: var(--dark-grey-green);
+
+    }
+ }
+
+/* DESKTOP */
+@media (min-width: 1200px) { }
+
+
