@@ -192,7 +192,6 @@ body {
     border-bottom: solid var(--vivid-dark-green) 1px;
     display: flex;
     flex-direction: column;
-    width: 70rem;
 }
 
 .clickBlogText {
@@ -272,12 +271,18 @@ body {
 
 .dashboardInputStyle {
     height: 2rem;
-    width: 23rem;
+    width: 40vh;
 }
 
 /*** Media queries ***/
 /* TABLET */
-@media (min-width: 768px) { }
+@media (min-width: 768px) { 
+    .dashboardInputStyle {
+        height: 2rem;
+        width: 60vh;
+    }
+    
+}
 
 /* DESKTOP */
 @media (min-width: 992px) {
@@ -342,7 +347,7 @@ body {
 
 .dashboardInputStyle {
     height: 2rem;
-    width: 50rem;
+    width: 60vh;
     margin: 0.8rem;
 }
 

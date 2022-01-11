@@ -43,13 +43,12 @@
 
     border: solid var(--dark-grey-green) 1px;
     border-radius: 7px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    padding-right: 2rem;
 }
 
 .submitButtonStyle:hover {
     background-color: var(--medium-dark-green);
+    cursor: pointer;
 }
 
