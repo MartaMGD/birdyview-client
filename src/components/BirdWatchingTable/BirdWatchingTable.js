@@ -37,8 +37,10 @@ export default function TablaPajaros() {
             watchedtime: watchedtime
         }
 
-        setBirdInfo((previousBirds) => [...previousBirds, newBird])
+        setBirdInfo((previousBirds) => [...previousBirds, newBird]);
     }
+
+
 
     return (
         <>
