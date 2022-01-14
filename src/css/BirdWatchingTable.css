@@ -12,20 +12,21 @@
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    background-color: var(--vanilla);
+    background-color:rgb(241, 191, 144);
     border: solid var(--dark-grey-green) 1px;
     box-shadow: 0px 4px 12px -1px var(--dark-grey-green);
   }
   
   #tableStyle td, #tableStyle th {
     border: solid ver(--dark-grey-green) 1px;
-    padding: 0.5rem;
+    padding-left: 8rem;
+    
   }
   
-  #tableStyle tr:nth-child(even){background-color: var(--medium-pale-green)}
+  #tableStyle tr:nth-child(even){background-color: rgb(199, 128, 88);}
   
-  #tableStyle tr:hover {background-color: #ddd;}
-  
+  #tableStyle tr:hover {background-color: var(--pale-green)}
+
   #tableStyle th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -34,10 +35,6 @@
     color: white;
   }
 
-  .birdtd{
-    display: flex;
-    flex-direction: column;
-  } 
 
   /* INPUT TABLE */
 

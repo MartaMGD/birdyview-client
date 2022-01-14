@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../css/BirdWatchingTable.css';
+import { birds } from '../../data/hardcodeddata';
 
 export default function TablaPajaros() {
 
@@ -14,6 +15,7 @@ export default function TablaPajaros() {
 
     const [birdname, setBirdname] = useState("");
     const [location, setLocation] = useState("");
+    const [watchedday, setWatchedday] = useState("");
     const [watchedtime, setWatchedtime] = useState("");
 
     // HANDLES
@@ -25,6 +27,10 @@ export default function TablaPajaros() {
         setLocation(e.target.value);
     }
 
+    const handleWatchedDayChange = (e) => {
+        setWatchedday(e.target.value);
+    }
+
     const handleTimeChange = (e) => {
         setWatchedtime(e.target.value);
     }
@@ -34,6 +40,7 @@ export default function TablaPajaros() {
         const newBird = {
             birdname: birdname,
             location: location,
+            watchedday: watchedday,
             watchedtime: watchedtime
         }
 
@@ -50,6 +57,7 @@ export default function TablaPajaros() {
                     <tr>
                         <th>Ave</th>
                         <th>Localización</th>
+                        <th>Día</th>
                         <th>Hora</th>
                     </tr>
                 </thead>
@@ -66,6 +74,10 @@ export default function TablaPajaros() {
                                 {bird.location}
                             </td>
 
+                            <td className="watcheddaytd" key={bird.watchedday}>
+                                {bird.watchedday}
+                            </td>
+
                             <td className="watchedtd" key={bird.watchedtime}>
                                 {bird.watchedtime}
                             </td>
@@ -78,20 +90,34 @@ export default function TablaPajaros() {
             <form onSubmit={handleSubmit}>
                 <div className="addBirdFormStyle">
                     <span className="birdwatchingSpanStyle">Añade un nuevo avistamiento</span>
-                    <input type="text"
-                        placeholder="Nombre del ave"
-                        onChange={handleBirdNameChange}
-                         />
+
+                    <select onChange={handleBirdNameChange}
+                    value={birdname}>
+                        {
+                            birds.map((bird, i) => {
+                                return (
+                                    <option key={i}>
+                                        {bird.birdname}
+                                    </option>
+                                )
+                            })
+                        }
+                    </select>
 
                     <input type="text"
                         placeholder="Localización"
                         onChange={handleLocationChange}
-                         />
+                    />
 
-                    <input type="text"
+                    <input type="date"
+                        placeholder="Día"
+                        onChange={handleWatchedDayChange}
+                    />
+
+                    <input type="time"
                         placeholder="Hora del avistamiento"
                         onChange={handleTimeChange}
-                         />
+                    />
 
                     <button type="submit">Añadir</button>
                 </div>
