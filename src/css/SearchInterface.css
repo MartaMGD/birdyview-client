@@ -15,7 +15,7 @@
 .searchFormWrapper {
     height: 14rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: var(--dark-coral);
@@ -30,6 +30,7 @@
     border: solid whitesmoke 1px;
     border-top-left-radius: 0.6rem;
     border-bottom-left-radius: 0.6rem;
+    margin-left: 1rem;
 
 }
 
@@ -41,6 +42,8 @@
     border: solid var(--vivid-dark-green) 1px;
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .searchButton:hover {

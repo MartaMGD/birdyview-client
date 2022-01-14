@@ -9,8 +9,8 @@ export default function SearchInterface() {
 
     return (
         <main>
-            <div className="searchFormWrapper">
-                <form>
+            <div >
+                <form className="searchFormWrapper">
                     <input
                         type="text"
                         placeholder="Introduce tu búsqueda"
@@ -19,10 +19,10 @@ export default function SearchInterface() {
                         autoComplete="off"
                         onChange={event => { setFilterBird(event.target.value) }} />
 
-                    {/* <button className="searchButton"
+                    <button className="searchButton"
                         type="submit">
                         Buscar
-                    </button> */}
+                    </button>
                 </form>
             </div>
 
@@ -34,15 +34,15 @@ export default function SearchInterface() {
                         return bird
                     }
                 }
-            ).map((bird, i) => {
-                        return (
-                            <BirdCard
-                                key={i}
-                                id={bird.id}
-                                birdname={bird.birdname}
-                                scientificname={bird.scientificname} />
-                        );
-                    })}
+                ).map((bird, i) => {
+                    return (
+                        <BirdCard
+                            key={i}
+                            id={bird.id}
+                            birdname={bird.birdname}
+                            scientificname={bird.scientificname} />
+                    );
+                })}
             </div>
         </main>
     )

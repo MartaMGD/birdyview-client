@@ -5,12 +5,13 @@
     --dark-grey-green: #515C53;
     --medium-dark-green: #62A871;
     --cream: #E6E1BE;
+    --vanilla: #FFE9B8;
 }
 
 .formContainer {
     height: rem;
     width: 100%;
-    background-color: var(--pale-green);
+    background-color: var(--vanilla);
     color: black;
     display: flex;
     flex-direction: column;
