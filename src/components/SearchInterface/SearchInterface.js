@@ -11,6 +11,7 @@ export default function SearchInterface() {
         <main>
             <div >
                 <form className="searchFormWrapper">
+                    <span className="filterSpan">Introduce un ave</span>
                     <input
                         type="text"
                         placeholder="Introduce tu búsqueda"
@@ -18,11 +19,30 @@ export default function SearchInterface() {
                         name="searchText"
                         autoComplete="off"
                         onChange={event => { setFilterBird(event.target.value) }} />
-
+                    {/* 
                     <button className="searchButton"
                         type="submit">
                         Buscar
-                    </button>
+                    </button> */}
+
+                    <span className="filterSpan">Filtra por orden o provincia</span>
+                    <div className="filterBoxesContainer">
+                        <select className="selectStyle">
+                            <option> Ascendente </option>
+                            <option> Descendente </option>
+                        </select>
+
+                        <select className="selectStyle">
+                            <option> Huelva </option>
+                            <option> Sevilla </option>
+                            <option> Cádiz </option>
+                            <option> Málaga </option>
+                            <option> Córdoba </option>
+                            <option> Jaén </option>
+                            <option> Granada </option>
+                            <option> Almería </option>
+                        </select>
+                    </div>
                 </form>
             </div>
 
