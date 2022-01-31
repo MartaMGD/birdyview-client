@@ -1,4 +1,3 @@
-import '../css/globalstyle.css';
 import { useParams } from 'react-router';
 import { getBirdById } from '../selectors/getBirdById';
 

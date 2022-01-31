@@ -1,5 +1,3 @@
-import '../../../css/LoginCard.css';
-
 export default function RegisterCard() {
     return (
         <main className="loginWrapper">

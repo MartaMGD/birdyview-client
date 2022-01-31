@@ -1,7 +1,6 @@
 import Hero from '../components/Hero/Hero';
 import HomeInfoBox from '../components/HomeInfoBox/HomeInfoBox';
 import NewsletterInput from '../components/NewsletterInput/NewsletterInput';
-import '../css/Hero.css'
 
 export default function Home() {
     return (

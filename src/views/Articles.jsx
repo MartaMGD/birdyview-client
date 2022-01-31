@@ -1,5 +1,4 @@
 import { blogentries } from '../data/blogdata';
-import '../css/globalstyle.css';
 import { Link } from 'react-router-dom';
 
 export default function Articles() {

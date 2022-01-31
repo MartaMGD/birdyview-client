@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import '../../css/BirdCard.css';
 
 export default function BirdCard(props) {
     return (

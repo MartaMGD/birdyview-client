@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../../css/BirdWatchingTable.css';
 import { birds } from '../../data/hardcodeddata';
 
 export default function TablaPajaros() {

@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     overflow: hidden;
-    background-color:coral;
+    background-color:$light-coral;
     transition: .9s ease;
     opacity: 0.9;
 }
@@ -51,16 +51,16 @@
     color: black;
     border: solid whitesmoke 1px;
     border-radius: 0.5rem;
-}
 
-.knowMoreButton a{
-    text-decoration: none;
-}
+    &:a {
+        text-decoration: none;
+    }
 
-.knowMoreButton:hover {
-    background-color: gray;
-    border: solid gray 1px;
-    cursor: pointer;
+    &:hover {
+        background-color: gray;
+        border: solid gray 1px;
+        cursor: pointer;
+    }
 }
 
 /*** Media queries ***/
@@ -88,13 +88,13 @@
         left: 0;
         right: 0;
         overflow: hidden;
-        background-color:coral;
+        background-color:$light-coral;
         transition: .9s ease;
         opacity: 0.9;
-    }
-    
-    .infoBoxStyle:hover .infoBoxEffect {
-        width: 100%;
+
+        &:hover {
+            width: 100%;
+        }
     }
     
     .infoBoxText {

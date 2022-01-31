@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import BirdyViewApp from './BirdyViewApp';
-import './css/globalstyle.css';
+import './styles/styles.css';
 
 ReactDOM.render(
   <React.StrictMode>

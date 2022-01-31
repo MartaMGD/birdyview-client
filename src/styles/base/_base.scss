@@ -1,13 +1,3 @@
-:root {
-    --vivid-dark-green: #355C3E;
-    --pale-green: #C6E1CC;
-    --medium-pale-green: #80DB94;
-    --dark-grey-green: #515C53;
-    --medium-dark-green: #62A871;
-    --cream: #E6E1BE;
-    --vanilla: #FFE9B8;
-}
-
 /*** Global Styles ***/
 * {
     box-sizing: border-box;
@@ -25,7 +15,7 @@ ul, ol, li {
 
 body {
     margin: 0;
-    background-color: var(--cream);
+    background-color: $cream;
     font-family:'Poppins';
 }
 
@@ -33,90 +23,25 @@ body {
 .container {
     margin-left:0;
     margin-right:0;
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    box-shadow: 0px 8px 12px -1px $vivid-dark-green;
 }
 
-/*** Navbar - Links - Logo ***/
-.navBarContainer {
-    height: 3rem;
-    width: 100%;
-    background-color: var(--cream);
-    display:flex;
-    align-items: center;
-    position: relative;
-    border-bottom: 1px solid var(--vivid-dark-green);
+// Login and register screen view
+.loginBackground {
+    background: url('../assets/images/LoginBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
-.logoStyle {
-    margin-left: 0.6rem;
-    height: 2.1rem;
-    width: 2.1rem;
-    display: flex; 
-}
-
-#openMenu {
-    display: none;
-}
-
-.openMenuIcon {
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    padding-right: 1rem;
-
-}
-
-.linkUnit a {
-    color: var(--dark-grey-green);
-    display: block;
-    text-align: right;
-    margin: 0.8rem 0;
-}
-
-.linkUnit a:hover {
-    text-shadow: 2px 2px 3px var(--dark-grey-green);
-    cursor: pointer;
-}
-
-.linkPosition {
-    display: none;
-    width: 60%;
-    padding: 1rem;
-    background-color: var(--cream);
-    position: absolute;
-    z-index: 2;
-    top: 3rem;
-    right: 0;
-    height: calc(100vh - 48px);
-    border-left: 1px solid var(--vivid-dark-green);
-}
-
-.navbarBlockStyle {
+.loginContainer {
     display: flex;
-    flex-direction: row;
-}
-
-.openMenu:checked ~ .linkPosition {
-    display: block;
-}
-
-/* Footer */
-.footerStyle {
-    margin: 0;
-    background-color: black;
-    color: var(--cream);
-    font-size: 0.8rem;
-    height: 3rem;
-    width: 100%;
-    display:flex;
-    justify-content:flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 0 1rem;
 }
 
 /*** SEARCH PAGE GLOBAL CONFIGURATION ***/
 .searchPageImage {
-    background-image:url(../assets/images/SearchPageImage.jpeg);
+    background-image:url('../assets/images/SearchPageImage.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center bottom;
@@ -134,8 +59,8 @@ body {
 /*** BIRD PAGE GLOBAL CONFIGURATION ***/
 .birdPageWrapper, .birdPageWrapper p{
     height: 100%;
-    background-color: var(--vanilla);
-    color: var(--vivid-dark-green);
+    background-color: $vanilla;
+    color: $vivid-dark-green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +81,7 @@ body {
 .titleStyle {
     margin: 0;
     background-image: url('../assets/images/LoginRegisterBackground.jpeg');
-    color: var(--vanilla);
+    color: $vanilla;
     font-size: 1.6rem;
     padding: 3rem;
     display: flex;
@@ -164,8 +89,8 @@ body {
 }
 
 .mainBlogStyle {
-    background-color: var(--vanilla);
-    color: var(--vivid-dark-green);
+    background-color: $vanilla;
+    color: $vivid-dark-green;
     padding: 2rem;
     display: flex;
     flex-direction: row;
@@ -177,8 +102,8 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
-    background-color: var(--vanilla);
-    color: var(--vivid-dark-green);
+    background-color: $vanilla;
+    color: $vivid-dark-green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,7 +114,7 @@ body {
 .articleEntryStyle {
     padding-bottom: 1.5rem;
     text-align: justify;
-    border-bottom: solid var(--vivid-dark-green) 1px;
+    border-bottom: solid $vivid-dark-green 1px;
     display: flex;
     flex-direction: column;
 }
@@ -212,8 +137,8 @@ body {
 
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
 .commentBoxStyle {
-    background-color: var(--vanilla);
-    border-top: solid var(--vivid-dark-green) 1px;
+    background-color: $vanilla;
+    border-top: solid $vivid-dark-green 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -233,8 +158,8 @@ body {
 
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
 .dashboardContainer {
-    background-color: var(--vanilla);
-    color: var(--dark-grey-green);
+    background-color: $vanilla;
+    color: $dark-grey-green;
     padding: 2rem;
 }
 
@@ -244,8 +169,8 @@ body {
 }
 
 .welcomePanelStyle {
-    background-color: var(--pale-green);
-    box-shadow: 2px 2px 2px var(--dark-grey-green);
+    background-color: $pale-green;
+    box-shadow: 2px 2px 2px $dark-grey-green;
     color:black;
     height: 3rem;
     display: flex;
@@ -294,19 +219,19 @@ body {
     .navBarContainer {
         height: 3rem;
         width: 100%;
-        background-color: var(--cream);
+        background-color: $cream;
         display:flex;
         align-items: center;
         position: relative;
-        border-bottom: 1px solid var(--vivid-dark-green);
+        border-bottom: 1px solid $vivid-dark-green;
         padding-right: 2rem;
     }
 
     .linkPosition {
         display: flex;
         justify-content: space-around;
-        border-bottom: 1px solid var(--vivid-dark-green);
-        border-left: 1px solid var(--cream);
+        border-bottom: 1px solid $vivid-dark-green;
+        border-left: 1px solid $cream;
         position: static;
         width: 100%;
         height: 3rem;
@@ -328,8 +253,8 @@ body {
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
 
 .welcomePanelStyle {
-    background-color: var(--pale-green);
-    box-shadow: 2px 2px 2px var(--dark-grey-green);
+    background-color: $pale-green;
+    box-shadow: 2px 2px 2px $dark-grey-green;
     color:black;
     height: 3rem;
     width: 40rem;
@@ -368,10 +293,10 @@ body {
 }
 
 .birdPageWrapper{
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    box-shadow: 0px 8px 12px -1px $vivid-dark-green;
     height: 100%;
-    background-color: var(--vanilla);
-    color: var(--vivid-dark-green);
+    background-color: $vanilla;
+    color: $vivid-dark-green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,16 +305,16 @@ body {
 
 /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
 .birdwatchingPage {
-    background-color: var(--vanilla);
+    background-color: $vanilla;
     padding: 2rem;
 }
 
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
 .commentBoxStyle {
-    background-color: var(--vanilla);
+    background-color: $vanilla;
     padding: 1rem;
-    border-top: solid var(--vivid-dark-green) 1px;
-    box-shadow: 0px 8px 12px -1px var(--vivid-dark-green);
+    border-top: solid $vivid-dark-green 1px;
+    box-shadow: 0px 8px 12px -1px $vivid-dark-green;
 }
 
 .commentInputStyle {
@@ -410,8 +335,8 @@ body {
     padding-right: 10rem;
     padding-bottom: 2rem;
     padding-top: 2rem;
-    background-color: var(--vanilla);
-    color: var(--vivid-dark-green);
+    background-color: $vanilla;
+    color: $vivid-dark-green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -421,9 +346,9 @@ body {
 
 /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
 .commentBoxStyle {
-    background-color: var(--vanilla);
+    background-color: $vanilla;
     padding-left: 2rem;
-    border-top: solid var(--vivid-dark-green) 1px;
+    border-top: solid $vivid-dark-green 1px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -450,5 +375,3 @@ body {
 
 /* DESKTOP */
 @media (min-width: 1200px) { }
-
-

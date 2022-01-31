@@ -1,4 +1,3 @@
-import '../../css/SearchInterface.css';
 import BirdCard from '../BirdCard/BirdCard';
 import { birds } from '../../data/hardcodeddata';
 import { useState } from 'react';

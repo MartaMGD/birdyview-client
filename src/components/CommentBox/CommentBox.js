@@ -1,5 +1,3 @@
-import '../../css/CommentBox.css';
-
 export default function CommentBox() {
     return (
         <div className="container commentStyle">

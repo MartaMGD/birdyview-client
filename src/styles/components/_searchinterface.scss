@@ -1,16 +1,3 @@
-:root {
-    --vivid-dark-green: #355C3E;
-    --pale-green: #C6E1CC;
-    --medium-pale-green: #80DB94;
-    --dark-grey-green: #515C53;
-    --medium-dark-green: #62A871;
-    --cream: #E6E1BE;
-    --light-coral: #FF9778;
-    --medium-coral: #FF7358;
-    --dark-coral: #6E3226;
-    --vanilla: #FFE9B8;
-}
-
 /*** SEARCH BAR ***/
 .searchFormWrapper {
     height: 14rem;
@@ -18,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark-coral);
+    background-color: $dark-coral;
 }
 
 .searchInterfaceInput {
@@ -42,7 +29,7 @@
 
 .filterSpan {
     margin-top: 1rem;
-    color: var(--vanilla);
+    color: $vanilla;
     font-weight: bold;
 }
 
@@ -54,24 +41,24 @@
 .searchButton {
     height: 2.5rem;
     width: 5rem;
-    background-color: var(--vivid-dark-green);
+    background-color: $vivid-dark-green;
     color: white;
-    border: solid var(--vivid-dark-green) 1px;
+    border: solid $vivid-dark-green 1px;
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
     margin-bottom: 1rem;
-}
 
-.searchButton:hover {
-    background-color: var(--medium-dark-green);
-    border: solid var(--medium-dark-green) 1px;
+    &:hover {
+        background-color: $medium-dark-green;
+        border: solid $medium-dark-green 1px;
+    }
 }
 
 /*** SHOW BIRDS SPACE ***/
 .showBirds {
     height: 100%;
     width: 100%;
-    background-color: var(--vanilla);
+    background-color: $vanilla;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -106,7 +93,7 @@
     .showBirds {
         height: 100%;
         width: 100%;
-        background-color: var(--vanilla);
+        background-color: $vanilla;
         padding: 1.5rem;
         display: flex;
         flex-direction: row;

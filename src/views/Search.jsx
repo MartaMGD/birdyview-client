@@ -1,6 +1,4 @@
 import SearchInterface from '../components/SearchInterface/SearchInterface';
-import '../css/globalstyle.css';
-
 
 export default function HomeSearch() {
     return (

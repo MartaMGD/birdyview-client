@@ -1,5 +1,3 @@
-import "../../css/NewsletterInput.css";
-
 export default function NewsletterInput() {
     return (
         <>

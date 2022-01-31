@@ -1,0 +1,107 @@
+/*** Navbar - Links - Logo ***/
+.navBarContainer {
+    height: 3rem;
+    width: 100%;
+    background-color: $cream;
+    display:flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid $vivid-dark-green;
+}
+
+.logoStyle {
+    margin-left: 0.6rem;
+    height: 2.1rem;
+    width: 2.1rem;
+    display: flex; 
+}
+
+#openMenu {
+    display: none;
+}
+
+.openMenuIcon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    padding-right: 1rem;
+
+}
+
+.linkUnit a {
+    color: $dark-grey-green;
+    display: block;
+    text-align: right;
+    margin: 0.8rem 0;
+
+    &:hover{
+        text-shadow: 2px 2px 3px $dark-grey-green;
+        cursor: pointer;
+    }
+}
+
+.linkPosition {
+    display: none;
+    width: 60%;
+    padding: 1rem;
+    background-color: $cream;
+    position: absolute;
+    z-index: 2;
+    top: 3rem;
+    right: 0;
+    height: calc(100vh - 48px);
+    border-left: 1px solid $vivid-dark-green;
+}
+
+.navbarBlockStyle {
+    display: flex;
+    flex-direction: row;
+}
+
+.openMenu:checked ~ .linkPosition {
+    display: block;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+    .container {
+        margin-left:10rem;
+        margin-right:10rem;
+    }
+    
+    .navBarContainer {
+        height: 3rem;
+        width: 100%;
+        background-color: $cream;
+        display:flex;
+        align-items: center;
+        position: relative;
+        border-bottom: 1px solid $vivid-dark-green;
+        padding-right: 2rem;
+    }
+
+    .linkPosition {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid $vivid-dark-green;
+        border-left: 1px solid $cream;
+        position: static;
+        width: 100%;
+        height: 3rem;
+        padding: 0;
+    }
+
+    .openMenuIcon {
+        display: none;
+    }
+
+    .infoBirdPhoto {
+        margin-top: 1rem;
+        height: 50%;
+        width: 50%;
+        border-radius: 7px;
+    }
+ }
+
+/* DESKTOP */
+@media (min-width: 1200px) { }

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import HomeInfoBoxImage from '../../assets/images/HomeInfoBoxImage.png';
-import '../../css/HomeInfoBox.css';
 
 export default function HomeInfoBox() {
     return (

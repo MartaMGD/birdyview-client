@@ -1,4 +1,3 @@
-import '../css/globalstyle.css';
 import userimage from '../assets/avatars/userimage.jpeg';
 
 export default function UserDashboard(props) {

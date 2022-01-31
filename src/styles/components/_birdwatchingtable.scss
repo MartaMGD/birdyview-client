@@ -1,37 +1,27 @@
-:root {
-    --vivid-dark-green: #355C3E;
-    --pale-green: #C6E1CC;
-    --medium-pale-green: #80DB94;
-    --dark-grey-green: #515C53;
-    --medium-dark-green: #62A871;
-    --cream: #E6E1BE;
-    --vanilla: #FFE9B8;
-}
-
 #tableStyle {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     background-color:rgb(241, 191, 144);
-    border: solid var(--dark-grey-green) 1px;
-    box-shadow: 0px 4px 12px -1px var(--dark-grey-green);
+    border: solid $dark-grey-green 1px;
+    box-shadow: 0px 4px 12px -1px $dark-grey-green;
   }
   
   #tableStyle td, #tableStyle th {
-    border: solid ver(--dark-grey-green) 1px;
+    border: solid $dark-grey-green 1px;
     padding-left: 8rem;
     
   }
   
   #tableStyle tr:nth-child(even){background-color: rgb(199, 128, 88);}
   
-  #tableStyle tr:hover {background-color: var(--pale-green)}
+  #tableStyle tr:hover {background-color: $pale-green}
 
   #tableStyle th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: var(--vivid-dark-green);
+    background-color: $vivid-dark-green;
     color: white;
   }
 
@@ -40,14 +30,14 @@
 
   .addBirdFormStyle {
     margin-top: 4rem;
-    background-color: var(--vanilla);
+    background-color: $vanilla;
     align-items: center;
     padding: 2rem;
-    border: solid var(--dark-grey-green) 1px;
+    border: solid $dark-grey-green 1px;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
-    box-shadow: 0px 4px 12px -1px var(--dark-grey-green);
+    box-shadow: 0px 4px 12px -1px $dark-grey-green;
 
   }
 
@@ -58,29 +48,29 @@
       display: flex;
       flex-direction: column;
       border-radius: 0.3rem;
-      border: solid var(--vivid-dark-green) 0.1rem;
+      border: solid $vivid-dark-green 0.1rem;
       margin: 0.5rem;
   }
 
   .birdwatchingSpanStyle {
     font-weight: bold;
-    color: var(--dark-grey-green);
+    color: $dark-grey-green;
     padding: 1rem;
   }
   
   button {
       height: 2rem;
       width: 5rem;
-      background-color: var(--dark-grey-green);
-      border: solid var(--dark-grey-green) 0.1rem;
+      background-color: $dark-grey-green;
+      border: solid $dark-grey-green 0.1rem;
       border-radius: 0.3rem;
       color: white;
       font-weight: bold;
       cursor: pointer;
       margin-top: 1rem;
-  }
 
-  button:hover {
-    background-color: var(--vivid-dark-green);
-    border: solid var(--vivid-dark-green) 0.1rem;
+      &:hover {
+        background-color: $vivid-dark-green;
+        border: solid $vivid-dark-green 0.1rem;
+      }
   }

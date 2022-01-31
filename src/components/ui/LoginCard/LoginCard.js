@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../../../css/LoginCard.css'
 import { users } from '../../../data/hardcodeddata'
 import { useNavigate } from 'react-router-dom'
 

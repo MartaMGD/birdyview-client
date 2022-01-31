@@ -1,20 +1,10 @@
-:root {
-    --vivid-dark-green: #355C3E;
-    --pale-green: #C6E1CC;
-    --medium-pale-green: #80DB94;
-    --dark-grey-green: #515C53;
-    --medium-dark-green: #62A871;
-    --medium-teal: #6B997B;
-    --cream: #E6E1BE;
-}
-
 .loginRegisterCard {
     height: 30rem;
     width: 22rem;
-    background-color: var(--cream);
-    color: var(--dark-grey-green);
+    background-color: $cream;
+    color: $dark-grey-green;
     border-radius: 1.5em;
-    box-shadow: 2px 6px 15px 0px var(--vivid-dark-green);
+    box-shadow: 2px 6px 15px 0px $vivid-dark-green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +27,7 @@
     width: 16rem;
     margin: 0.7rem;
     border-radius: 5rem;
-    border: solid var(--medium-teal) 0.1rem;
+    border: solid $medium-teal 0.1rem;
     padding-left: 2rem;
 
 }
@@ -52,9 +42,9 @@
     height: 2.2rem;
     width: 7rem;
     border-radius: 2.5rem;
-    border: solid var(--dark-grey-green) 0.1rem;
-    background-color: var(--dark-grey-green);
-    color: var(--pale-green);
+    border: solid $dark-grey-green 0.1rem;
+    background-color: $dark-grey-green;
+    color: $pale-green;
     font-weight: bold;
     margin: 2rem;
 
@@ -62,8 +52,8 @@
 }
 
 .loginButtonStyle:hover {
-    background-color: var(--vivid-dark-green);
-    border: solid var(--vivid-dark-green) 0.1rem;
+    background-color: $vivid-dark-green;
+    border: solid $vivid-dark-green 0.1rem;
     cursor: pointer;
 }
 
@@ -99,10 +89,10 @@
     .loginRegisterCard {
         height: 25rem;
         width: 45rem;
-        background-color: var(--cream);
-        color: var(--dark-grey-green);
+        background-color: $cream;
+        color: $dark-grey-green;
         border-radius: 1.5em;
-        box-shadow: 2px 6px 15px 0px var(--vivid-dark-green);
+        box-shadow: 2px 6px 15px 0px $vivid-dark-green;
         display: flex;
         flex-direction: row;
         justify-content:space-between;
@@ -129,7 +119,7 @@
         width: 17rem;
         margin: 0.7rem;
         border-radius: 5rem;
-        border: solid var(--medium-teal) 0.1rem;
+        border: solid $medium-teal 0.1rem;
         padding-left: 2rem;
     }
 
@@ -137,9 +127,9 @@
         height: 2.2rem;
         width: 7rem;
         border-radius: 2.5rem;
-        border: solid var(--dark-grey-green) 0.1rem;
-        background-color: var(--dark-grey-green);
-        color: var(--pale-green);
+        border: solid $dark-grey-green 0.1rem;
+        background-color: $dark-grey-green;
+        color: $pale-green;
         font-weight: bold;
         margin-top: 1.5rem;
     }

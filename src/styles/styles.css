@@ -1,0 +1,1366 @@
+/*** Global Styles ***/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #E6E1BE;
+  font-family: 'Poppins';
+}
+
+/* Container */
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-shadow: 0px 8px 12px -1px #355C3E;
+          box-shadow: 0px 8px 12px -1px #355C3E;
+}
+
+.loginBackground {
+  background: url("../assets/images/LoginBackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.loginContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*** SEARCH PAGE GLOBAL CONFIGURATION ***/
+.searchPageImage {
+  background-image: url("../assets/images/SearchPageImage.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  margin: 0;
+  height: 30rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*** BIRD PAGE GLOBAL CONFIGURATION ***/
+.birdPageWrapper, .birdPageWrapper p {
+  height: 100%;
+  background-color: #FFE9B8;
+  color: #355C3E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.birdPageWrapper p {
+  padding: 0 2rem;
+  text-align: justify;
+}
+
+.infoBirdPhoto {
+  height: 100%;
+  width: 100%;
+}
+
+/*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
+.titleStyle {
+  margin: 0;
+  background-image: url("../assets/images/LoginRegisterBackground.jpeg");
+  color: #FFE9B8;
+  font-size: 1.6rem;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainBlogStyle {
+  background-color: #FFE9B8;
+  color: #355C3E;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainEntryStyle {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  background-color: #FFE9B8;
+  color: #355C3E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+}
+
+.articleEntryStyle {
+  padding-bottom: 1.5rem;
+  text-align: justify;
+  border-bottom: solid #355C3E 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.clickBlogText {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.articlePhoto {
+  height: 100%;
+  width: 100%;
+}
+
+.photoSeparator {
+  width: 100%;
+  height: 70px;
+}
+
+/*** BLOG ENTRY GLOBAL CONFIGURATION ***/
+.commentBoxStyle {
+  background-color: #FFE9B8;
+  border-top: solid #355C3E 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.commentInputStyle {
+  height: 5rem;
+  width: 25rem;
+  padding-bottom: 2rem;
+}
+
+.articleSeparator {
+  width: 400px;
+  height: 70px;
+}
+
+/*** USER DASHBOARD GLOBAL CONFIGURATION ***/
+.dashboardContainer {
+  background-color: #FFE9B8;
+  color: #515C53;
+  padding: 2rem;
+}
+
+.dashboardTextStyle {
+  text-decoration: underline;
+  padding-bottom: 2rem;
+}
+
+.welcomePanelStyle {
+  background-color: #C6E1CC;
+  -webkit-box-shadow: 2px 2px 2px #515C53;
+          box-shadow: 2px 2px 2px #515C53;
+  color: black;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+}
+
+.profilePhoto {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 3rem;
+  margin-right: 6rem;
+  margin-bottom: 2.5rem;
+}
+
+.userPanelStyle {
+  height: 40rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.dashboardInputStyle {
+  height: 2rem;
+  width: 40vh;
+}
+
+/*** Media queries ***/
+/* TABLET */
+@media (min-width: 768px) {
+  .dashboardInputStyle {
+    height: 2rem;
+    width: 60vh;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .container {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .navBarContainer {
+    height: 3rem;
+    width: 100%;
+    background-color: #E6E1BE;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    border-bottom: 1px solid #355C3E;
+    padding-right: 2rem;
+  }
+  .linkPosition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border-bottom: 1px solid #355C3E;
+    border-left: 1px solid #E6E1BE;
+    position: static;
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+  }
+  .openMenuIcon {
+    display: none;
+  }
+  .infoBirdPhoto {
+    margin-top: 1rem;
+    height: 50%;
+    width: 50%;
+    border-radius: 7px;
+  }
+  /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
+  .welcomePanelStyle {
+    background-color: #C6E1CC;
+    -webkit-box-shadow: 2px 2px 2px #515C53;
+            box-shadow: 2px 2px 2px #515C53;
+    color: black;
+    height: 3rem;
+    width: 40rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 2rem;
+  }
+  .dashboardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboardInputStyle {
+    height: 2rem;
+    width: 60vh;
+    margin: 0.8rem;
+  }
+  .userPanelStyle {
+    height: 40rem;
+    width: 100%;
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /*** BIRD PAGE GLOBAL CONFIGURATION ***/
+  .infoBirdPhoto {
+    padding-top: 2rem;
+  }
+  .birdPageWrapper {
+    -webkit-box-shadow: 0px 8px 12px -1px #355C3E;
+            box-shadow: 0px 8px 12px -1px #355C3E;
+    height: 100%;
+    background-color: #FFE9B8;
+    color: #355C3E;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
+  .birdwatchingPage {
+    background-color: #FFE9B8;
+    padding: 2rem;
+  }
+  /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
+  .commentBoxStyle {
+    background-color: #FFE9B8;
+    padding: 1rem;
+    border-top: solid #355C3E 1px;
+    -webkit-box-shadow: 0px 8px 12px -1px #355C3E;
+            box-shadow: 0px 8px 12px -1px #355C3E;
+  }
+  .commentInputStyle {
+    height: 5rem;
+    width: 80rem;
+    padding-bottom: 2rem;
+  }
+  .commentNameInputStyle {
+    height: 2rem;
+    width: 80rem;
+  }
+  /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
+  .mainEntryStyle {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: #FFE9B8;
+    color: #355C3E;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: justify;
+  }
+  /*** BLOG ENTRY GLOBAL CONFIGURATION ***/
+  .commentBoxStyle {
+    background-color: #FFE9B8;
+    padding-left: 2rem;
+    border-top: solid #355C3E 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .commentInputStyle {
+    height: 5rem;
+    width: 15rem;
+    padding-bottom: 2rem;
+  }
+  .articleSeparator {
+    width: 400px;
+    height: 70px;
+  }
+  .commentInputStyle {
+    height: 5rem;
+    width: 80rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* DESKTOP */
+.birdCard {
+  height: 23rem;
+  width: 18rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0.25rem 0.25rem 0 gray;
+          box-shadow: 0 0.25rem 0.25rem 0 gray;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.birdPhotoCard {
+  width: 100%;
+  height: 11rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.toPageStyle {
+  text-decoration: none;
+}
+
+.birdCardContainer {
+  padding: 2rem;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .birdCard {
+    height: 24rem;
+    width: 20rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    -webkit-box-shadow: 0 0.25rem 0.25rem 0 gray;
+            box-shadow: 0 0.25rem 0.25rem 0 gray;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    padding: 1rem;
+  }
+  .birdCard:hover {
+    -webkit-box-shadow: 0 0.25rem 1rem 0 gray;
+            box-shadow: 0 0.25rem 1rem 0 gray;
+  }
+  .birdPhotoCard {
+    width: 100%;
+    height: 12rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+}
+
+/* DESKTOP */
+#tableStyle {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #f1bf90;
+  border: solid #515C53 1px;
+  -webkit-box-shadow: 0px 4px 12px -1px #515C53;
+          box-shadow: 0px 4px 12px -1px #515C53;
+}
+
+#tableStyle td, #tableStyle th {
+  border: solid #515C53 1px;
+  padding-left: 8rem;
+}
+
+#tableStyle tr:nth-child(even) {
+  background-color: #c78058;
+}
+
+#tableStyle tr:hover {
+  background-color: #C6E1CC;
+}
+
+#tableStyle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #355C3E;
+  color: white;
+}
+
+/* INPUT TABLE */
+.addBirdFormStyle {
+  margin-top: 4rem;
+  background-color: #FFE9B8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  border: solid #515C53 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 12px -1px #515C53;
+          box-shadow: 0px 4px 12px -1px #515C53;
+}
+
+input, select {
+  padding-left: 1rem;
+  height: 2rem;
+  width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.3rem;
+  border: solid #355C3E 0.1rem;
+  margin: 0.5rem;
+}
+
+.birdwatchingSpanStyle {
+  font-weight: bold;
+  color: #515C53;
+  padding: 1rem;
+}
+
+button {
+  height: 2rem;
+  width: 5rem;
+  background-color: #515C53;
+  border: solid #515C53 0.1rem;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #355C3E;
+  border: solid #355C3E 0.1rem;
+}
+
+.commentStyle {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  height: 200px;
+  background-color: #FFE9B8;
+  color: #515C53;
+}
+
+.commentName {
+  font-weight: bold;
+}
+
+.commentContent {
+  text-align: justify;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .commentStyle {
+    padding-top: 2rem;
+    padding-left: 10rem;
+    height: 200px;
+    background-color: #FFE9B8;
+    color: #515C53;
+  }
+}
+
+/* DESKTOP */
+/*** HOME ***/
+.heroContainer {
+  position: relative;
+  width: 100%;
+}
+
+.heroImage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.heroEffect {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.heroContainer:hover .heroImage {
+  opacity: 0.3;
+}
+
+.heroContainer:hover .heroEffect {
+  opacity: 1;
+}
+
+.heroText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25rem;
+  height: 10rem;
+  background-color: #515C53;
+  color: #E6E1BE;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+/*** Text Box ***/
+.heroTextBox {
+  margin: 0;
+  height: 18rem;
+  background-color: #355C3E;
+  color: #E6E1BE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .heroImage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 45rem;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .heroText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80rem;
+    height: 30rem;
+    background-color: #515C53;
+    color: #E6E1BE;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+}
+
+/* DESKTOP */
+.infoBoxStyle {
+  position: relative;
+  width: 100%;
+}
+
+.infoBoxImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.infoBoxEffect {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #FF9778;
+  -webkit-transition: .9s ease;
+  transition: .9s ease;
+  opacity: 0.9;
+}
+
+.infoBoxStyle:hover .infoBoxEffect {
+  width: 100%;
+}
+
+.infoBoxText {
+  white-space: nowrap;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.knowMoreButton {
+  text-decoration: none;
+  height: 2rem;
+  width: 6rem;
+  background-color: whitesmoke;
+  color: black;
+  border: solid whitesmoke 1px;
+  border-radius: 0.5rem;
+}
+
+.knowMoreButton:a {
+  text-decoration: none;
+}
+
+.knowMoreButton:hover {
+  background-color: gray;
+  border: solid gray 1px;
+  cursor: pointer;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .infoBoxStyle {
+    position: relative;
+    width: 100%;
+  }
+  .infoBoxImage {
+    display: block;
+    width: 100%;
+    height: 50rem;
+  }
+  .infoBoxEffect {
+    position: absolute;
+    height: 50rem;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: #FF9778;
+    -webkit-transition: .9s ease;
+    transition: .9s ease;
+    opacity: 0.9;
+  }
+  .infoBoxEffect:hover {
+    width: 100%;
+  }
+  .infoBoxText {
+    white-space: nowrap;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* DESKTOP */
+/*** SEARCH BAR ***/
+.searchFormWrapper {
+  height: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #6E3226;
+}
+
+.searchInterfaceInput {
+  margin-top: 1rem;
+  height: 2.5rem;
+  width: 15rem;
+  background-color: whitesmoke;
+  border: solid whitesmoke 1px;
+  border-radius: 0.6rem;
+}
+
+.selectStyle {
+  margin-bottom: 1rem;
+  margin-top: 0.8rem;
+  height: 2.5rem;
+  width: 10rem;
+  background-color: whitesmoke;
+  border: solid whitesmoke 1px;
+  border-radius: 0.6rem;
+}
+
+.filterSpan {
+  margin-top: 1rem;
+  color: #FFE9B8;
+  font-weight: bold;
+}
+
+.filterBoxesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.searchButton {
+  height: 2.5rem;
+  width: 5rem;
+  background-color: #355C3E;
+  color: white;
+  border: solid #355C3E 1px;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.searchButton:hover {
+  background-color: #62A871;
+  border: solid #62A871 1px;
+}
+
+/*** SHOW BIRDS SPACE ***/
+.showBirds {
+  height: 100%;
+  width: 100%;
+  background-color: #FFE9B8;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.showBirds span {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .searchInterfaceInput {
+    height: 2.5rem;
+    width: 35rem;
+  }
+  .searchButton {
+    height: 2.5rem;
+    width: 5rem;
+  }
+  .showBirds {
+    height: 100%;
+    width: 100%;
+    background-color: #FFE9B8;
+    padding: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/* DESKTOP */
+.formContainer {
+  height: rem;
+  width: 100%;
+  background-color: var(--vanilla);
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.emailInputStyle {
+  background-color: white;
+  color: grey;
+  height: 2rem;
+  width: 15rem;
+  border: solid var(--vivid-dark-green) 1px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.submitButtonStyle {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: var(--vivid-dark-green);
+  color: white;
+  font-weight: bold;
+  height: 2.4em;
+  width: 6rem;
+  border: solid var(--dark-grey-green) 1px;
+  border-radius: 7px;
+  padding-right: 2rem;
+}
+
+.submitButtonStyle:hover {
+  background-color: var(--medium-dark-green);
+  cursor: pointer;
+}
+
+/*** Navbar - Links - Logo ***/
+.navBarContainer {
+  height: 3rem;
+  width: 100%;
+  background-color: #E6E1BE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-bottom: 1px solid #355C3E;
+}
+
+.logoStyle {
+  margin-left: 0.6rem;
+  height: 2.1rem;
+  width: 2.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#openMenu {
+  display: none;
+}
+
+.openMenuIcon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.linkUnit a {
+  color: #515C53;
+  display: block;
+  text-align: right;
+  margin: 0.8rem 0;
+}
+
+.linkUnit a:hover {
+  text-shadow: 2px 2px 3px #515C53;
+  cursor: pointer;
+}
+
+.linkPosition {
+  display: none;
+  width: 60%;
+  padding: 1rem;
+  background-color: #E6E1BE;
+  position: absolute;
+  z-index: 2;
+  top: 3rem;
+  right: 0;
+  height: calc(100vh - 48px);
+  border-left: 1px solid #355C3E;
+}
+
+.navbarBlockStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.openMenu:checked ~ .linkPosition {
+  display: block;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .container {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .navBarContainer {
+    height: 3rem;
+    width: 100%;
+    background-color: #E6E1BE;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    border-bottom: 1px solid #355C3E;
+    padding-right: 2rem;
+  }
+  .linkPosition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border-bottom: 1px solid #355C3E;
+    border-left: 1px solid #E6E1BE;
+    position: static;
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+  }
+  .openMenuIcon {
+    display: none;
+  }
+  .infoBirdPhoto {
+    margin-top: 1rem;
+    height: 50%;
+    width: 50%;
+    border-radius: 7px;
+  }
+}
+
+/* DESKTOP */
+.footerStyle {
+  margin: 0;
+  background-color: black;
+  color: #E6E1BE;
+  font-size: 0.8rem;
+  height: 3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.loginRegisterCard {
+  height: 30rem;
+  width: 22rem;
+  background-color: #E6E1BE;
+  color: #515C53;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 2px 6px 15px 0px #355C3E;
+          box-shadow: 2px 6px 15px 0px #355C3E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardImage {
+  background-image: url("../assets/images/LoginRegisterBackground.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+  width: 100%;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  position: static;
+}
+
+.loginInputStyle {
+  height: 2.5rem;
+  width: 16rem;
+  margin: 0.7rem;
+  border-radius: 5rem;
+  border: solid #6B997B 0.1rem;
+  padding-left: 2rem;
+}
+
+.formContentWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginButtonStyle {
+  height: 2.2rem;
+  width: 7rem;
+  border-radius: 2.5rem;
+  border: solid #515C53 0.1rem;
+  background-color: #515C53;
+  color: #C6E1CC;
+  font-weight: bold;
+  margin: 2rem;
+  padding-right: 1rem;
+}
+
+.loginButtonStyle:hover {
+  background-color: #355C3E;
+  border: solid #355C3E 0.1rem;
+  cursor: pointer;
+}
+
+.loginMessage {
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.registerMessage {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.loginSpanStyle {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.inputTextPlaceholders {
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*** Media queries ***/
+/* TABLET */
+/* DESKTOP */
+@media (min-width: 992px) {
+  .loginRegisterCard {
+    height: 25rem;
+    width: 45rem;
+    background-color: #E6E1BE;
+    color: #515C53;
+    border-radius: 1.5em;
+    -webkit-box-shadow: 2px 6px 15px 0px #355C3E;
+            box-shadow: 2px 6px 15px 0px #355C3E;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .formContentWrap {
+    padding-right: 3.5rem;
+  }
+  .cardImage {
+    background-image: url("../assets/images/LoginRegisterBackground.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 45%;
+    border-radius: 0;
+    border-top-left-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+    position: static;
+  }
+  .loginInputStyle {
+    height: 2.5rem;
+    width: 17rem;
+    margin: 0.7rem;
+    border-radius: 5rem;
+    border: solid #6B997B 0.1rem;
+    padding-left: 2rem;
+  }
+  .loginButtonStyle {
+    height: 2.2rem;
+    width: 7rem;
+    border-radius: 2.5rem;
+    border: solid #515C53 0.1rem;
+    background-color: #515C53;
+    color: #C6E1CC;
+    font-weight: bold;
+    margin-top: 1.5rem;
+  }
+}
+
+/* DESKTOP */
+/*# sourceMappingURL=styles.css.map */

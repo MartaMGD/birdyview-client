@@ -1,5 +1,5 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom'
-import BirdyViewLogo from '../../../assets/images/BirdyViewLogo.png'
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import BirdyViewLogo from '../../../assets/images/BirdyViewLogo.png';
 
 export default function Navbar(props) {
     const navigate = useNavigate()
