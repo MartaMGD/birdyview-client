@@ -8,18 +8,18 @@
   }
   
   #tableStyle td, #tableStyle th {
-    border: solid $dark-grey-green 1px;
     padding-left: 8rem;
     
   }
   
   #tableStyle tr:nth-child(even){background-color: rgb(199, 128, 88);}
   
-  #tableStyle tr:hover {background-color: $pale-green}
+  #tableStyle tr:hover {background-color: lighten($color: $dark-coral, $amount: 20)}
 
   #tableStyle th {
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-right: 6rem;
     text-align: left;
     background-color: $vivid-dark-green;
     color: white;
@@ -73,4 +73,36 @@
         background-color: $vivid-dark-green;
         border: solid $vivid-dark-green 0.1rem;
       }
+  }
+
+  /* BUTTONS */
+  .optionButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .editButton {
+    width: 7rem;
+    border: none;
+    background-color: darken($color: $medium-teal, $amount: 20);
+    margin-right: 5rem;
+
+    &:hover {
+      border: none;
+      background-color: lighten($color: $medium-teal, $amount: 5 );
+    }
+  }
+
+  .deleteButton {
+    width: 7rem;
+    border: none;
+    background-color: lighten($color: $dark-coral, $amount: 10);
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      border: none;
+      background-color: $medium-coral;
+    }
   }

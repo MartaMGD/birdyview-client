@@ -58,6 +58,7 @@ export default function TablaPajaros() {
                         <th>Localización</th>
                         <th>Día</th>
                         <th>Hora</th>
+                        <th>Opciones</th>
                     </tr>
                 </thead>
 
@@ -79,6 +80,11 @@ export default function TablaPajaros() {
 
                             <td className="watchedtd" key={bird.watchedtime}>
                                 {bird.watchedtime}
+                            </td>
+
+                            <td className="optionButtons" key={bird.watchedtime}>
+                                <button className="editButton">Editar</button>
+                                <button className="deleteButton">X</button>
                             </td>
                         </tr>
                     )}
