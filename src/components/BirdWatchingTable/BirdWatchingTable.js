@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { birds } from '../../data/hardcodeddata';
 
-export default function TablaPajaros() {
+export default function BirdwatchingTable() {
 
     // Estado general
     const [birdInfo, setBirdInfo] = useState([]);

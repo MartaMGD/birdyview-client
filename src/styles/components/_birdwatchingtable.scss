@@ -1,32 +1,4 @@
-#tableStyle {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    background-color:rgb(241, 191, 144);
-    border: solid $dark-grey-green 1px;
-    box-shadow: 0px 4px 12px -1px $dark-grey-green;
-  }
-  
-  #tableStyle td, #tableStyle th {
-    padding-left: 8rem;
-    
-  }
-  
-  #tableStyle tr:nth-child(even){background-color: rgb(199, 128, 88);}
-  
-  #tableStyle tr:hover {background-color: lighten($color: $dark-coral, $amount: 20)}
-
-  #tableStyle th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 6rem;
-    text-align: left;
-    background-color: $vivid-dark-green;
-    color: white;
-  }
-
-
-  /* INPUT TABLE */
+/* INPUT TABLE */
 
   .addBirdFormStyle {
     margin-top: 4rem;
@@ -36,7 +8,6 @@
     border: solid $dark-grey-green 1px;
     display: flex;
     flex-direction: column;
-    border-radius: 1rem;
     box-shadow: 0px 4px 12px -1px $dark-grey-green;
 
   }
@@ -80,17 +51,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .editButton {
     width: 7rem;
     border: none;
     background-color: darken($color: $medium-teal, $amount: 20);
-    margin-right: 5rem;
 
     &:hover {
       border: none;
-      background-color: lighten($color: $medium-teal, $amount: 5 );
+      background-color: lighten($color: $medium-teal, $amount: 1 );
     }
   }
 
@@ -98,7 +69,6 @@
     width: 7rem;
     border: none;
     background-color: lighten($color: $dark-coral, $amount: 10);
-    margin-right: 5rem;
     margin-bottom: 1rem;
 
     &:hover {
@@ -106,3 +76,65 @@
       background-color: $medium-coral;
     }
   }
+
+  /* GLOBAL TABLE STYLE AND QUERIES */
+table { 
+  box-shadow: 0px 4px 12px -1px $dark-grey-green;
+  background: lighten($color: $vivid-dark-green, $amount: 50);
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+  background: lighten($color: $vivid-dark-green, $amount: 30); 
+}
+
+th { 
+  background: darken($color: $dark-grey-green, $amount: 10); 
+  color: white; 
+  font-weight: bold;
+}
+
+td, th { 
+  padding: 6px; 
+  text-align:center;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	td { 
+		border: none;
+		position: relative;
+		padding-left: 50%; 
+    text-align: left;
+	}
+  
+	
+	td:before { 
+
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+
+  }
+
+	td:nth-of-type(1):before { content: "Ave"; }
+	td:nth-of-type(2):before { content: "Localización"; }
+	td:nth-of-type(3):before { content: "Fecha"; }
+	td:nth-of-type(4):before { content: "Hora"; }
+	td:nth-of-type(5):before { content: "Opciones"; }
+}

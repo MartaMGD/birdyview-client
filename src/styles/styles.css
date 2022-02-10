@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*** Global Styles ***/
 * {
   -webkit-box-sizing: border-box;
@@ -526,37 +527,6 @@ body {
 }
 
 /* DESKTOP */
-#tableStyle {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #f1bf90;
-  border: solid #515C53 1px;
-  -webkit-box-shadow: 0px 4px 12px -1px #515C53;
-          box-shadow: 0px 4px 12px -1px #515C53;
-}
-
-#tableStyle td, #tableStyle th {
-  padding-left: 8rem;
-}
-
-#tableStyle tr:nth-child(even) {
-  background-color: #c78058;
-}
-
-#tableStyle tr:hover {
-  background-color: #ba5440;
-}
-
-#tableStyle th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-right: 6rem;
-  text-align: left;
-  background-color: #355C3E;
-  color: white;
-}
-
 /* INPUT TABLE */
 .addBirdFormStyle {
   margin-top: 4rem;
@@ -573,7 +543,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 1rem;
   -webkit-box-shadow: 0px 4px 12px -1px #515C53;
           box-shadow: 0px 4px 12px -1px #515C53;
 }
@@ -629,31 +598,96 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .editButton {
   width: 7rem;
   border: none;
   background-color: #405e4b;
-  margin-right: 5rem;
 }
 
 .editButton:hover {
   border: none;
-  background-color: #7aa388;
+  background-color: #6e9b7e;
 }
 
 .deleteButton {
   width: 7rem;
   border: none;
   background-color: #944333;
-  margin-right: 5rem;
   margin-bottom: 1rem;
 }
 
 .deleteButton:hover {
   border: none;
   background-color: #FF7358;
+}
+
+/* GLOBAL TABLE STYLE AND QUERIES */
+table {
+  -webkit-box-shadow: 0px 4px 12px -1px #515C53;
+          box-shadow: 0px 4px 12px -1px #515C53;
+  background: #b9d7c0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+  background: #78b286;
+}
+
+th {
+  background: #39413b;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 6px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before {
+    content: "Ave";
+  }
+  td:nth-of-type(2):before {
+    content: "Localización";
+  }
+  td:nth-of-type(3):before {
+    content: "Fecha";
+  }
+  td:nth-of-type(4):before {
+    content: "Hora";
+  }
+  td:nth-of-type(5):before {
+    content: "Opciones";
+  }
 }
 
 .commentStyle {
