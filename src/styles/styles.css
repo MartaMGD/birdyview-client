@@ -480,6 +480,11 @@ body {
           justify-content: center;
 }
 
+.birdCard:hover {
+  -webkit-box-shadow: 0 0.25rem 1rem 0 gray;
+          box-shadow: 0 0.25rem 1rem 0 gray;
+}
+
 .birdPhotoCard {
   width: 100%;
   height: 11rem;
