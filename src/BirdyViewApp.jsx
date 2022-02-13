@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import UserDashboard from './views/UserDashboard';
 import Birdpage from './views/Birdpage';
 import BlogEntryPage from './views/BlogEntryPage';
+import { NewArticle } from './views/NewArticle';
 
 export default function BirdyViewApp() {
 
@@ -62,6 +63,10 @@ export default function BirdyViewApp() {
 
                     <Route path="userdashboard" element={<PrivateOutlet />}>
                         <Route path="" element={<UserDashboard userSession={userSession} />} />
+                    </Route>
+
+                    <Route path="articulos/nuevoarticulo" element={<PrivateOutlet />}>
+                        <Route path="" element={<NewArticle userSession={userSession} />} />
                     </Route>
                 </Routes>
                 <Footer />

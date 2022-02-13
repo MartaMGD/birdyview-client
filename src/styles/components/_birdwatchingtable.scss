@@ -1,9 +1,11 @@
 /* INPUT TABLE */
 
   .addBirdFormStyle {
+    height: 74vh;
     margin-top: 4rem;
     background-color: $vanilla;
     align-items: center;
+    justify-content: space-evenly;
     padding: 2rem;
     border: solid $dark-grey-green 1px;
     display: flex;

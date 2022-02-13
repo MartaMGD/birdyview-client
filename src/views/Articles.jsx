@@ -9,6 +9,12 @@ export default function Articles() {
 
                 {
                     <div>
+                        <Link
+                            to={`/articulos/nuevoarticulo`}>
+                            <button className="newPost">
+                                Nueva publicación
+                            </button>
+                        </Link>
                         <ul className="list-group">
                             {blogentries.map((entry, i) => {
                                 return (

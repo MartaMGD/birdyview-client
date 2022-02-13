@@ -1,10 +1,18 @@
 import BirdCard from '../BirdCard/BirdCard';
-import { birds } from '../../data/hardcodeddata';
-import { useState } from 'react';
+// import { birds } from '../../data/hardcodeddata';
+import { useState, useEffect } from 'react';
+import {API_URL} from "../../config/config.js"
 
 export default function SearchInterface() {
 
     const [filterBird, setFilterBird] = useState('')
+    const [birds, setBirds] = useState([]);
+
+    useEffect(() => {
+        fetch(API_URL)
+          .then(response => response.json())
+          .then(data => setBirds(data.birds));
+      }, [])
 
     return (
         <main>
@@ -18,11 +26,6 @@ export default function SearchInterface() {
                         name="searchText"
                         autoComplete="off"
                         onChange={event => { setFilterBird(event.target.value) }} />
-                    {/* 
-                    <button className="searchButton"
-                        type="submit">
-                        Buscar
-                    </button> */}
 
                     <span className="filterSpan">Filtra por orden o provincia</span>
                     <div className="filterBoxesContainer">
@@ -47,18 +50,18 @@ export default function SearchInterface() {
 
             <div className="showBirds">
                 {birds.filter((bird) => {
-                    if (filterBird == "") {
+                    if (filterBird === "") {
                         return bird
-                    } else if (bird.birdname.toLowerCase().includes(filterBird.toLowerCase())) {
+                    } else if (bird.name.toLowerCase().includes(filterBird.toLowerCase())) {
                         return bird
                     }
-                }
-                ).map((bird, i) => {
+                })
+                .map((bird, _id) => {
                     return (
                         <BirdCard
-                            key={i}
-                            id={bird.id}
-                            birdname={bird.birdname}
+                            key={bird._id}
+                            _id={bird._id}
+                            name={bird.name}
                             scientificname={bird.scientificname} />
                     );
                 })}
