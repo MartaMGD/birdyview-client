@@ -72,7 +72,7 @@ body {
 .birdPageWrapper, .birdPageWrapper p {
   height: 100%;
   background-color: #FFE9B8;
-  color: #355C3E;
+  color: #192b1d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,6 +96,50 @@ body {
 .infoBirdPhoto {
   height: 100%;
   width: 100%;
+}
+
+.birdInfo {
+  height: 30rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.birdParagStyle {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.infoBirdSeparator {
+  height: 5rem;
+  width: 30rem;
+}
+
+.birdName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  width: 22rem;
+  background-color: #FF9778;
 }
 
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
@@ -385,15 +429,39 @@ body {
             align-items: center;
   }
   /*** BIRD PAGE GLOBAL CONFIGURATION ***/
+  .birdInfo {
+    background-color: #b9d7c0;
+    height: 30rem;
+    width: 50rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem;
+  }
+  .birdParagStyle {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    text-align: justify;
+  }
   .infoBirdPhoto {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .birdPageWrapper {
     -webkit-box-shadow: 0px 8px 12px -1px #355C3E;
             box-shadow: 0px 8px 12px -1px #355C3E;
     height: 100%;
     background-color: #FFE9B8;
-    color: #355C3E;
+    color: #192b1d;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -408,9 +476,20 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .birdParagStyle {
-    margin-left: 22rem;
-    margin-right: 22rem;
+  .infoBirdSeparator {
+    height: 5rem;
+    width: 50rem;
+  }
+  .birdName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 1rem;
+    width: 40rem;
+    background-color: #FF9778;
   }
   /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
   .birdwatchingPage {

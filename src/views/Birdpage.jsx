@@ -2,33 +2,40 @@ import { useParams } from 'react-router';
 import { useState, useEffect } from 'react';
 import { API_URL } from '../config/config';
 
-export default function Birdpage(props) {
+export default function Birdpage() {
     const { birdId } = useParams();
-    const [birds, setBirds] = useState([]);
+    const [bird, setBird] = useState();
 
     useEffect(() => {
         fetch(API_URL)
             .then(response => response.json())
-            .then(data => setBirds(data.birds));
+            .then(data => setBird(getBirdById(data.birds, birdId)));
     }, [])
 
-    const getBirdById = (_id = '') => {
-
+    // This "selector" finds inside the data and returns the bird with the same id. 
+    const getBirdById = (birds, _id) => {
         return birds.find(bird => bird._id === _id);
     }
-    
-    const bird = getBirdById(birdId);
+
+    if (!bird) {
+        return <p>Cargando...</p>
+    }
 
     return (
         <div className="container birdPageWrapper">
             <img className="infoBirdPhoto"
                 src={`/birdimages/${bird._id}.jpg`}
                 alt="Pájaro info" />
-            <h2>{bird.name}</h2>
-            <h3> Nombre científico: {bird.scientificname}</h3>
-            <span><b>Altura:</b> {bird.height}</span>
-            <span><b>Envergadura:</b> {bird.wingspan}</span>
-            <p className="birdParagStyle"><b>Descripción:</b> {bird.description} </p>
+            <img className="infoBirdSeparator" src="/photoseparator.png" alt="Separator" />
+            <div className="birdInfo">
+                <div className="birdName">
+                    <h2>{bird.name}</h2>
+                </div>
+                <h3> Nombre científico: {bird.scientificname}</h3>
+                <span><b>Altura:</b> {bird.height}</span>
+                <span><b>Envergadura:</b> {bird.wingspan}</span>
+                <span className="birdParagStyle"><b>Descripción:</b> {bird.description} </span>
+            </div>
         </div>
     )
 

@@ -60,7 +60,7 @@ body {
 .birdPageWrapper, .birdPageWrapper p{
     height: 100%;
     background-color: $vanilla;
-    color: $vivid-dark-green;
+    color: darken($color: $vivid-dark-green, $amount: 15);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +75,40 @@ body {
 .infoBirdPhoto {
     height: 100%;
     width: 100%;
+}
+
+.birdInfo {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+
+
+}
+
+.birdParagStyle {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.infoBirdSeparator {
+    height: 5rem;
+    width: 30rem;
+}
+
+.birdName {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 22rem;
+    background-color: $light-coral;
+
 }
 
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
@@ -311,25 +345,51 @@ body {
 }
 
 /*** BIRD PAGE GLOBAL CONFIGURATION ***/
+.birdInfo {
+    background-color: lighten($color: $vivid-dark-green, $amount: 50);
+    height: 30rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 3rem;
+
+}
+
+.birdParagStyle {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    text-align: justify;
+}
 
 .infoBirdPhoto {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .birdPageWrapper{
     box-shadow: 0px 8px 12px -1px $vivid-dark-green;
     height: 100%;
     background-color: $vanilla;
-    color: $vivid-dark-green;
+    color: darken($color: $vivid-dark-green, $amount: 15);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.birdParagStyle {
-    margin-left: 22rem;
-    margin-right: 22rem;
+.infoBirdSeparator {
+    height: 5rem;
+    width: 50rem;
+}
+
+.birdName {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 40rem;
+    background-color: $light-coral;
+
 }
 
 /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
