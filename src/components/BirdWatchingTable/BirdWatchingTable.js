@@ -43,7 +43,12 @@ export default function BirdwatchingTable() {
             watchedtime: watchedtime
         }
 
-        setBirdInfo((previousBirds) => [...previousBirds, newBird]);
+        if (birdname.length !== 0 & location.length !== 0 & watchedday.length !== 0 & watchedtime !== 0) {
+            setBirdInfo((previousBirds) => [...previousBirds, newBird]);
+        } else {
+            alert("Por favor, rellena todos los campos.")
+        }
+
     }
 
 
@@ -97,7 +102,7 @@ export default function BirdwatchingTable() {
                     <span className="birdwatchingSpanStyle">Añade un nuevo avistamiento</span>
 
                     <select onChange={handleBirdNameChange}
-                    value={birdname}>
+                        value={birdname}>
                         {
                             birds.map((bird, i) => {
                                 return (

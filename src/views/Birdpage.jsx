@@ -34,6 +34,7 @@ export default function Birdpage() {
                 <h3> Nombre científico: {bird.scientificname}</h3>
                 <span><b>Altura:</b> {bird.height}</span>
                 <span><b>Envergadura:</b> {bird.wingspan}</span>
+                <span><b>Localización:</b> {bird.location[0]}, {bird.location[1]}, {bird.location[2]}, {bird.location[3]} </span>
                 <span className="birdParagStyle"><b>Descripción:</b> {bird.description} </span>
             </div>
         </div>

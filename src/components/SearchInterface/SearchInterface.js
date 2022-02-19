@@ -5,7 +5,8 @@ import {API_URL} from "../../config/config.js"
 
 export default function SearchInterface() {
 
-    const [filterBird, setFilterBird] = useState('')
+    const [filterBird, setFilterBird] = useState('');
+    const [selectLocation, setSelectLocation] = useState('');
     const [birds, setBirds] = useState([]);
 
     useEffect(() => {
@@ -13,6 +14,13 @@ export default function SearchInterface() {
           .then(response => response.json())
           .then(data => setBirds(data.birds));
       }, [])
+      
+    // For the filter by location select
+    const birdsCopy = [...birds];
+
+    const handleSelectChange = (event) => {
+        setSelectLocation(event.target.value);
+    }
 
     return (
         <main>
@@ -27,24 +35,20 @@ export default function SearchInterface() {
                         autoComplete="off"
                         onChange={event => { setFilterBird(event.target.value) }} />
 
-                    <span className="filterSpan">Filtra por orden o provincia</span>
-                    <div className="filterBoxesContainer">
-                        <select className="selectStyle">
-                            <option> Ascendente </option>
-                            <option> Descendente </option>
+                    <span className="filterSpan">Filtra por provincia</span>
+                        <select 
+                        className="selectStyle"
+                        value={selectLocation}
+                        onChange={handleSelectChange}>
+                            <option value="Huelva"> Huelva </option>
+                            <option value="Sevilla"> Sevilla </option>
+                            <option value="Cádiz"> Cádiz </option>
+                            <option value="Málaga"> Málaga </option>
+                            <option value="Córdoba"> Córdoba </option>
+                            <option value="Jaén"> Jaén </option>
+                            <option value="Granada"> Granada </option>
+                            <option value="Almería"> Almería </option>
                         </select>
-
-                        <select className="selectStyle">
-                            <option> Huelva </option>
-                            <option> Sevilla </option>
-                            <option> Cádiz </option>
-                            <option> Málaga </option>
-                            <option> Córdoba </option>
-                            <option> Jaén </option>
-                            <option> Granada </option>
-                            <option> Almería </option>
-                        </select>
-                    </div>
                 </form>
             </div>
 
