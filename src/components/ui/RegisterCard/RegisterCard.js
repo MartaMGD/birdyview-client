@@ -7,6 +7,19 @@ export default function RegisterCard() {
 
                 <div className="formContentWrap">
                     <span className="registerMessage">Crea una cuenta</span>
+                    <div>
+                        <span className="inputTextPlaceholders">Nombre: </span>
+                        <input className="loginInputStyle"
+                            type="text"
+                            placeholder="Introduce tu nombre" />
+                    </div>
+
+                    <div>
+                        <span className="inputTextPlaceholders">Apellido: </span>
+                        <input className="loginInputStyle"
+                            type="text"
+                            placeholder="Introduce tu apellido" />
+                    </div>
 
                     <div>
                         <span className="inputTextPlaceholders">Nombre de usuario: </span>
