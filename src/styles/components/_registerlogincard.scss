@@ -1,6 +1,6 @@
 .loginRegisterCard {
-    height: 30rem;
-    width: 22rem;
+    height: 42rem;
+    width: 25rem;
     background-color: $cream;
     color: $dark-grey-green;
     border-radius: 1.5em;
@@ -24,7 +24,7 @@
 
 .loginInputStyle {
     height: 2.5rem;
-    width: 16rem;
+    width: 20rem;
     margin: 0.7rem;
     border-radius: 5rem;
     border: solid $medium-teal 0.1rem;
@@ -87,8 +87,8 @@
 @media (min-width: 992px) {
 
     .loginRegisterCard {
-        height: 25rem;
-        width: 45rem;
+        height: 40rem;
+        width: 50rem;
         background-color: $cream;
         color: $dark-grey-green;
         border-radius: 1.5em;
@@ -116,7 +116,7 @@
 
     .loginInputStyle {
         height: 2.5rem;
-        width: 17rem;
+        width: 19rem;
         margin: 0.7rem;
         border-radius: 5rem;
         border: solid $medium-teal 0.1rem;

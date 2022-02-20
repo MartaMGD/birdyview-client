@@ -1401,8 +1401,8 @@ td, th {
 }
 
 .loginRegisterCard {
-  height: 30rem;
-  width: 22rem;
+  height: 42rem;
+  width: 25rem;
   background-color: #E6E1BE;
   color: #515C53;
   border-radius: 1.5em;
@@ -1436,7 +1436,7 @@ td, th {
 
 .loginInputStyle {
   height: 2.5rem;
-  width: 16rem;
+  width: 20rem;
   margin: 0.7rem;
   border-radius: 5rem;
   border: solid #6B997B 0.1rem;
@@ -1504,8 +1504,8 @@ td, th {
 /* DESKTOP */
 @media (min-width: 992px) {
   .loginRegisterCard {
-    height: 25rem;
-    width: 45rem;
+    height: 40rem;
+    width: 50rem;
     background-color: #E6E1BE;
     color: #515C53;
     border-radius: 1.5em;
@@ -1538,7 +1538,7 @@ td, th {
   }
   .loginInputStyle {
     height: 2.5rem;
-    width: 17rem;
+    width: 19rem;
     margin: 0.7rem;
     border-radius: 5rem;
     border: solid #6B997B 0.1rem;
