@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegisterCard() {
     // States for the user creation
+    const navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState('');
@@ -22,9 +24,11 @@ export default function RegisterCard() {
 
         axios.post("http://localhost:5000/users", registered)
             .then(response => console.log(response.data))
-    }
 
-    console.log(setFirstName);
+        navigate('/login');
+
+
+    }
 
     return (
         <main className="loginWrapper">

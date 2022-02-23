@@ -10,7 +10,7 @@ export default function UserDashboard(props) {
                 <div className="welcomePanelStyle">
                     <img class="profilePhoto" src={userimage}
                         alt="Profile picture" />
-                    <h4>Bienvenida, {props.userSession.name}</h4>
+                    <h4>Hola, {props.userSession.name}</h4>
                 </div>
 
                 <div className="userPanelStyle">
