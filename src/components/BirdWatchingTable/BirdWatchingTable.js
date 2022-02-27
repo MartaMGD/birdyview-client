@@ -1,21 +1,27 @@
 import { useState } from 'react';
+import { API_URL } from '../../config/config';
+import { useEffect } from 'react';
 import { birds } from '../../data/hardcodeddata';
 
 export default function BirdwatchingTable() {
 
-    // Estado general
     const [birdInfo, setBirdInfo] = useState([]);
-
-    // const [newBird, setNewBird] = useState({
-    //     birdname: "",
-    //     location: "",
-    //     watchedtime: ""
-    // });
 
     const [birdname, setBirdname] = useState("");
     const [location, setLocation] = useState("");
     const [watchedday, setWatchedday] = useState("");
     const [watchedtime, setWatchedtime] = useState("");
+
+    // const handleAddBird = (event) => {
+        
+    // }
+    // useEffect(() => {
+    //     fetch(API_URL)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setBirdname(data.birds)
+    //         });
+    // }, [])
 
     // HANDLES
     const handleBirdNameChange = (e) => {

@@ -1,41 +1,36 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios';
+import { users } from '../../../data/hardcodeddata'
+import { useNavigate } from 'react-router';
 
 export default function LoginCard(props) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const navigate = useNavigate()
+    const usuarios = users
+    const [email, setEmail] = useState('')
+    const [pass, setPass] = useState('')
     console.log('EMAIL ====>', email)
-    console.log('PASS ====>', password)
+    console.log('PASS ====>', pass)
 
-    async function loginUser(event) {
-        event.preventDefault();
-
-        const response = await fetch("http://localhost:5000/users/login", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email,
-                password
-            }),
-        });
-
-        const data = await response.json();
-
-        if(data.user) {
-            alert('Has iniciado sesión.')
-            window.location.href = '/avistamientos'
+    const enviarDatos = () => {
+        let index = usuarios.findIndex(obj => obj.email === email && obj.pass === pass)
+        if (index !== -1) {
+            console.log('USUARIO CORRECTO')
+            props.setUserSession({
+                status: true,
+                token: 'token123',
+                name: users[index].nombre,
+                email: users[index].email,
+                admin: users[index].admin
+            })
+            navigate('/avistamientos')
         } else {
-            alert('Datos erróneos. Comprueba tu email y usuario.');
+            alert('USUARIO INCORRECTO')
         }
-
     }
 
     return (
         <main>
-            <form onSubmit={loginUser} className="loginRegisterCard">
+            <form className="loginRegisterCard">
 
                 <div className="cardImage" />
 
@@ -51,8 +46,8 @@ export default function LoginCard(props) {
 
                     <div>
                         <input className="loginInputStyle"
-                            type="password" value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            type="password" value={pass}
+                            onChange={(e) => setPass(e.target.value)}
                             placeholder={props.secondInputText} />
                     </div>
 
@@ -68,9 +63,10 @@ export default function LoginCard(props) {
                         </Link>
                     </span>
 
-                    <input className="loginButtonStyle" type="submit" value="Enviar" />
+                    <input onClick={enviarDatos} className="loginButtonStyle" type="submit" value="Enviar" />
                 </div>
             </form>
         </main>
     )
 }
+

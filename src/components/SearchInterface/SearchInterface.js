@@ -1,27 +1,35 @@
 import BirdCard from '../BirdCard/BirdCard';
-// import { birds } from '../../data/hardcodeddata';
 import { useState, useEffect } from 'react';
-import {API_URL} from "../../config/config.js"
+import { API_URL } from "../../config/config.js"
 
 export default function SearchInterface() {
 
+    const provinces = [
+        { slug: 'All' },
+        { slug: 'Jaén' },
+        { slug: 'Córdoba' },
+        { slug: 'Sevilla' },
+        { slug: 'Huelva' },
+        { slug: 'Cádiz' },
+        { slug: 'Málaga' },
+        { slug: 'Granada' },
+        { slug: 'Almería' },
+    ]
+
     const [filterBird, setFilterBird] = useState('');
-    const [selectLocation, setSelectLocation] = useState('');
     const [birds, setBirds] = useState([]);
+    const [copyBirds, setCopyBirds] = useState([]);
+    const [provinceSeleted, setProvinceSelected] = useState(provinces[0].value);
 
     useEffect(() => {
         fetch(API_URL)
-          .then(response => response.json())
-          .then(data => setBirds(data.birds));
-      }, [])
-      
-    // For the filter by location select
-    const birdsCopy = [...birds];
-
-    const handleSelectChange = (event) => {
-        setSelectLocation(event.target.value);
-    }
-
+            .then(response => response.json())
+            .then(data => {
+                setBirds(data.birds)
+                setCopyBirds(data.birds)
+            });
+    }, [])
+    
     return (
         <main>
             <div >
@@ -36,19 +44,16 @@ export default function SearchInterface() {
                         onChange={event => { setFilterBird(event.target.value) }} />
 
                     <span className="filterSpan">Filtra por provincia</span>
-                        <select 
-                        className="selectStyle"
-                        value={selectLocation}
-                        onChange={handleSelectChange}>
-                            <option value="Huelva"> Huelva </option>
-                            <option value="Sevilla"> Sevilla </option>
-                            <option value="Cádiz"> Cádiz </option>
-                            <option value="Málaga"> Málaga </option>
-                            <option value="Córdoba"> Córdoba </option>
-                            <option value="Jaén"> Jaén </option>
-                            <option value="Granada"> Granada </option>
-                            <option value="Almería"> Almería </option>
-                        </select>
+                    <select className="selectStyle"
+                    value={provinceSeleted}
+                    onChange={e => setProvinceSelected(e.target.value)}>
+                    
+                    {provinces.map((province, index) => {
+                        return (
+                            <option key={index} value={province.slug}>{province.slug}</option>
+                        )
+                    })}
+                    </select>
                 </form>
             </div>
 
@@ -60,15 +65,15 @@ export default function SearchInterface() {
                         return bird
                     }
                 })
-                .map((bird, _id) => {
-                    return (
-                        <BirdCard
-                            key={bird._id}
-                            _id={bird._id}
-                            name={bird.name}
-                            scientificname={bird.scientificname} />
-                    );
-                })}
+                    .map((bird, _id) => {
+                        return (
+                            <BirdCard
+                                key={bird._id}
+                                _id={bird._id}
+                                name={bird.name}
+                                scientificname={bird.scientificname} />
+                        );
+                    })}
             </div>
         </main>
     )

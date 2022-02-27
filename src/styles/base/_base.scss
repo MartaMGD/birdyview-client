@@ -206,12 +206,49 @@ body {
 }
 
 /*** NEW ENTRY GLOBAL CONFIGURATION ***/
+.newArticleForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .newArticle {
     background-color: $vanilla;
 }
 
 .newArticleBody {
     height: 50rem;
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.uploadImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    width: 60rem;
+}
+
+.newArticleInput {
+    height: 2rem;
+    width: 2rem;
+    padding-left: 9rem;
+    border: 1px solid $dark-grey-green;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.newArticleSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+    font-weight: bold;
 }
 
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
@@ -462,5 +499,64 @@ body {
 }
  }
 
+/*** NEW ENTRY GLOBAL CONFIGURATION ***/
+.newArticleForm {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: $dark-grey-green;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.newArticle {
+    background-color: $vanilla;
+}
+
+.newArticleBody {
+    height: 50rem;
+    width: 60rem;
+    margin-bottom: 2rem;
+    padding-bottom: 47rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.uploadImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    width: 25rem;
+}
+
+.newArticleInput {
+    height: 2rem;
+    width: 50rem;
+    padding-left: 9rem;
+    border: 1px solid $dark-grey-green;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.newArticleSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
 /* DESKTOP */
 @media (min-width: 1200px) { }

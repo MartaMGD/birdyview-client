@@ -1,18 +1,22 @@
 .commentStyle {
+    background-color: $vanilla;
     padding-top: 2rem;
     padding-left: 2rem;
     height: 200px;
-    background-color: $vanilla;
     color: $dark-grey-green;
 
 }
-
 .commentName {
     font-weight: bold;
 }
 
 .commentContent {
     text-align: justify;
+}
+
+.commentButton {
+    margin-left: 10rem;
+    margin-bottom: 2rem;
 }
 
 /*** Media queries ***/
@@ -28,6 +32,11 @@
         background-color: $vanilla;
         color: $dark-grey-green;
 
+    }
+
+    .commentButton {
+        margin-left: 38rem;
+        margin-bottom: 2rem;
     }
  }
 

@@ -1,8 +1,25 @@
-export default function CommentBox() {
+export default function CommentBox({ commentInfo }) {
     return (
-        <div className="container commentStyle">
-            <span className="commentName">Nombre</span>
-            <p className="commentContent">Contenido comentario</p>
-        </div>
+        <>
+            {
+                commentInfo?.map((com) => {
+                    return (
+
+                        <div className="container commentStyle">
+                            <span className="commentName"
+                                key={com.setnewCommentName}>
+                                Nombre: {com.newCommentName}
+                            </span>
+
+                            <p className="commentContent"
+                                key={com.setNewCommentBody}>
+                                {com.newCommentBody}
+                            </p>
+                        </div>
+
+                    )
+                })
+            }
+        </>
     )
 }

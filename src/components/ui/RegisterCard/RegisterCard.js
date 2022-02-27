@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 export default function RegisterCard() {
     // States for the user creation
     const navigate = useNavigate();
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,14 +13,12 @@ export default function RegisterCard() {
         event.preventDefault();
 
         const registered = {
-            firstname: firstName,
-            lastname: lastName,
             username: username,
             email: email,
             password: password
         }
 
-        axios.post("http://localhost:5000/users", registered)
+        axios.post("http://localhost:5000/api/auth/register", registered)
             .then(response => console.log(response.data))
 
         navigate('/login');
@@ -38,23 +34,6 @@ export default function RegisterCard() {
 
                 <div className="formContentWrap">
                     <span className="registerMessage">Crea una cuenta</span>
-                    <div>
-                        <span className="inputTextPlaceholders">Nombre: </span>
-                        <input className="loginInputStyle"
-                            type="text"
-                            placeholder="Introduce tu nombre"
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)} />
-                    </div>
-
-                    <div>
-                        <span className="inputTextPlaceholders">Apellido: </span>
-                        <input className="loginInputStyle"
-                            type="text"
-                            placeholder="Introduce tu apellido"
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)} />
-                    </div>
 
                     <div>
                         <span className="inputTextPlaceholders">Nombre de usuario: </span>

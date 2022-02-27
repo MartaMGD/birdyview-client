@@ -1,11 +1,39 @@
 import { useParams } from 'react-router';
-import { useState } from 'react';
 import { getPostbyId } from '../selectors/getPostById';
+import { useState } from 'react';
 import CommentBox from '../components/CommentBox/CommentBox';
 
-export default function BlogEntryPage(props) {
-    const { postId } = useParams();
+export default function BlogEntryPage() {
+    const [commentInfo, setCommentInfo] = useState([]);
+    const [newCommentName, setnewCommentName] = useState("");
+    const [newCommentBody, setNewCommentBody] = useState("");
 
+    // HANDLES
+    const handleName = (e) => {
+        setnewCommentName(e.target.value);
+    }
+
+    const handleBody = (e) => {
+        setNewCommentBody(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newComment = {
+            newCommentName: newCommentName,
+            newCommentBody: newCommentBody
+        }
+
+        if (newCommentBody.length !== 0 && newCommentName !== 0) {
+            setCommentInfo((previousComments) => [...previousComments, newComment]);
+        } else {
+            alert("Por favor, rellena todos los campos.");
+        }
+        
+    }
+
+    const { postId } = useParams();
     const post = getPostbyId(postId);
 
 
@@ -14,8 +42,8 @@ export default function BlogEntryPage(props) {
             <div className="container mainEntryStyle">
                 <h2>{post.articletitle}</h2>
                 <img className="articlePhoto"
-                src={`/articleimages/${post.id}.jpg`}
-                alt="Foto artículo" />
+                    src={`/articleimages/${post.id}.jpg`}
+                    alt="Foto artículo" />
                 <img className="photoSeparator" src="/photoseparator.png" alt="Separator" />
                 <p>{post.articlecontent}</p>
             </div>
@@ -23,23 +51,28 @@ export default function BlogEntryPage(props) {
             {/* COMMENTS */}
             <div className="container commentBoxStyle">
                 <h3>Comentarios</h3>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        className="commentNameInputStyle"
+                        type="text"
+                        placeholder="Nombre"
+                        onChange={handleName}
+                    />
 
-                <input
-                    className="commentNameInputStyle"
-                    type="text"
-                    placeholder="Nombre"
-                />
+                    <input
+                        className="commentInputStyle"
+                        type="text"
+                        placeholder="Deja tu comentario..."
+                        onChange={handleBody}
+                    />
 
-                <input
-                    className="commentInputStyle"
-                    type="text"
-                    placeholder="Deja tu comentario..."
-                />
-
+                    <button className="commentButton" type="submit">Enviar</button>
+                </form>
+                
                 <img className="articleSeparator" src="/articleseparator.png" alt="Separator" />
             </div>
 
-            <CommentBox />
+            <CommentBox commentInfo={commentInfo}/>
         </>
     )
 
