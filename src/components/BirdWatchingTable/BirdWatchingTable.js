@@ -30,6 +30,11 @@ export default function BirdwatchingTable() {
         setBirdInfo((previousBirds) => [...previousBirds, newBird]);
     }
 
+    // Handle to remove birds
+    const removeBirds = (_id) => {
+        setBirdInfo(birds.filter(birds => birds._id !== _id));
+    };
+
     return (
         <>
 
@@ -66,7 +71,8 @@ export default function BirdwatchingTable() {
 
                             <td className="optionButtons" key={bird.hour}>
                                 <button className="editButton">Editar</button>
-                                <button className="deleteButton">X</button>
+                                <button className="deleteButton"
+                                    onClick={() => removeBirds(birds._id)}>X</button>
                             </td>
                         </tr>
                     )}
