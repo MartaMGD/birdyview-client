@@ -49,11 +49,12 @@
 .heroTextBox {
     margin: 0;
     height: 18rem;
-    background-color: $vivid-dark-green;
+    background-color: lighten($color: $vivid-dark-green, $amount: 5);
     color: $cream;
     display: flex;
     align-items: center;
     text-align:center;
+    font-weight: bold;
     padding: 2rem;
 }
 

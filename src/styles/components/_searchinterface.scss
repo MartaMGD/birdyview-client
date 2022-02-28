@@ -1,6 +1,6 @@
 /*** SEARCH BAR ***/
 .searchFormWrapper {
-    height: 14rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,22 +36,6 @@
 .filterBoxesContainer {
     display: flex;
     flex-direction: row;
-}
-
-.searchButton {
-    height: 2.5rem;
-    width: 5rem;
-    background-color: $vivid-dark-green;
-    color: white;
-    border: solid $vivid-dark-green 1px;
-    border-top-right-radius: 0.6rem;
-    border-bottom-right-radius: 0.6rem;
-    margin-bottom: 1rem;
-
-    &:hover {
-        background-color: $medium-dark-green;
-        border: solid $medium-dark-green 1px;
-    }
 }
 
 /*** SHOW BIRDS SPACE ***/

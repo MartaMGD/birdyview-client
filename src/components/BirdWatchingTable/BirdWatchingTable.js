@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 import { API_URL } from '../../config/config';
 import { useEffect } from 'react';
@@ -7,57 +8,27 @@ export default function BirdwatchingTable() {
 
     const [birdInfo, setBirdInfo] = useState([]);
 
-    const [birdname, setBirdname] = useState("");
-    const [location, setLocation] = useState("");
-    const [watchedday, setWatchedday] = useState("");
-    const [watchedtime, setWatchedtime] = useState("");
+    const [birdname, setBirdname] = useState('');
+    const [location, setLocation] = useState('');
+    const [date, setDate] = useState('');
+    const [hour, setHour] = useState('');
 
-    // const handleAddBird = (event) => {
-        
-    // }
-    // useEffect(() => {
-    //     fetch(API_URL)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setBirdname(data.birds)
-    //         });
-    // }, [])
-
-    // HANDLES
-    const handleBirdNameChange = (e) => {
-        setBirdname(e.target.value);
-    }
-
-    const handleLocationChange = (e) => {
-        setLocation(e.target.value);
-    }
-
-    const handleWatchedDayChange = (e) => {
-        setWatchedday(e.target.value);
-    }
-
-    const handleTimeChange = (e) => {
-        setWatchedtime(e.target.value);
-    }
-
+    // Handle to submit bird 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         const newBird = {
             birdname: birdname,
             location: location,
-            watchedday: watchedday,
-            watchedtime: watchedtime
+            date: date,
+            hour: hour
         }
 
-        if (birdname.length !== 0 & location.length !== 0 & watchedday.length !== 0 & watchedtime !== 0) {
-            setBirdInfo((previousBirds) => [...previousBirds, newBird]);
-        } else {
-            alert("Por favor, rellena todos los campos.")
-        }
+        axios.post("http://localhost:5000/birdwatching", newBird)
+            .then(response => console.log(response.data));
 
+        setBirdInfo((previousBirds) => [...previousBirds, newBird]);
     }
-
-
 
     return (
         <>
@@ -85,15 +56,15 @@ export default function BirdwatchingTable() {
                                 {bird.location}
                             </td>
 
-                            <td className="watcheddaytd" key={bird.watchedday}>
-                                {bird.watchedday}
+                            <td className="watcheddaytd" key={bird.date}>
+                                {bird.date}
                             </td>
 
-                            <td className="watchedtd" key={bird.watchedtime}>
-                                {bird.watchedtime}
+                            <td className="watchedtd" key={bird.hour}>
+                                {bird.hour}
                             </td>
 
-                            <td className="optionButtons" key={bird.watchedtime}>
+                            <td className="optionButtons" key={bird.hour}>
                                 <button className="editButton">Editar</button>
                                 <button className="deleteButton">X</button>
                             </td>
@@ -107,7 +78,7 @@ export default function BirdwatchingTable() {
                 <div className="addBirdFormStyle">
                     <span className="birdwatchingSpanStyle">Añade un nuevo avistamiento</span>
 
-                    <select onChange={handleBirdNameChange}
+                    <select onChange={(e) => setBirdname(e.target.value)}
                         value={birdname}>
                         {
                             birds.map((bird, i) => {
@@ -122,17 +93,17 @@ export default function BirdwatchingTable() {
 
                     <input type="text"
                         placeholder="Localización"
-                        onChange={handleLocationChange}
+                        onChange={(e) => setLocation(e.target.value)}
                     />
 
                     <input type="date"
                         placeholder="Día"
-                        onChange={handleWatchedDayChange}
+                        onChange={(e) => setDate(e.target.value)}
                     />
 
                     <input type="time"
                         placeholder="Hora del avistamiento"
-                        onChange={handleTimeChange}
+                        onChange={(e) => setHour(e.target.value)}
                     />
 
                     <button type="submit">Añadir</button>

@@ -15,7 +15,7 @@ export default function NewsletterInput() {
                 </div>
 
                 <div>
-                    <input className="loginButtonStyle" 
+                    <input className="loginButtonStyle"
                     type="submit" 
                     value="Suscríbete" />
                 </div>

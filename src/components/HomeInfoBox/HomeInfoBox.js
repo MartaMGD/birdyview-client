@@ -9,7 +9,7 @@ export default function HomeInfoBox() {
                 alt="Birdwatching news" />
             <div className="infoBoxEffect">
                 <span className="infoBoxText">
-                    Descubre los últimos avistamientos
+                    Registra tus últimos avistamientos
                     <button className="knowMoreButton">
                         <Link
                             to="/avistamientos">

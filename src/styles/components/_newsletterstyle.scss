@@ -1,7 +1,7 @@
 .formContainer {
     height: rem;
     width: 100%;
-    background-color: var(--vanilla);
+    background-color: darken($color: $vanilla, $amount: 10);
     color: black;
     display: flex;
     flex-direction: column;

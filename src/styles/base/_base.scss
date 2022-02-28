@@ -111,6 +111,17 @@ body {
 
 }
 
+/*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
+.birdwatchingPage {
+    margin-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    background-image: url('../assets/images/LoginBackground.jpg');
+    background-attachment: fixed;
+    background-position: center;
+}
+
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
 .titleStyle {
     margin: 0;
@@ -210,6 +221,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 2rem;
 }
 
 .newArticle {
@@ -232,7 +244,7 @@ body {
 
 .newArticleInput {
     height: 2rem;
-    width: 2rem;
+    width: 20rem;
     padding-left: 9rem;
     border: 1px solid $dark-grey-green;
     border-radius: 1rem;
@@ -540,7 +552,7 @@ body {
 
 .newArticleInput {
     height: 2rem;
-    width: 50rem;
+    width: 40rem;
     padding-left: 9rem;
     border: 1px solid $dark-grey-green;
     border-radius: 1rem;

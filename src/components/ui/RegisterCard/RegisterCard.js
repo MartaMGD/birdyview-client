@@ -9,8 +9,8 @@ export default function RegisterCard() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const sendNewUser = (event) => {
-        event.preventDefault();
+    const sendNewUser = (e) => {
+        e.preventDefault();
 
         const registered = {
             username: username,
