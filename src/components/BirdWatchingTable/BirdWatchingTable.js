@@ -37,6 +37,8 @@ export default function BirdwatchingTable() {
             .then((response) => {
                 setBirdInfo([...birdInfo, newBird]);
             });
+
+        setBirdInfo([...birdInfo, newBird]);
     }
 
     // Handle to update bird (PUT)
@@ -70,14 +72,12 @@ export default function BirdwatchingTable() {
     const removeBirds = (id) => {
         axios.delete(`http://localhost:5000/birdwatching/delete/${id}`).then(() => {
             setBirdInfo(
-                birdInfo.birdwatching.filter((bird) => {
+                birdInfo.filter((bird) => {
                     return bird._id != id;
                 })
             )
         });
     };
-
-
 
     return (
         <>
@@ -95,7 +95,7 @@ export default function BirdwatchingTable() {
 
                 <tbody>
 
-                    {birdInfo.birdwatching?.map((bird) =>
+                    {birdInfo?.map((bird) =>
                         <tr>
                             <td className="birdtd" key={bird._id}>
                                 {bird.birdname}
@@ -125,7 +125,7 @@ export default function BirdwatchingTable() {
                 </tbody>
             </table>
 
-            <form onSubmit={handleSubmit}>
+            <form>
                 <div className="addBirdFormStyle">
                     <span className="birdwatchingSpanStyle">Añade un nuevo avistamiento</span>
 
@@ -149,7 +149,9 @@ export default function BirdwatchingTable() {
                         onChange={(e) => setHour(e.target.value)}
                     />
 
-                    <button type="submit">Añadir</button>
+                    <button
+                    onClick={handleSubmit} 
+                    type="submit">Añadir</button>
                 </div>
             </form>
 
