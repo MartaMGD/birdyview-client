@@ -2,10 +2,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import { API_URL } from '../../config/config';
 import { useEffect } from 'react';
-import { birds } from '../../data/hardcodeddata';
 
 export default function BirdwatchingTable() {
-
     const [birdInfo, setBirdInfo] = useState([]);
 
     const [birdname, setBirdname] = useState('');
@@ -13,8 +11,19 @@ export default function BirdwatchingTable() {
     const [date, setDate] = useState('');
     const [hour, setHour] = useState('');
 
-    // Handle to submit bird 
-    const handleSubmit = (e) => {
+    // Petition to read birds (GET)
+    useEffect(() => {
+        axios.get("http://localhost:5000/birdwatching")
+            .then((response) => {
+                setBirdInfo(response.data)
+            })
+            .catch(() => {
+                console.log('ERR');
+            });
+    }, []);
+
+    // Handle to submit bird (POST)
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newBird = {
@@ -24,16 +33,51 @@ export default function BirdwatchingTable() {
             hour: hour
         }
 
-        axios.post("http://localhost:5000/birdwatching", newBird)
-            .then(response => console.log(response.data));
-
-        setBirdInfo((previousBirds) => [...previousBirds, newBird]);
+        await axios.post("http://localhost:5000/birdwatching", newBird)
+            .then((response) => {
+                setBirdInfo([...birdInfo, newBird]);
+            });
     }
 
-    // Handle to remove birds
-    const removeBirds = (_id) => {
-        setBirdInfo(birds.filter(birds => birds._id !== _id));
+    // Handle to update bird (PUT)
+    const updateBird = (id) => {
+        const newName = prompt("Introduce un nuevo nombre");
+        const newLocation = prompt("Introduce una nueva localización");
+        const newDate = prompt("Introduce una nueva fecha");
+        const newHour = prompt("Introduce una nueva hora");
+
+        axios.put("http://localhost:5000/birdwatching/update", {
+            newName: newName,
+            newLocation: newLocation,
+            newDate: newDate,
+            newHour: newHour,
+            id: id
+        }).then(() => {
+            setBirdInfo(birdInfo.map((bird) => {
+                return bird._id == id ? {
+                    _id: id,
+                    birdname: newName,
+                    location: newLocation,
+                    date: newDate,
+                    hour: newHour
+                }
+                    : bird
+            }))
+        })
     };
+
+    // Handle to remove birds
+    const removeBirds = (id) => {
+        axios.delete(`http://localhost:5000/birdwatching/delete/${id}`).then(() => {
+            setBirdInfo(
+                birdInfo.birdwatching.filter((bird) => {
+                    return bird._id != id;
+                })
+            )
+        });
+    };
+
+
 
     return (
         <>
@@ -51,28 +95,29 @@ export default function BirdwatchingTable() {
 
                 <tbody>
 
-                    {birdInfo?.map((bird) =>
+                    {birdInfo.birdwatching?.map((bird) =>
                         <tr>
-                            <td className="birdtd" key={bird.birdname}>
+                            <td className="birdtd" key={bird._id}>
                                 {bird.birdname}
                             </td>
 
-                            <td className="locationtd" key={bird.location}>
+                            <td className="locationtd" key={bird._id}>
                                 {bird.location}
                             </td>
 
-                            <td className="watcheddaytd" key={bird.date}>
+                            <td className="watcheddaytd" key={bird._id}>
                                 {bird.date}
                             </td>
 
-                            <td className="watchedtd" key={bird.hour}>
+                            <td className="watchedtd" key={bird._id}>
                                 {bird.hour}
                             </td>
 
-                            <td className="optionButtons" key={bird.hour}>
-                                <button className="editButton">Editar</button>
+                            <td className="optionButtons" key={bird._id}>
+                                <button className="editButton"
+                                    onClick={() => updateBird(bird._id)}>Editar</button>
                                 <button className="deleteButton"
-                                    onClick={() => removeBirds(birds._id)}>X</button>
+                                    onClick={() => removeBirds(bird._id)}>X</button>
                             </td>
                         </tr>
                     )}
@@ -84,18 +129,10 @@ export default function BirdwatchingTable() {
                 <div className="addBirdFormStyle">
                     <span className="birdwatchingSpanStyle">Añade un nuevo avistamiento</span>
 
-                    <select onChange={(e) => setBirdname(e.target.value)}
-                        value={birdname}>
-                        {
-                            birds.map((bird, i) => {
-                                return (
-                                    <option key={i}>
-                                        {bird.birdname}
-                                    </option>
-                                )
-                            })
-                        }
-                    </select>
+                    <input type="text"
+                        placeholder="Nombre"
+                        onChange={(e) => setBirdname(e.target.value)}
+                    />
 
                     <input type="text"
                         placeholder="Localización"
