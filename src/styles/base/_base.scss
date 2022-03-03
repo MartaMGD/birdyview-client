@@ -152,8 +152,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: justify;
 
+}
+
+.returnButton {
+    margin-right: 18rem;
+    margin-top: 2rem;
 }
 
 .articleEntryStyle {
@@ -508,6 +514,10 @@ body {
     height: 5rem;
     width: 80rem;
     padding-bottom: 2rem;
+}
+
+.returnButton {
+    margin-right: 73.5rem;
 }
  }
 

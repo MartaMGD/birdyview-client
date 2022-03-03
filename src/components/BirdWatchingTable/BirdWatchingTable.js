@@ -13,7 +13,7 @@ export default function BirdwatchingTable() {
 
     // Petition to read birds (GET)
     useEffect(() => {
-        axios.get("http://localhost:5000/birdwatching")
+        axios.get("http://localhost:5000/birdwatching/")
             .then((response) => {
                 setBirdInfo(response.data)
             })
@@ -33,7 +33,7 @@ export default function BirdwatchingTable() {
             hour: hour
         }
 
-        await axios.post("http://localhost:5000/birdwatching", newBird)
+        await axios.post("http://localhost:5000/birdwatching/", newBird)
             .then((response) => {
                 setBirdInfo([...birdInfo, newBird]);
             });
@@ -48,7 +48,7 @@ export default function BirdwatchingTable() {
         const newDate = prompt("Introduce una nueva fecha");
         const newHour = prompt("Introduce una nueva hora");
 
-        axios.put("http://localhost:5000/birdwatching/update", {
+        axios.put("http://localhost:5000/birdwatching/", {
             newName: newName,
             newLocation: newLocation,
             newDate: newDate,
@@ -61,7 +61,7 @@ export default function BirdwatchingTable() {
                     birdname: newName,
                     location: newLocation,
                     date: newDate,
-                    hour: newHour
+                    hour: newHour,
                 }
                     : bird
             }))
@@ -97,19 +97,19 @@ export default function BirdwatchingTable() {
 
                     {birdInfo?.map((bird) =>
                         <tr>
-                            <td className="birdtd" key={bird._id}>
+                            <td className="birdtd" key={bird.hour}>
                                 {bird.birdname}
                             </td>
 
-                            <td className="locationtd" key={bird._id}>
+                            <td className="locationtd" key={bird.hour}>
                                 {bird.location}
                             </td>
 
-                            <td className="watcheddaytd" key={bird._id}>
+                            <td className="watcheddaytd" key={bird.hour}>
                                 {bird.date}
                             </td>
 
-                            <td className="watchedtd" key={bird._id}>
+                            <td className="watchedtd" key={bird.hour}>
                                 {bird.hour}
                             </td>
 

@@ -1,7 +1,22 @@
 import { blogentries } from '../data/blogdata';
+import axios from 'axios';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Articles() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/posts/")
+            .then((response) => {
+                setPosts(response.data)
+            })
+            .catch(error => {
+                console.log(error)
+            });
+    }, []);
+
     return (
         <>
             <h1 className="container titleStyle"> Últimos artículos </h1>
@@ -16,21 +31,21 @@ export default function Articles() {
                             </button>
                         </Link>
                         <ul className="list-group">
-                            {blogentries.map((entry, i) => {
+                            {posts.map((post, i) => {
                                 return (
                                     <li className="articleEntryStyle"
                                         key={i}>
 
-                                        <h3 className="articleTitleStyle">{entry.articletitle}</h3>
-
+                                        <h3 className="articleTitleStyle">{post.title}</h3>
+                                        
                                         <p>
 
-                                            {entry.extract}
+                                            {post.extract}
 
                                         </p>
 
                                         <Link
-                                            to={`/articulos/${entry.id}`}>
+                                            to={`/articulos/${post._id}`}>
                                             <span className="clickBlogText">
                                                 Sigue leyendo
                                             </span>

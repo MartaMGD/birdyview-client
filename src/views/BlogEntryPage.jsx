@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { getPostbyId } from '../selectors/getPostById';
 import { useState } from 'react';
@@ -40,7 +41,12 @@ export default function BlogEntryPage() {
     return (
         <>
             <div className="container mainEntryStyle">
-                <h2>{post.articletitle}</h2>
+                <Link
+                to={`/articulos`}>
+                <button className="returnButton"> Volver </button>
+                </Link>
+                <h1 className="entryTitle">{post.articletitle}</h1>
+                <span>Autor: </span>
                 <img className="articlePhoto"
                     src={`/articleimages/${post.id}.jpg`}
                     alt="Foto artículo" />

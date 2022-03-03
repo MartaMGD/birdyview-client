@@ -200,7 +200,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: justify;
+}
+
+.returnButton {
+  margin-right: 18rem;
+  margin-top: 2rem;
 }
 
 .articleEntryStyle {
@@ -643,6 +651,9 @@ body {
     height: 5rem;
     width: 80rem;
     padding-bottom: 2rem;
+  }
+  .returnButton {
+    margin-right: 73.5rem;
   }
 }
 
