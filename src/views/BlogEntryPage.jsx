@@ -1,10 +1,25 @@
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { getPostbyId } from '../selectors/getPostById';
-import { useState } from 'react';
+import axios from 'axios'; 
+import { useState, useEffect } from 'react';
 import CommentBox from '../components/CommentBox/CommentBox';
 
 export default function BlogEntryPage() {
+    // State and fetch for ARTICLE INFO
+    const [postInfo, setPostInfo] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/posts/")
+            .then((response) => {
+                setPostInfo(response.data)
+            })
+            .catch(error => {
+                console.log(error)
+            });
+    }, []);
+
+    // States and handles for COMMENTS
     const [commentInfo, setCommentInfo] = useState([]);
     const [newCommentName, setnewCommentName] = useState("");
     const [newCommentBody, setNewCommentBody] = useState("");
@@ -40,19 +55,23 @@ export default function BlogEntryPage() {
 
     return (
         <>
-            <div className="container mainEntryStyle">
+        {postInfo.map((post, i) => {
+            return (
+                <div className="container mainEntryStyle">
                 <Link
                 to={`/articulos`}>
                 <button className="returnButton"> Volver </button>
                 </Link>
-                <h1 className="entryTitle">{post.articletitle}</h1>
-                <span>Autor: </span>
+                <h1 className="entryTitle">{post.title}</h1>
+                <span>Autor: {post.author} </span>
                 <img className="articlePhoto"
-                    src={`/articleimages/${post.id}.jpg`}
+                    src={post.item}
                     alt="Foto artículo" />
                 <img className="photoSeparator" src="/photoseparator.png" alt="Separator" />
-                <p>{post.articlecontent}</p>
+                <p>{post.body}</p>
             </div>
+            )
+        })}
 
             {/* COMMENTS */}
             <div className="container commentBoxStyle">

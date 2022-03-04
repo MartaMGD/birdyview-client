@@ -125,12 +125,20 @@ body {
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
 .titleStyle {
     margin: 0;
-    background-image: url('../assets/images/LoginRegisterBackground.jpeg');
+    background-image: url('../assets/images/ArticleBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
     color: $vanilla;
     font-size: 1.6rem;
+    font-weight: bold;
     padding: 3rem;
     display: flex;
     align-items: center;
+}
+
+.articleTitleStyle {
+    text-decoration: underline;
 }
 
 .mainBlogStyle {
@@ -155,6 +163,12 @@ body {
     align-items: center;
     text-align: justify;
 
+}
+
+.articleButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .returnButton {
@@ -235,7 +249,7 @@ body {
 }
 
 .newArticleBody {
-    height: 50rem;
+    height: 30rem;
     width: 5rem;
     margin-bottom: 2rem;
 }
@@ -267,6 +281,10 @@ body {
     justify-content: center;
     padding-top: 2rem;
     font-weight: bold;
+}
+
+.newArticleButton {
+    margin-bottom: 2rem;
 }
 
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/

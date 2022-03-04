@@ -1,4 +1,3 @@
-import { blogentries } from '../data/blogdata';
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -36,21 +35,31 @@ export default function Articles() {
                                     <li className="articleEntryStyle"
                                         key={i}>
 
-                                        <h3 className="articleTitleStyle">{post.title}</h3>
-                                        
+                                        <Link
+                                            to={`/articulos/${post._id}`}>
+                                            <span className="clickBlogText">
+                                                <h3 className="articleTitleStyle">{post.title}</h3>
+                                            </span>
+                                        </Link>
+
                                         <p>
 
                                             {post.extract}
 
                                         </p>
 
-                                        <Link
-                                            to={`/articulos/${post._id}`}>
-                                            <span className="clickBlogText">
-                                                Sigue leyendo
-                                            </span>
-                                        </Link>
+                                        <div className="articleButtons">
+                                            <button className="editButton">
+                                                Editar
+                                            </button>
 
+                                            <Link
+                                                to={`/articulos/`}>
+                                                <button className="deleteButton">
+                                                    Eliminar
+                                                </button>
+                                            </Link>
+                                        </div>
                                     </li>
                                 )
                             })}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import FileBase64 from 'react-file-base64';
 
 export default function NewArticle() {
+    const [item, setItem] = useState();
     const navigate = useNavigate();
 
     // States to send article info to database
@@ -11,7 +12,6 @@ export default function NewArticle() {
     const [title, setTitle] = useState("");
     const [extract, setExtract] = useState("");
     const [body, setBody] = useState("");
-    const [item, setItem] = useState();
 
     // Handle to submit
     const handleSubmit = (e) => {
