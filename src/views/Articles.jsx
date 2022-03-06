@@ -1,20 +1,6 @@
-import axios from 'axios';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
-export default function Articles() {
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-        axios.get("http://localhost:5000/posts/")
-            .then((response) => {
-                setPosts(response.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
-    }, []);
+export default function Articles({posts}) {
 
     return (
         <>
@@ -49,9 +35,13 @@ export default function Articles() {
                                         </p>
 
                                         <div className="articleButtons">
-                                            <button className="editButton">
-                                                Editar
-                                            </button>
+
+                                            <Link
+                                                to={`/articulos/editararticulo/`}>
+                                                <button className="editButton">
+                                                    Editar
+                                                </button>
+                                            </Link>
 
                                             <Link
                                                 to={`/articulos/`}>

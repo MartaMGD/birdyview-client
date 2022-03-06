@@ -47,6 +47,7 @@ export default function NewArticle() {
                     <input
                         className="newArticleInput"
                         type="text"
+                        value={author}
                         placeholder="Introduce un nombre"
                         onChange={e => setAuthor(e.target.value)} />
 
@@ -54,6 +55,7 @@ export default function NewArticle() {
                     <input
                         className="newArticleInput"
                         type="text"
+                        value={title}
                         placeholder="Introduce un título"
                         onChange={e => setTitle(e.target.value)} />
 
@@ -61,6 +63,7 @@ export default function NewArticle() {
                     <input
                         className="newArticleBody"
                         type="text"
+                        value={extract}
                         placeholder="Introduce un título"
                         onChange={e => setExtract(e.target.value)} />
 
@@ -77,6 +80,7 @@ export default function NewArticle() {
                     <input
                         className="newArticleBody"
                         type="text"
+                        value={body}
                         placeholder="Cuerpo del artículo"
                         onChange={e => setBody(e.target.value)} />
 

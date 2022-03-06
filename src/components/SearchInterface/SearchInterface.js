@@ -19,7 +19,7 @@ export default function SearchInterface() {
     const [filterBird, setFilterBird] = useState('');
     const [birds, setBirds] = useState([]);
     const [copyBirds, setCopyBirds] = useState([]);
-    const [provinceSeleted, setProvinceSelected] = useState(provinces[0].value);
+    const [provinceSelected, setProvinceSelected] = useState(provinces[0].slug);
 
     useEffect(() => {
         fetch(API_URL)
@@ -27,8 +27,13 @@ export default function SearchInterface() {
             .then(data => {
                 setBirds(data.birds)
                 setCopyBirds(data.birds)
+
+                console.log(birds);
             });
+            
     }, [])
+
+
     
     return (
         <main>
@@ -45,7 +50,7 @@ export default function SearchInterface() {
 
                     <span className="filterSpan">Filtra por provincia</span>
                     <select className="selectStyle"
-                    value={provinceSeleted}
+                    value={provinceSelected}
                     onChange={e => setProvinceSelected(e.target.value)}>
                     
                     {provinces.map((province, index) => {
@@ -57,15 +62,22 @@ export default function SearchInterface() {
                 </form>
             </div>
 
+            {/* REGULAR FILTER */}
             <div className="showBirds">
                 {birds.filter((bird) => {
                     if (filterBird === "") {
                         return bird
-                    } else if (bird.name.toLowerCase().includes(filterBird.toLowerCase())) {
+                    } else if (bird.name.toLowerCase().includes(filterBird.toLowerCase().trim())) {
+                        return bird
+                    }
+                }).filter((bird) => {
+                    if (provinceSelected === "All") {
+                        return bird
+                    } else if (bird.location.includes(provinceSelected)) {
                         return bird
                     }
                 })
-                    .map((bird, _id) => {
+                    .map((bird, i) => {
                         return (
                             <BirdCard
                                 key={bird._id}

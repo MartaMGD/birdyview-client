@@ -1,28 +1,32 @@
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
-import { getPostbyId } from '../selectors/getPostById';
-import axios from 'axios'; 
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 import CommentBox from '../components/CommentBox/CommentBox';
 
 export default function BlogEntryPage() {
     // State and fetch for ARTICLE INFO
-    const [postInfo, setPostInfo] = useState([]);
-
-    useEffect(() => {
-        axios.get("http://localhost:5000/posts/")
-            .then((response) => {
-                setPostInfo(response.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
-    }, []);
-
-    // States and handles for COMMENTS
+    const { postId } = useParams();
+    const [post, setPost] = useState();
+    // // States and handles for COMMENTS
     const [commentInfo, setCommentInfo] = useState([]);
     const [newCommentName, setnewCommentName] = useState("");
     const [newCommentBody, setNewCommentBody] = useState("");
+
+    useEffect(() => {
+        fetch("http://localhost:5000/posts/")
+            .then(response => response.json())
+            .then(data => setPost(getBirdById(data.posts, postId)));
+    }, [])
+
+    // This "selector" finds inside the post and returns the post with the same id. 
+    const getBirdById = (posts, _id) => {
+        return posts.find(post => post._id === _id);
+    }
+
+    if (!post) {
+        return <p>Cargando...</p>
+    }
 
     // HANDLES
     const handleName = (e) => {
@@ -46,21 +50,14 @@ export default function BlogEntryPage() {
         } else {
             alert("Por favor, rellena todos los campos.");
         }
-        
     }
-
-    const { postId } = useParams();
-    const post = getPostbyId(postId);
-
 
     return (
         <>
-        {postInfo.map((post, i) => {
-            return (
-                <div className="container mainEntryStyle">
+            <div className="container mainEntryStyle">
                 <Link
-                to={`/articulos`}>
-                <button className="returnButton"> Volver </button>
+                    to={`/articulos`}>
+                    <button className="returnButton"> Volver </button>
                 </Link>
                 <h1 className="entryTitle">{post.title}</h1>
                 <span>Autor: {post.author} </span>
@@ -70,8 +67,6 @@ export default function BlogEntryPage() {
                 <img className="photoSeparator" src="/photoseparator.png" alt="Separator" />
                 <p>{post.body}</p>
             </div>
-            )
-        })}
 
             {/* COMMENTS */}
             <div className="container commentBoxStyle">
@@ -93,11 +88,11 @@ export default function BlogEntryPage() {
 
                     <button className="commentButton" type="submit">Enviar</button>
                 </form>
-                
+
                 <img className="articleSeparator" src="/articleseparator.png" alt="Separator" />
             </div>
 
-            <CommentBox commentInfo={commentInfo}/>
+            <CommentBox commentInfo={commentInfo} />
         </>
     )
 

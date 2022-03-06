@@ -1,4 +1,6 @@
 import { Routes, Route, BrowserRouter, Outlet, Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Search from './views/Search';
 import Articles from './views/Articles';
 import Birdwatching from './views/Birdwatching';
@@ -8,14 +10,14 @@ import Footer from './components/ui/Footer/Footer';
 import Home from './views/Home';
 import RetrievePassword from './views/RetrievePassword';
 import RegisterScreen from './views/RegisterScreen';
-import { useEffect, useState } from 'react';
 import UserDashboard from './views/UserDashboard';
 import Birdpage from './views/Birdpage';
 import BlogEntryPage from './views/BlogEntryPage';
 import NewArticle from './views/NewArticle';
+import EditArticle from './views/EditArticle';
 
 export default function BirdyViewApp() {
-
+    // FOR THE USER SESSION
     // En este hook creamos una sesión de usuario, al estar en el app.jsx lo tenemos "disponible" en toda la web
     const [userSession, setUserSession] = useState({
         status: false,
@@ -39,6 +41,19 @@ export default function BirdyViewApp() {
         return auth ? <Outlet /> : <Navigate to="/login" />
     }
 
+    // GLOBAL STATE TO SET AND EDIT ARTICLES
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/posts/")
+            .then((response) => {
+                setPosts(response.data)
+            })
+            .catch(error => {
+                console.log(error)
+            });
+    }, []);
+
     return (
         <>
             <BrowserRouter>
@@ -48,8 +63,8 @@ export default function BirdyViewApp() {
                     <Route path="/" element={<Home />} />
                     <Route path="search" element={<Search />} />
                     <Route path="birdpage/:birdId" element={<Birdpage />} />
-                    <Route path="articulos" element={<Articles />} />
-                    <Route path="articulos/:postId" element={<BlogEntryPage />} />
+                    <Route path="articulos" element={<Articles posts={posts}/>}  />
+                    <Route path="articulos/:PostId" element={<BlogEntryPage posts={posts} />} />
 
                     {/*aquí pasamos la sesión al componente Login Screen*/}
                     <Route path="login" element={<LoginScreen setUserSession={setUserSession} />} />
@@ -63,6 +78,9 @@ export default function BirdyViewApp() {
 
                     <Route path="articulos/nuevoarticulo" element={<PrivateOutlet />}>
                         <Route path="" element={<NewArticle userSession={userSession} />} />
+                    </Route>
+                    <Route path="articulos/editararticulo" element={<PrivateOutlet />}>
+                        <Route path="" element={<EditArticle posts={posts} userSession={userSession} />} />
                     </Route>
 
                     <Route path="userdashboard" element={<PrivateOutlet />}>

@@ -39,7 +39,7 @@ export default function NewArticle() {
                 onSubmit={handleSubmit}
                 className="newArticle container">
                 <div className="titleStyle">
-                    <span className><b>Nueva publicación</b></span>
+                    <span className><b>Editar publicación</b></span>
                 </div>
 
                 <div className="newArticleForm">
