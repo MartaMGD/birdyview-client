@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
-import FileBase64 from 'react-file-base64';
+import { Context } from '../context/Context';
 
 export default function NewArticle() {
     const navigate = useNavigate();
 
     // States to send article info to database
-    const [author, setAuthor] = useState("");
     const [title, setTitle] = useState("");
+    const [photo, setPhoto] = useState("");
     const [extract, setExtract] = useState("");
     const [body, setBody] = useState("");
-    const [item, setItem] = useState();
+
+    const { user } = useContext(Context);
 
     // Handle to submit
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newPost = {
-            author,
+            username: user.username,
             title,
             extract,
+            photo,
             body
-        }
+        };
 
-        axios.post("http://localhost:5000/posts/add", newPost)
-            .then(response => console.log(response.data))
-            .catch(err => {
-                console.log(err);
-            });
-
-        navigate('/articulos');
-    }
+        try {
+            await axios.post("http://localhost:5000/api/posts", newPost);
+            navigate('/articulos');
+        } catch (err) { }
+    };
 
     return (
         <>
@@ -43,13 +42,6 @@ export default function NewArticle() {
                 </div>
 
                 <div className="newArticleForm">
-                    <span className="newArticleSpan">Autor</span>
-                    <input
-                        className="newArticleInput"
-                        type="text"
-                        value={author}
-                        placeholder="Introduce un nombre"
-                        onChange={e => setAuthor(e.target.value)} />
 
                     <span className="newArticleSpan">Título</span>
                     <input
@@ -60,7 +52,7 @@ export default function NewArticle() {
                         onChange={e => setTitle(e.target.value)} />
 
                     <span className="newArticleSpan">Extracto</span>
-                    <input
+                    <textarea
                         className="newArticleBody"
                         type="text"
                         value={extract}
@@ -68,16 +60,15 @@ export default function NewArticle() {
                         onChange={e => setExtract(e.target.value)} />
 
                     <span className="newArticleSpan">Imagen</span>
-                    <div className="uploadImage">
-                        <FileBase64
-                            multiple={false}
-                            onDone={({ base64 }) => setItem({
-                                item, image: base64
-                            })} />
-                    </div>
+                    <input
+                        className="newArticleInput"
+                        type="text"
+                        value={photo}
+                        placeholder="Introduce una URL"
+                        onChange={(e) => setPhoto(e.target.value)} />
 
                     <span className="newArticleSpan">Artículo</span>
-                    <input
+                    <textarea
                         className="newArticleBody"
                         type="text"
                         value={body}
@@ -91,3 +82,4 @@ export default function NewArticle() {
         </>
     )
 }
+

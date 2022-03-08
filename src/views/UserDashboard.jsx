@@ -1,6 +1,9 @@
 import userimage from '../assets/avatars/userimage.jpeg';
+import { useContext } from 'react';
+import { Context } from '../context/Context';
 
 export default function UserDashboard() {
+    const { user } = useContext(Context);
     return (
         <main className="container">
             <div className="dashboardContainer">
@@ -10,7 +13,7 @@ export default function UserDashboard() {
                 <div className="welcomePanelStyle">
                     <img className="profilePhoto" src={userimage}
                         alt="Profile" />
-                    <h4>Bienvenido</h4>
+                    <h4>Bienvenido, {user.username}</h4>
                 </div>
 
                 <div className="userPanelStyle">
@@ -23,14 +26,7 @@ export default function UserDashboard() {
 
                                 <input className="dashboardInputStyle"
                                     type="text"
-                                    placeholder="María" />
-                            </div>
-
-                            <div>
-
-                                <input className="dashboardInputStyle"
-                                    type="text"
-                                    placeholder="García García" />
+                                    placeholder="Nombre de usuario" />
                             </div>
 
 
@@ -38,14 +34,14 @@ export default function UserDashboard() {
 
                                 <input className="dashboardInputStyle"
                                     type="email"
-                                    placeholder="maria@gmail.com" />
+                                    placeholder="Introduce un nuevo correo electrónico" />
                             </div>
 
                             <div>
 
                                 <input className="dashboardInputStyle"
                                     type="password"
-                                    placeholder="Contraseña" />
+                                    placeholder="Cambia tu contraseña" />
                             </div>
 
                             <div>
@@ -53,14 +49,6 @@ export default function UserDashboard() {
                                 <input className="dashboardInputStyle"
                                     type="password"
                                     placeholder="Nueva contraseña" />
-                            </div>
-
-
-                            <div>
-
-                                <input className="dashboardInputStyle"
-                                    type="date"
-                                    placeholder="01/02/1990" />
                             </div>
 
                             <input className="loginButtonStyle" type="submit" value="Actualizar" />

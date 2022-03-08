@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { API_URL } from '../../config/config';
 import { useEffect } from 'react';
 
-export default function BirdwatchingTable() {
-    const [birdInfo, setBirdInfo] = useState([]);
 
+export default function BirdwatchingTable() {
+
+    const [birdInfo, setBirdInfo] = useState([]);
     const [birdname, setBirdname] = useState('');
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
@@ -97,19 +98,19 @@ export default function BirdwatchingTable() {
 
                     {birdInfo?.map((bird) =>
                         <tr>
-                            <td className="birdtd" key={bird.hour}>
+                            <td className="birdtd" key={bird._id}>
                                 {bird.birdname}
                             </td>
 
-                            <td className="locationtd" key={bird.hour}>
+                            <td className="locationtd" key={bird._id}>
                                 {bird.location}
                             </td>
 
-                            <td className="watcheddaytd" key={bird.hour}>
+                            <td className="watcheddaytd" key={bird._id}>
                                 {bird.date}
                             </td>
 
-                            <td className="watchedtd" key={bird.hour}>
+                            <td className="watchedtd" key={bird._id}>
                                 {bird.hour}
                             </td>
 

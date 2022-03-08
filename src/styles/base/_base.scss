@@ -250,7 +250,7 @@ body {
 
 .newArticleBody {
     height: 30rem;
-    width: 5rem;
+    width: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -562,10 +562,8 @@ body {
 }
 
 .newArticleBody {
-    height: 50rem;
     width: 60rem;
-    margin-bottom: 2rem;
-    padding-bottom: 47rem;
+    height: 30rem;
     display: flex;
     flex-direction: row;
 }
@@ -580,7 +578,7 @@ body {
 
 .newArticleInput {
     height: 2rem;
-    width: 40rem;
+    width: 60rem;
     padding-left: 9rem;
     border: 1px solid $dark-grey-green;
     border-radius: 1rem;

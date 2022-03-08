@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
 
 export default function Article({ post }) {
+    const { user } = useContext(Context);
+
     return (
         <div>
             <li className="articleEntryStyle">
@@ -12,28 +16,31 @@ export default function Article({ post }) {
                     </span>
                 </Link>
                 <span>Autor: {post.username}</span>
+
                 <p>
 
                     {post.extract}
 
                 </p>
 
-                <div className="articleButtons">
+                {user &&
+                    <div className="articleButtons">
 
-                    <Link
-                        to={`/articulos/editararticulo/`}>
-                        <button className="editButton">
-                            Editar
-                        </button>
-                    </Link>
+                        <Link
+                            to={`/articulos/editararticulo/`}>
+                            <button className="editButton">
+                                Editar
+                            </button>
+                        </Link>
 
-                    <Link
-                        to={`/articulos/`}>
-                        <button className="deleteButton">
-                            Eliminar
-                        </button>
-                    </Link>
-                </div>
+                        <Link
+                            to={`/articulos/`}>
+                            <button className="deleteButton">
+                                Eliminar
+                            </button>
+                        </Link>
+                    </div>
+                }
             </li>
         </div>
     );

@@ -14,12 +14,14 @@ export default function BlogEntryPage({ posts }) {
             setPost(res.data)
         };
         getPost();
-    })
+    }, [post])
+
+    console.log(post);
     return (
         <>
             <div className="container mainEntryStyle">
                 <Link
-                    to={`/articulos/${post._id}`}>
+                    to={`/articulos/`}>
                     <button className="returnButton"> Volver </button>
                 </Link>
                 <h1 className="entryTitle">{post.title}</h1>
@@ -29,6 +31,7 @@ export default function BlogEntryPage({ posts }) {
                     <img className="articlePhoto"
                         src={post.photo}
                         alt="Foto artículo" />
+                        
                 }
                 <img className="photoSeparator" src="/photoseparator.png" alt="Separator" />
                 <p>{post.body}</p>

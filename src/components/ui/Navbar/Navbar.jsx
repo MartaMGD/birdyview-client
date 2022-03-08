@@ -45,27 +45,32 @@ export default function Navbar() {
                         </Link>
                     </li>
 
-                    <li className="linkUnit">
+                    {user && <li className="linkUnit">
                         <Link to="/avistamientos">
                             Avistamientos
                         </Link>
-                    </li>
+                    </li>}
 
-                    <li className="linkUnit">
+                    {user && <li className="linkUnit">
                         <Link to="/userdashboard">
                             Mi cuenta
                         </Link>
-                    </li>
-
+                    </li>}
 
                     <li className="linkUnit">
-                        <a
-                            onClick={handleLogout}>
-                            {user && "Cerrar sesión"}
+                        <a>
                             <Link to="/login">
                                 Accede / Regístrate
                             </Link>
                         </a>
+
+                        {user &&
+                            <a onClick={handleLogout}>
+                                <Link to="/login">
+                                    Cerrar sesión
+                                </Link>
+                            </a>
+                        }
 
                     </li>
                 </ul>
