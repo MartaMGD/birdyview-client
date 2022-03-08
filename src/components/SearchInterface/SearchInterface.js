@@ -5,7 +5,7 @@ import { API_URL } from "../../config/config.js"
 export default function SearchInterface() {
 
     const provinces = [
-        { slug: 'All' },
+        { slug: 'Todas' },
         { slug: 'Jaén' },
         { slug: 'Córdoba' },
         { slug: 'Sevilla' },
@@ -71,7 +71,7 @@ export default function SearchInterface() {
                         return bird
                     }
                 }).filter((bird) => {
-                    if (provinceSelected === "All") {
+                    if (provinceSelected === "Todas") {
                         return bird
                     } else if (bird.location.includes(provinceSelected)) {
                         return bird

@@ -94,8 +94,10 @@ export default function BlogEntryPage() {
                     </h1>
                 )}
 
-                <span>Fecha: {new Date(post.createdAt).toDateString()}</span>
-                <span>Autor: {post.username} </span>
+                <div className="entryDateAuthor">
+                    <span className="authorName">Fecha: {new Date(post.createdAt).toLocaleDateString()}</span>
+                    <span className="authorName">Autor: {post.username} </span>
+                </div>
 
                 {updateMode ? <input
                     className="newArticleInput"

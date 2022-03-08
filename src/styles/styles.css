@@ -172,7 +172,50 @@ body {
 }
 
 .articleTitleStyle {
-  text-decoration: underline;
+  font-weight: bold;
+}
+
+.entryDateAuthor {
+  padding: 2rem;
+  height: 3rem;
+  width: 79.3rem;
+  background-color: #c36451;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authorTag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  width: 8rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#042b05), color-stop(#09401e), to(#588f59));
+  background-image: linear-gradient(to right, #042b05, #09401e, #588f59);
+  border-radius: 49% 51% 44% 56% / 39% 60% 40% 61%;
+}
+
+.authorName {
+  color: white;
+  font-weight: bold;
 }
 
 .mainBlogStyle {

@@ -138,7 +138,34 @@ body {
 }
 
 .articleTitleStyle {
-    text-decoration: underline;
+    font-weight: bold;
+}
+
+.entryDateAuthor {
+    padding: 2rem;
+    height: 3rem;
+    width: 79.3rem;
+    background-color: lighten($color: $dark-coral, $amount: 25);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.authorTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 8rem;
+    background-image: linear-gradient(to right, #042b05 , #09401e, #588f59);
+    border-radius: 49% 51% 44% 56% / 39% 60% 40% 61%;
+}
+
+.authorName {
+    color: white;
+    font-weight: bold;
 }
 
 .mainBlogStyle {
