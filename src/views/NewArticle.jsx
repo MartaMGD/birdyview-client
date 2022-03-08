@@ -27,15 +27,18 @@ export default function NewArticle() {
         };
 
         try {
-            await axios.post("http://localhost:5000/api/posts", newPost);
-            navigate('/articulos');
-        } catch (err) { }
+            const res = await axios.post("http://localhost:5000/api/posts", newPost);
+            navigate("/articulos/" + res.data._id);
+            window.location.reload();
+        } catch (err) {
+            alert("Error al publicar. Inténtalo de nuevo.")
+        }
+
     };
 
     return (
         <>
             <form
-                onSubmit={handleSubmit}
                 className="newArticle container">
                 <div className="titleStyle">
                     <span className><b>Nueva publicación</b></span>
@@ -75,7 +78,9 @@ export default function NewArticle() {
                         placeholder="Cuerpo del artículo"
                         onChange={e => setBody(e.target.value)} />
 
-                    <button className="newArticleButton">Enviar</button>
+                    <button
+                        className="newArticleButton"
+                        onClick={handleSubmit}>Enviar</button>
                 </div>
 
             </form>

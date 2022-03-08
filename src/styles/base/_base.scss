@@ -167,8 +167,7 @@ body {
 
 .articleButtons {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .returnButton {
@@ -265,7 +264,6 @@ body {
 .newArticleInput {
     height: 2rem;
     width: 20rem;
-    padding-left: 9rem;
     border: 1px solid $dark-grey-green;
     border-radius: 1rem;
     display: flex;
@@ -579,7 +577,6 @@ body {
 .newArticleInput {
     height: 2rem;
     width: 60rem;
-    padding-left: 9rem;
     border: 1px solid $dark-grey-green;
     border-radius: 1rem;
     display: flex;

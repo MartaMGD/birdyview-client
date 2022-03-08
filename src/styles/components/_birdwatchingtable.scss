@@ -59,6 +59,7 @@
   .editButton {
     width: 7rem;
     border: none;
+    margin: 1rem;
     background-color: darken($color: $medium-teal, $amount: 20);
 
     &:hover {
