@@ -1,8 +1,18 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from '../../../context/Context';
+import { useNavigate } from 'react-router';
 import BirdyViewLogo from '../../../assets/images/BirdyViewLogo.png';
 
-export default function Navbar(props) {
-    const navigate = useNavigate()
+export default function Navbar() {
+    const { user, dispatch } = useContext(Context);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+        navigate('/login');
+    }
+
     return (
         <header>
             <nav className="navBarContainer">
@@ -35,40 +45,28 @@ export default function Navbar(props) {
                         </Link>
                     </li>
 
-                    {props.userSession.status &&
-                        <li className="linkUnit">
-                            <Link to="/avistamientos">
-                                Avistamientos
-                            </Link>
-                        </li>
-                    }
-
-                    {props.userSession.status &&
-                        <li className="linkUnit">
-                            <Link to="/userdashboard">
-                                Mi cuenta
-                            </Link>
-                        </li>
-                    }
+                    <li className="linkUnit">
+                        <Link to="/avistamientos">
+                            Avistamientos
+                        </Link>
+                    </li>
 
                     <li className="linkUnit">
-                        {props.userSession.status
-                            ? <a onClick={() => {
-                                props.setUserSession({
-                                    status: false,
-                                    token: '',
-                                    name: '',
-                                    email: '',
-                                    admin: false
-                                })
-                                navigate('/')
-                            }}>
-                                Cerrar sesión
-                            </a>
-                            : <Link to="/login">
+                        <Link to="/userdashboard">
+                            Mi cuenta
+                        </Link>
+                    </li>
+
+
+                    <li className="linkUnit">
+                        <a
+                            onClick={handleLogout}>
+                            {user && "Cerrar sesión"}
+                            <Link to="/login">
                                 Accede / Regístrate
                             </Link>
-                        }
+                        </a>
+
                     </li>
                 </ul>
 

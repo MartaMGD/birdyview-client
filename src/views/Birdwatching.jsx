@@ -1,9 +1,9 @@
 import BirdwatchingTable from "../components/BirdWatchingTable/BirdWatchingTable";
 
-export default function Birdwatching(props) {
+export default function Birdwatching() {
     return (
         <main className="container birdwatchingPage">
-            <h3>Hola {props.userSession.name}, ¿Algún avistamiento hoy?</h3>
+            <h3>Hola, ¿Algún avistamiento hoy?</h3>
             <BirdwatchingTable/>
         </main>
     );

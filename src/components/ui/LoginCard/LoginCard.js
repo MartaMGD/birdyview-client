@@ -1,54 +1,55 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useRef, useContext } from 'react';
 import { users } from '../../../data/hardcodeddata'
 import { useNavigate } from 'react-router';
+import { Context } from '../../../context/Context';
+import axios from 'axios';
 
-export default function LoginCard(props) {
-    const navigate = useNavigate()
-    const usuarios = users
-    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('')
-    console.log('EMAIL ====>', email)
-    console.log('PASS ====>', pass)
+export default function LoginCard() {
+    const navigate = useNavigate();
+    const userRef = useRef();
+    const passwordRef = useRef();
+    const { dispatch, isFetching } = useContext(Context);
 
-    const enviarDatos = () => {
-        let index = usuarios.findIndex(obj => obj.email === email && obj.pass === pass)
-        if (index !== -1) {
-            console.log('USUARIO CORRECTO')
-            props.setUserSession({
-                status: true,
-                token: 'token123',
-                name: users[index].nombre,
-                email: users[index].email,
-                admin: users[index].admin
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        dispatch({ type: "LOGIN_START" });
+        try {
+            const res = await axios.post("http://localhost:5000/api/auth/login", {
+                username: userRef.current.value,
+                password: passwordRef.current.value,
             })
-            navigate('/avistamientos')
-        } else {
-            alert('USUARIO INCORRECTO')
+            dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+        } catch (err) {
+            dispatch({ type: "LOGIN_FAILURE"});
         }
-    }
+        
+        navigate("/avistamientos");
+    };
 
     return (
         <main>
-            <form className="loginRegisterCard">
+            <form className="loginRegisterCard"
+                onSubmit={handleSubmit}>
 
                 <div className="cardImage" />
 
                 <div className="formContentWrap">
-                    <span className="loginMessage">{props.loginMessage}</span>
+                    <span className="loginMessage">Inicia sesión</span>
 
                     <div>
                         <input className="loginInputStyle"
-                            type="email" value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder={props.firstInputText} />
+                            type="text"
+                            placeholder="Nombre de usuario"
+                            ref={userRef} />
                     </div>
 
                     <div>
                         <input className="loginInputStyle"
-                            type="password" value={pass}
-                            onChange={(e) => setPass(e.target.value)}
-                            placeholder={props.secondInputText} />
+                            type="password"
+                            placeholder="Contraseña"
+                            ref={passwordRef} />
                     </div>
 
                     <span className="loginSpanStyle">
@@ -63,7 +64,7 @@ export default function LoginCard(props) {
                         </Link>
                     </span>
 
-                    <input onClick={enviarDatos} className="loginButtonStyle" type="submit" value="Enviar" />
+                    <input className="loginButtonStyle" type="submit" value="Enviar" disabled={isFetching} />
                 </div>
             </form>
         </main>

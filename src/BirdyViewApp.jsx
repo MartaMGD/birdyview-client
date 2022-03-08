@@ -1,4 +1,5 @@
 import { Routes, Route, BrowserRouter, Outlet, Navigate } from 'react-router-dom';
+import { useContext } from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Search from './views/Search';
@@ -15,77 +16,41 @@ import Birdpage from './views/Birdpage';
 import BlogEntryPage from './views/BlogEntryPage';
 import NewArticle from './views/NewArticle';
 import EditArticle from './views/EditArticle';
+import { Context } from './context/Context';
 
 export default function BirdyViewApp() {
     // FOR THE USER SESSION
-    // En este hook creamos una sesión de usuario, al estar en el app.jsx lo tenemos "disponible" en toda la web
-    const [userSession, setUserSession] = useState({
-        status: false,
-        token: '',
-        name: '',
-        email: '',
-        admin: false
-    })
+    const { user } = useContext(Context);
 
-    useEffect(() => {
-        console.log('El valor de userSession es:', userSession)
-    }, [userSession])
-
-    function useAuth() {
-        return userSession.status
-    }
-
-    // Esta función redirige al usuario al componente (panel de control) si está autenticado o sino lo deja en el login
-    function PrivateOutlet() {
-        const auth = useAuth()
-        return auth ? <Outlet /> : <Navigate to="/login" />
-    }
-
-    // GLOBAL STATE TO SET AND EDIT ARTICLES
+    // GLOBAL STATE TO SET AND EDIT ARTICLES GLOBALLY
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/posts/")
-            .then((response) => {
-                setPosts(response.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
+        const fetchPosts = async () => {
+            const res = await axios.get("http://localhost:5000/api/posts/")
+            setPosts(res.data);
+        }
+        fetchPosts();
     }, []);
 
     return (
         <>
             <BrowserRouter>
                 {/*aquí pasamos la sesión a la navbar*/}
-                <Navbar userSession={userSession} setUserSession={setUserSession} />
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="search" element={<Search />} />
                     <Route path="birdpage/:birdId" element={<Birdpage />} />
-                    <Route path="articulos" element={<Articles posts={posts}/>}  />
+                    <Route path="articulos" element={<Articles posts={posts} />} />
                     <Route path="articulos/:PostId" element={<BlogEntryPage posts={posts} />} />
-
-                    {/*aquí pasamos la sesión al componente Login Screen*/}
-                    <Route path="login" element={<LoginScreen setUserSession={setUserSession} />} />
+                    <Route path="login" element={<LoginScreen />} />
                     <Route path="recuperarpassword" element={<RetrievePassword />} />
                     <Route path="registernewuser" element={<RegisterScreen />} />
-
-                    {/*Esta es una ruta protegida: la del panel de usuario*/}
-                    <Route path="avistamientos" element={<PrivateOutlet />}>
-                        <Route path="" element={<Birdwatching userSession={userSession} />} />
-                    </Route>
-
-                    <Route path="articulos/nuevoarticulo" element={<PrivateOutlet />}>
-                        <Route path="" element={<NewArticle userSession={userSession} />} />
-                    </Route>
-                    <Route path="articulos/editararticulo" element={<PrivateOutlet />}>
-                        <Route path="" element={<EditArticle posts={posts} userSession={userSession} />} />
-                    </Route>
-
-                    <Route path="userdashboard" element={<PrivateOutlet />}>
-                        <Route path="" element={<UserDashboard userSession={userSession} />} />
-                    </Route>
+                    <Route path="avistamientos" element={<Birdwatching />} />
+                    <Route path="articulos/nuevoarticulo" element={<NewArticle />} />
+                    <Route path="articulos/editararticulo" element={<EditArticle posts={posts} />} />
+                    <Route path="userdashboard" element={<UserDashboard />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

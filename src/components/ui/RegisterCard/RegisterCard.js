@@ -8,23 +8,22 @@ export default function RegisterCard() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(false);
 
-    const sendNewUser = (e) => {
+    const sendNewUser = async (e) => {
         e.preventDefault();
-
-        const registered = {
-            username: username,
-            email: email,
-            password: password
+        setError(false);
+        try {
+            const res = await axios.post("http://localhost:5000/api/auth/register", {
+                username,
+                email,
+                password
+            });
+            res.data && navigate('/login');
+        } catch (err) {
+            setError(true);
         }
-
-        axios.post("http://localhost:5000/api/auth/register", registered)
-            .then(response => console.log(response.data))
-
-        navigate('/login');
-
-
-    }
+    };
 
     return (
         <main className="loginWrapper">
@@ -64,6 +63,7 @@ export default function RegisterCard() {
                     </div>
 
                     <input className="loginButtonStyle" type="submit" value="Enviar" />
+                    {error && <span> Por favor, rellena todos los campos </span>}
                 </div>
             </form>
         </main >

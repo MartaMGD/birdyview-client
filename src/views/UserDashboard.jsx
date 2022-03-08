@@ -1,6 +1,6 @@
 import userimage from '../assets/avatars/userimage.jpeg';
 
-export default function UserDashboard(props) {
+export default function UserDashboard() {
     return (
         <main className="container">
             <div className="dashboardContainer">
@@ -10,7 +10,7 @@ export default function UserDashboard(props) {
                 <div className="welcomePanelStyle">
                     <img className="profilePhoto" src={userimage}
                         alt="Profile" />
-                    <h4>Hola, {props.userSession.name}</h4>
+                    <h4>Bienvenido</h4>
                 </div>
 
                 <div className="userPanelStyle">
