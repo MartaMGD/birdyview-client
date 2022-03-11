@@ -4,7 +4,7 @@ export default function HomeSearch() {
     return (
         <main className="container">
             <h2 className="searchPageImage">
-                Buscador
+                Búsqueda de aves
             </h2>
             <SearchInterface/>
         </main>

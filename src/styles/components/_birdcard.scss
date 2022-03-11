@@ -12,25 +12,42 @@
     justify-content: center;
     
     &:hover {
-      box-shadow: 0 0.25rem 1rem 0 gray;
+      box-shadow: 0 0.25rem 1rem 0 $vivid-dark-green;
   }
   }
   
   .birdPhotoCard {
+    border: 1px solid lighten($color: $vivid-dark-green, $amount: 35);
     width: 100%;
-    height: 11rem;
+    height: 12rem;
     object-fit:cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
+  }
+
+  .birdNameCard {
+    color: darken($color: $vivid-dark-green, $amount: 10)
+  }
+
+  .scientificNameCard {
+    font-style: italic;
+    margin: 0;
+  }
+
+  .birdDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .toPageStyle {
-    text-decoration: none;
-  }
-  
-  .birdCardContainer {
-    padding: 2rem;
-    
+    background-color: darken($color: $pale-green, $amount: 15);
+    border: none;
+    color: white;
+
+    &:hover {
+      background-color: $pale-green;
+      border: none;
+    }
   }
 
 /*** Media queries ***/
@@ -46,21 +63,15 @@
     border-radius: 1.5rem;
     box-shadow: 0 0.25rem 0.25rem 0 gray;
     transition: 0.2s ease-in;
-    padding: 1rem;
 
     &:hover {
-        box-shadow: 0 0.25rem 1rem 0 gray;
+      box-shadow: 0 0.25rem 1rem 0 $vivid-dark-green;
     }
 
   }
 
   .birdPhotoCard {
-    width: 100%;
-    height: 12rem;
-    object-fit:cover;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-
+    height: 13rem;
   }
   
  }

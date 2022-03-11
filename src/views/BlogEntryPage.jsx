@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLocation, useNavigate } from 'react-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { useContext } from 'react';
 import { Context } from '../context/Context';
 
 export default function BlogEntryPage() {
@@ -83,7 +82,7 @@ export default function BlogEntryPage() {
                     to={`/articulos/`}>
                     <button className="returnButton"> Volver </button>
                 </Link>
-                
+
                 <div className="entryDateAuthor">
                     <span className="authorName">Fecha: {new Date(post.createdAt).toLocaleDateString()}</span>
                     <span className="authorName">Autor: {post.username} </span>
@@ -98,7 +97,6 @@ export default function BlogEntryPage() {
                         {post.title}
                     </h1>
                 )}
-
 
                 {updateMode ? <input
                     className="newArticleInput"

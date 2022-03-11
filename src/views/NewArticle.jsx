@@ -14,7 +14,7 @@ export default function NewArticle() {
 
     const { user } = useContext(Context);
 
-    // Handle to submit
+    // Handle to submit article (POST)
     const handleSubmit = async (e) => {
         e.preventDefault();
 

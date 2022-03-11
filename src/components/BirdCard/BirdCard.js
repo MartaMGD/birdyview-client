@@ -7,15 +7,16 @@ export default function BirdCard(props) {
                 src={`/birdimages/${props._id}.jpg`}
                 alt="Imagen pájaro" />
             <div className="birdCardcontainer">
-                <h4><b>{props.name}</b></h4>
-                <p>{props.scientificname}</p>
-                <h5 className="toPageStyle">
-
-                    <Link
-                        to={`/birdpage/${props._id}`}>
-                        Saber más
-                    </Link>
-                </h5>
+                <div className="birdDataContainer">
+                    <h3 className="birdNameCard"><b>{props.name}</b></h3>
+                    <p className="scientificNameCard">{props.scientificname}</p>
+                    <button className="toPageStyle">
+                        <Link
+                            to={`/birdpage/${props._id}`}>
+                            Saber más
+                        </Link>
+                    </button>
+                </div>
             </div>
         </div>
     )

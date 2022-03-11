@@ -1,4 +1,4 @@
-import userimage from '../assets/avatars/userimage.jpeg';
+import userimage from '../assets/avatars/userimage.jpg';
 import { useContext } from 'react';
 import { Context } from '../context/Context';
 
@@ -8,12 +8,12 @@ export default function UserDashboard() {
         <main className="container">
             <div className="dashboardContainer">
 
-                <h3 className="dashboardTextStyle">Mi cuenta</h3>
+                <h2 className="dashboardTextStyle">Mi cuenta</h2>
 
                 <div className="welcomePanelStyle">
                     <img className="profilePhoto" src={userimage}
                         alt="Profile" />
-                    <h4>Bienvenido, {user.username}</h4>
+                    <h4>Hola, {user.username}</h4>
                 </div>
 
                 <div className="userPanelStyle">
@@ -26,7 +26,7 @@ export default function UserDashboard() {
 
                                 <input className="dashboardInputStyle"
                                     type="text"
-                                    placeholder="Nombre de usuario" />
+                                    placeholder={user.username} />
                             </div>
 
 
@@ -34,21 +34,21 @@ export default function UserDashboard() {
 
                                 <input className="dashboardInputStyle"
                                     type="email"
-                                    placeholder="Introduce un nuevo correo electrónico" />
+                                    placeholder={user.email} />
                             </div>
 
                             <div>
 
                                 <input className="dashboardInputStyle"
                                     type="password"
-                                    placeholder="Cambia tu contraseña" />
+                                    placeholder={"Cambia tu contraseña"} />
                             </div>
 
                             <div>
 
                                 <input className="dashboardInputStyle"
                                     type="password"
-                                    placeholder="Nueva contraseña" />
+                                    placeholder="Introduce tu contraseña actual" />
                             </div>
 
                             <input className="loginButtonStyle" type="submit" value="Actualizar" />

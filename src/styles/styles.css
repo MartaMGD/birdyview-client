@@ -54,7 +54,7 @@ body {
   background-attachment: fixed;
   background-position: center bottom;
   margin: 0;
-  height: 30rem;
+  height: 20rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +151,8 @@ body {
   background-image: url("../assets/images/LoginBackground.jpg");
   background-attachment: fixed;
   background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
@@ -436,15 +438,16 @@ body {
 }
 
 .dashboardTextStyle {
-  text-decoration: underline;
-  padding-bottom: 2rem;
+  font-weight: bold;
+  padding-bottom: 4rem;
 }
 
 .welcomePanelStyle {
-  background-color: #C6E1CC;
+  background-color: #4c8f5b;
   -webkit-box-shadow: 2px 2px 2px #515C53;
           box-shadow: 2px 2px 2px #515C53;
-  color: black;
+  font-weight: bold;
+  color: white;
   height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,8 +492,8 @@ body {
 /* DESKTOP */
 @media (min-width: 992px) {
   .container {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
   }
   .navBarContainer {
     height: 3rem;
@@ -530,12 +533,10 @@ body {
   }
   /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
   .welcomePanelStyle {
-    background-color: #C6E1CC;
     -webkit-box-shadow: 2px 2px 2px #515C53;
             box-shadow: 2px 2px 2px #515C53;
-    color: black;
     height: 3rem;
-    width: 40rem;
+    width: 48rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -555,11 +556,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .dashboardInputStyle {
     height: 2rem;
-    width: 60vh;
-    margin: 0.8rem;
+    width: 80vh;
+    margin: 1rem;
   }
   .userPanelStyle {
     height: 40rem;
@@ -844,25 +848,50 @@ body {
 }
 
 .birdCard:hover {
-  -webkit-box-shadow: 0 0.25rem 1rem 0 gray;
-          box-shadow: 0 0.25rem 1rem 0 gray;
+  -webkit-box-shadow: 0 0.25rem 1rem 0 #355C3E;
+          box-shadow: 0 0.25rem 1rem 0 #355C3E;
 }
 
 .birdPhotoCard {
+  border: 1px solid #89bb94;
   width: 100%;
-  height: 11rem;
+  height: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
+}
+
+.birdNameCard {
+  color: #223c28;
+}
+
+.scientificNameCard {
+  font-style: italic;
+  margin: 0;
+}
+
+.birdDataContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .toPageStyle {
-  text-decoration: none;
+  background-color: #94c79f;
+  border: none;
+  color: white;
 }
 
-.birdCardContainer {
-  padding: 2rem;
+.toPageStyle:hover {
+  background-color: #C6E1CC;
+  border: none;
 }
 
 /*** Media queries ***/
@@ -878,19 +907,13 @@ body {
             box-shadow: 0 0.25rem 0.25rem 0 gray;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
-    padding: 1rem;
   }
   .birdCard:hover {
-    -webkit-box-shadow: 0 0.25rem 1rem 0 gray;
-            box-shadow: 0 0.25rem 1rem 0 gray;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 #355C3E;
+            box-shadow: 0 0.25rem 1rem 0 #355C3E;
   }
   .birdPhotoCard {
-    width: 100%;
-    height: 12rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    height: 13rem;
   }
 }
 
@@ -1004,19 +1027,8 @@ button:hover {
 }
 
 .updateButton {
-  margin-left: 9.5rem;
-}
-
-.cancelButton {
-  background-color: #944333;
-  border: none;
-  margin-left: 9.5rem;
+  margin-left: 26rem;
   margin-bottom: 1rem;
-}
-
-.cancelButton:hover {
-  border: none;
-  background-color: #FF7358;
 }
 
 /* GLOBAL TABLE STYLE AND QUERIES */
@@ -1072,6 +1084,10 @@ td, th {
   }
   .inputEditMode {
     margin-left: 1.5rem;
+  }
+  .updateButton {
+    margin-left: 10rem;
+    margin-bottom: 1rem;
   }
   td:nth-of-type(1):before {
     content: "Usuario";

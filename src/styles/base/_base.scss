@@ -46,7 +46,7 @@ body {
     background-attachment: fixed;
     background-position: center bottom;
     margin: 0;
-    height:30rem;
+    height:20rem;
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -120,6 +120,8 @@ body {
     background-image: url('../assets/images/LoginBackground.jpg');
     background-attachment: fixed;
     background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 
 /*** BLOG-ARTICLES PAGE GLOBAL CONFIGURATION ***/
@@ -320,14 +322,15 @@ body {
 }
 
 .dashboardTextStyle {
-    text-decoration: underline;
-    padding-bottom: 2rem;
+    font-weight: bold;
+    padding-bottom: 4rem;
 }
 
 .welcomePanelStyle {
-    background-color: $pale-green;
+    background-color: darken($color: $pale-green, $amount: 40);
     box-shadow: 2px 2px 2px $dark-grey-green;
-    color:black;
+    font-weight: bold;
+    color:white;
     height: 3rem;
     display: flex;
     justify-content: space-evenly;
@@ -368,8 +371,8 @@ body {
 /* DESKTOP */
 @media (min-width: 992px) {
     .container {
-        margin-left:10rem;
-        margin-right:10rem;
+        margin-left:12rem;
+        margin-right:12rem;
     }
     
     .navBarContainer {
@@ -409,11 +412,9 @@ body {
 /*** USER DASHBOARD GLOBAL CONFIGURATION ***/
 
 .welcomePanelStyle {
-    background-color: $pale-green;
     box-shadow: 2px 2px 2px $dark-grey-green;
-    color:black;
     height: 3rem;
-    width: 40rem;
+    width: 48rem;
     display: flex;
     align-items: center;
     border-radius: 2rem;
@@ -424,12 +425,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .dashboardInputStyle {
     height: 2rem;
-    width: 60vh;
-    margin: 0.8rem;
+    width: 80vh;
+    margin: 1rem;
+    
 }
 
 .userPanelStyle {
