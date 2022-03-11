@@ -39,11 +39,11 @@ export default function Navbar() {
                         </Link>
                     </li>
 
-                    <li className="linkUnit">
+                    {user && <li className="linkUnit">
                         <Link to="/articulos">
                             Blog
                         </Link>
-                    </li>
+                    </li>}
 
                     {user && <li className="linkUnit">
                         <Link to="/avistamientos">
@@ -58,12 +58,11 @@ export default function Navbar() {
                     </li>}
 
                     <li className="linkUnit">
-                        
-                        <a>
+                        {!user && <a>
                             <Link to="/login">
                                 Accede / Regístrate
                             </Link>
-                        </a>
+                        </a>}
 
                         {user &&
                             <a onClick={handleLogout}>

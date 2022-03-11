@@ -9,7 +9,8 @@ export default function Hero() {
                     alt="Welcome" />
                 <div className="heroEffect">
                     <p className="heroText">
-                        Bienvenido a BirdyView
+                        ¡Bienvenido a BirdyView!
+                        Crea tu cuenta para leer artículos exclusivos.
                     </p>
                 </div>
             </div>

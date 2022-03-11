@@ -19,11 +19,12 @@ export default function LoginCard() {
                 password: passwordRef.current.value,
             })
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+            navigate("/avistamientos");
         } catch (err) {
+            alert("Las credenciales son erróneas");
+            navigate("/login");
             dispatch({ type: "LOGIN_FAILURE"});
         }
-        
-        navigate("/avistamientos");
     };
 
     return (

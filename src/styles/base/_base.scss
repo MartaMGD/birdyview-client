@@ -142,11 +142,11 @@ body {
 }
 
 .entryDateAuthor {
+    margin-top: 2rem;
     padding: 2rem;
     height: 3rem;
     width: 79.3rem;
     background-color: lighten($color: $dark-coral, $amount: 25);
-    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

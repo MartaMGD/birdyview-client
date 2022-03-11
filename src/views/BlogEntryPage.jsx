@@ -83,6 +83,11 @@ export default function BlogEntryPage() {
                     to={`/articulos/`}>
                     <button className="returnButton"> Volver </button>
                 </Link>
+                
+                <div className="entryDateAuthor">
+                    <span className="authorName">Fecha: {new Date(post.createdAt).toLocaleDateString()}</span>
+                    <span className="authorName">Autor: {post.username} </span>
+                </div>
 
                 {updateMode ? <input
                     className="newArticleInput"
@@ -94,10 +99,6 @@ export default function BlogEntryPage() {
                     </h1>
                 )}
 
-                <div className="entryDateAuthor">
-                    <span className="authorName">Fecha: {new Date(post.createdAt).toLocaleDateString()}</span>
-                    <span className="authorName">Autor: {post.username} </span>
-                </div>
 
                 {updateMode ? <input
                     className="newArticleInput"
@@ -122,10 +123,12 @@ export default function BlogEntryPage() {
                     </p>
                 )}
 
-                <button
-                    onClick={handleUpdate}>
-                    Actualizar
-                </button>
+                {updateMode && post.username === user.username &&
+                    <button
+                        onClick={handleUpdate}>
+                        Actualizar
+                    </button>
+                }
 
             </div>
         </>

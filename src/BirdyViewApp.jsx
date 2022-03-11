@@ -15,7 +15,6 @@ import UserDashboard from './views/UserDashboard';
 import Birdpage from './views/Birdpage';
 import BlogEntryPage from './views/BlogEntryPage';
 import NewArticle from './views/NewArticle';
-import EditArticle from './views/EditArticle';
 import { Context } from './context/Context';
 
 export default function BirdyViewApp() {
@@ -49,7 +48,6 @@ export default function BirdyViewApp() {
                     <Route path="registernewuser" element={<RegisterScreen />} />
                     <Route path="avistamientos" element={<Birdwatching />} />
                     <Route path="articulos/nuevoarticulo" element={<NewArticle />} />
-                    <Route path="articulos/editararticulo" element={<EditArticle posts={posts} />} />
                     <Route path="userdashboard" element={<UserDashboard />} />
                 </Routes>
                 <Footer />

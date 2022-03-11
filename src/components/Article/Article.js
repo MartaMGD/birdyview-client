@@ -9,7 +9,7 @@ export default function Article({ post }) {
                 <Link
                     to={`/articulos/${post._id}`}>
                     <span className="clickBlogText">
-                        <h1 className="articleTitleStyle">{post.title}</h1>
+                        <h2 className="articleTitleStyle">{post.title}</h2>
                     </span>
                 </Link>
                 <div className="authorTag">
