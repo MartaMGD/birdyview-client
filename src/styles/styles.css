@@ -1687,11 +1687,15 @@ td, th {
   background-color: black;
   color: #E6E1BE;
   font-size: 0.8rem;
-  height: 4rem;
+  height: 6rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1699,6 +1703,26 @@ td, th {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
+}
+
+.copyright {
+  color: white;
+  margin-right: 2rem;
+}
+
+.separator {
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.footerGithub {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .loginRegisterCard {

@@ -30,7 +30,6 @@ export default function Navbar() {
                 </label>
                 <input className="openMenu" type="checkbox" id="openMenu" />
 
-
                 <ul className="linkPosition">
 
                     <li className="linkUnit">

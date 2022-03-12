@@ -3,10 +3,32 @@
     background-color: black;
     color: $cream;
     font-size: 0.8rem;
-    height: 4rem;
+    height: 6rem;
     width: 100%;
     display:flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+
+}
+
+.copyright {
+    color: white;
+    margin-right: 2rem;
+}
+
+.separator {
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.footerGithub {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
