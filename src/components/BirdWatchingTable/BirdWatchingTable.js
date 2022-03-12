@@ -68,25 +68,25 @@ export default function BirdwatchingTable() {
 
                     {birdInfo?.map((bird) =>
                         <tr>
-                            <td className="birdtd" key={bird._id}>
+                            <td className="birdtd usernameTd" key={bird._id}>
                                 {bird.username}
                             </td>
 
-                                <td className="birdtd" key={bird._id}>
-                                    {bird.birdname}
-                                </td>
-                            
-                                <td className="locationtd" key={bird._id}>
-                                    {bird.location}
-                                </td>
+                            <td className="birdtd" key={bird._id}>
+                                {bird.birdname}
+                            </td>
 
-                                <td className="watcheddaytd" key={bird._id}>
-                                    {bird.date}
-                                </td>
+                            <td className="locationtd" key={bird._id}>
+                                {bird.location}
+                            </td>
 
-                                <td className="watchedtd" key={bird._id}>
-                                    {bird.hour}
-                                </td>
+                            <td className="watcheddaytd" key={bird._id}>
+                                {bird.date}
+                            </td>
+
+                            <td className="watchedtd" key={bird._id}>
+                                {bird.hour}
+                            </td>
                         </tr>
                     )}
 

@@ -9,8 +9,7 @@ export default function Home() {
             {/* Text Box */}
             <p className="heroTextBox">
                 Descubre la diversa fauna ornitológica de Andalucía a través de nuestro buscador personalizado, 
-                entérate de las últimas noticias sobre observación de aves y actualiza, comparte y 
-                comenta los últimos avistamientos realizados por otros aficionados.
+                entérate de las últimas noticias sobre observación de aves y entérate de los últimos avistamientos realizados por otros aficionados.
             </p>
             <HomeInfoBox/>
             <NewsletterInput/>

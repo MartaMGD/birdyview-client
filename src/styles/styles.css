@@ -1040,6 +1040,12 @@ table {
   border-collapse: collapse;
 }
 
+.usernameTd {
+  font-weight: bold;
+  border: #b87f00 solid 1px;
+  background-color: #FFE9B8;
+}
+
 tr:nth-of-type(odd) {
   background: #78b286;
 }
