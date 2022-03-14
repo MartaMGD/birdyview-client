@@ -1,6 +1,6 @@
+import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
 import { Context } from '../context/Context';
 
 export default function NewArticle() {

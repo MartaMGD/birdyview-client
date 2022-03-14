@@ -6,7 +6,7 @@ import { Context } from '../../context/Context';
 
 export default function BirdwatchingTable() {
 
-    // States to register new bird in birdwatching table/agenda
+    // States to register new bird in birdwatching table/agenda | Estados para registrar un nuevo avistamiento en la tabla/agenda
     const pathlocation = useLocation();
     const path = pathlocation.pathname.split("/")[2];
 
@@ -18,7 +18,7 @@ export default function BirdwatchingTable() {
 
     const { user } = useContext(Context);
 
-    // Petition to read birds (GET)
+    // Petition to read birds (GET) | Petición GET
     useEffect(() => {
         const fetchBirds = async () => {
             const res = await axios.get("http://localhost:5000/api/birdwatching/");
@@ -31,7 +31,7 @@ export default function BirdwatchingTable() {
         fetchBirds();
     }, [path]);
 
-    // Handle to submit bird (POST)
+    // Handle to submit bird (POST) | Petición POST para crear nuevo avistamiento
     const handleSubmit = async (e) => {
         e.preventDefault();
 

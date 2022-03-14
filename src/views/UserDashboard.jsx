@@ -41,7 +41,7 @@ export default function UserDashboard() {
 
                                 <input className="dashboardInputStyle"
                                     type="password"
-                                    placeholder={"Cambia tu contraseña"} />
+                                    placeholder="Cambia tu contraseña" />
                             </div>
 
                             <div>

@@ -15,6 +15,7 @@ ul, ol, li {
 
 body {
     margin: 0;
+    margin-top: 3.4rem;
     background-color: $cream;
     font-family:'Poppins';
 }
@@ -112,6 +113,10 @@ body {
 }
 
 /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
+.birdWatchingWelcome {
+    margin-top: 6rem;
+}
+
 .birdwatchingPage {
     margin-top: 0;
     padding-left: 1rem;

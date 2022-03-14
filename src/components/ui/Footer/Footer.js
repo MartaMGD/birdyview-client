@@ -12,14 +12,16 @@ export default function Footer() {
 
                 <div className="socialMedia">
                     <div className="footerGithub">
-                        <a href="https://github.com/martamgd">
-                            <i class="fa-brands fa-github"></i> Github
+                        <a className="footerLink"
+                            href="https://github.com/martamgd">
+                            <i className="fa-brands fa-github"></i> Github
                         </a>
                     </div>
 
                     <div className="footerLinkedIn">
-                        <a href="https://es.linkedin.com/in/martagd96">
-                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        <a className="footerLink"
+                            href="https://es.linkedin.com/in/martagd96">
+                            <i className="fa-brands fa-linkedin"></i> LinkedIn
                         </a>
                     </div>
                 </div>

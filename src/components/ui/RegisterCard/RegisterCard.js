@@ -1,9 +1,9 @@
-import { useState } from "react";
 import axios from 'axios';
+import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 export default function RegisterCard() {
-    // States for the user creation
+    // States for the user creation | Estados para guardar y crear nuevos usuarios
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -32,7 +32,7 @@ export default function RegisterCard() {
                 <div className="cardImage"></div>
 
                 <div className="formContentWrap">
-                    <span className="registerMessage">Crea una cuenta</span>
+                    <h3 className="registerMessage">Crea una cuenta</h3>
 
                     <div>
                         <span className="inputTextPlaceholders">Nombre de usuario: </span>

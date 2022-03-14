@@ -1,8 +1,8 @@
 import HomeImage from '../../assets/images/HomeImage.jpg';
+
 export default function Hero() {
     return (
         <div>
-            {/* Hero Image with hover effect */}
             <div className="heroContainer">
                 <img className="heroImage"
                     src={HomeImage}

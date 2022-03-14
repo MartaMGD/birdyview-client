@@ -1,8 +1,9 @@
+import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router';
 import { Context } from '../../../context/Context';
-import axios from 'axios';
+
 
 export default function LoginCard() {
     const navigate = useNavigate();
@@ -35,7 +36,7 @@ export default function LoginCard() {
                 <div className="cardImage" />
 
                 <div className="formContentWrap">
-                    <span className="loginMessage">Inicia sesión</span>
+                    <h2 className="loginMessage">Inicia sesión</h2>
 
                     <div>
                         <input className="loginInputStyle"

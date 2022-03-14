@@ -40,13 +40,19 @@
   }
 
   .toPageStyle {
+
     background-color: darken($color: $pale-green, $amount: 15);
     border: none;
-    color: white;
+
 
     &:hover {
       background-color: $pale-green;
       border: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: darken($color: $dark-grey-green, $amount: 10);
     }
   }
 

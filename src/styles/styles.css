@@ -17,6 +17,7 @@ ul, ol, li {
 
 body {
   margin: 0;
+  margin-top: 3.4rem;
   background-color: #E6E1BE;
   font-family: 'Poppins';
 }
@@ -143,6 +144,10 @@ body {
 }
 
 /*** BIRDWATCHING TABLE GLOBAL CONFIGURATION ***/
+.birdWatchingWelcome {
+  margin-top: 6rem;
+}
+
 .birdwatchingPage {
   margin-top: 0;
   padding-left: 1rem;
@@ -886,12 +891,16 @@ body {
 .toPageStyle {
   background-color: #94c79f;
   border: none;
-  color: white;
 }
 
 .toPageStyle:hover {
   background-color: #C6E1CC;
   border: none;
+}
+
+.toPageStyle a {
+  text-decoration: none;
+  color: #39413b;
 }
 
 /*** Media queries ***/
@@ -1475,7 +1484,6 @@ td, th {
 }
 
 /*** Media queries ***/
-/* TABLET */
 /* DESKTOP */
 @media (min-width: 992px) {
   .searchInterfaceInput {
@@ -1503,7 +1511,6 @@ td, th {
   }
 }
 
-/* DESKTOP */
 .formContainer {
   height: rem;
   width: 100%;
@@ -1560,68 +1567,42 @@ td, th {
   cursor: pointer;
 }
 
-/*** Navbar - Links - Logo ***/
-.navBarContainer {
-  height: 3rem;
+nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
   width: 100%;
-  background-color: #355C3E;
+  height: 55px;
+  background: linear-gradient(45deg, #061C03, #0B3006);
+}
+
+.logoStyle {
+  height: 3rem;
+  width: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0.5rem;
+}
+
+.list {
+  list-style-type: none;
+  background: linear-gradient(45deg, #061C03, #0B3006);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
 }
 
-.logoStyle {
-  margin-left: 0.6rem;
-  height: 2.1rem;
-  width: 2.1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#openMenu {
-  display: none;
-}
-
-.openMenuIcon {
-  color: white;
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-  padding-right: 1rem;
-}
-
-.linkUnit a {
-  color: #E6E1BE;
-  display: block;
-  text-align: right;
-  font-weight: bold;
-  margin: 0.8rem 0;
-}
-
-.linkUnit a:hover {
-  text-shadow: 1px 1px 3px #FFE9B8;
-  cursor: pointer;
-}
-
-.linkPosition {
-  display: none;
-  width: 60%;
-  padding: 1rem;
-  background-color: #355C3E;
-  position: absolute;
-  z-index: 2;
-  top: 3rem;
-  right: 0;
-  height: calc(100vh - 48px);
-  border-left: 1px solid #355C3E;
-}
-
-.navbarBlockStyle {
+.linkList {
+  margin-left: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1631,57 +1612,91 @@ td, th {
           flex-direction: row;
 }
 
-.openMenu:checked ~ .linkPosition {
-  display: block;
+.items {
+  margin-right: 20px;
+  font-size: 18px;
+  padding: 1rem;
+  font-weight: bold;
+  color: #FFE9B8;
+  cursor: pointer;
 }
 
-/* DESKTOP */
-@media (min-width: 992px) {
-  .container {
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-  .navBarContainer {
-    height: 3rem;
-    width: 100%;
-    background-color: #355C3E;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    border-bottom: 1px solid #355C3E;
-    padding-right: 2rem;
-  }
-  .linkPosition {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    border-bottom: 1px solid #355C3E;
-    border-left: 1px solid #355C3E;
-    position: static;
-    width: 100%;
-    height: 3rem;
-    padding: 0;
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-  .openMenuIcon {
+.items:hover {
+  text-shadow: 1px 1px 2px #FFE9B8;
+}
+
+.items a:visited {
+  color: #FFE9B8;
+}
+
+.btn {
+  background-color: #355C3E;
+  border: none;
+  display: none;
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  color: #FFE9B8;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .logoStyle {
     display: none;
   }
-  .infoBirdPhoto {
-    margin-top: 1rem;
-    height: 50%;
-    width: 50%;
-    border-radius: 7px;
+  .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .items:nth-child(1) {
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 50px;
+  }
+  .linkList {
+    margin-left: 28rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 28rem;
+  }
+  .items {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+  .btn {
+    display: block;
   }
 }
 
-/* DESKTOP */
+@media (min-width: 992px) {
+  .linkList {
+    margin-left: 28rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .items {
+    padding: 2rem;
+  }
+}
+
 .footerStyle {
   margin: 0;
   background-color: black;
@@ -1719,7 +1734,7 @@ td, th {
   margin-bottom: 0.5rem;
 }
 
-a {
+.footerLink {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -1816,6 +1831,7 @@ a {
 .loginSpanStyle {
   font-size: 0.8rem;
   padding-top: 0.5rem;
+  color: #355C3E;
 }
 
 .inputTextPlaceholders {

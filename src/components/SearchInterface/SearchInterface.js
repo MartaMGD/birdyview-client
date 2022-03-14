@@ -1,6 +1,7 @@
-import BirdCard from '../BirdCard/BirdCard';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { API_URL } from "../../config/config.js"
+import { API_URL } from "../../config/config.js";
+import BirdCard from '../BirdCard/BirdCard';
 
 export default function SearchInterface() {
 
@@ -18,23 +19,17 @@ export default function SearchInterface() {
 
     const [filterBird, setFilterBird] = useState('');
     const [birds, setBirds] = useState([]);
-    const [copyBirds, setCopyBirds] = useState([]);
     const [provinceSelected, setProvinceSelected] = useState(provinces[0].slug);
 
     useEffect(() => {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => {
-                setBirds(data.birds)
-                setCopyBirds(data.birds)
+        const fetchBirdInfo = async () => {
+            const res = await axios.get(API_URL)
+            setBirds(res.data.birds);
+        }
+        fetchBirdInfo();
+    }, []);
 
-                console.log(birds);
-            });
-            
-    }, [])
-
-
-    
+    console.log(birds);
     return (
         <main>
             <div >
@@ -62,7 +57,6 @@ export default function SearchInterface() {
                 </form>
             </div>
 
-            {/* REGULAR FILTER */}
             <div className="showBirds">
                 {birds.filter((bird) => {
                     if (filterBird === "") {

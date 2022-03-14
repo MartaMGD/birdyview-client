@@ -6,7 +6,7 @@ export default function Birdwatching() {
     const { user } = useContext(Context);
     return (
         <main className="container birdwatchingPage">
-            <h3>Hola, {user.username} ¿Algún avistamiento hoy?</h3>
+            <h3 className="birdwatchingWelcome">Hola, {user.username} ¿Algún avistamiento hoy?</h3>
             <BirdwatchingTable />
         </main>
     );
